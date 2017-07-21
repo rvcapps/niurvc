@@ -1,6 +1,6 @@
 # niurvc
 app for niu@rvc 
 
-[Website](http://www.rvchourofcode.com/niurvc.html)
+To view prototype visit [Website](http://www.rvchourofcode.com/niurvc.html)
 
-Manage Issues: See [link](https://waffle.io/rvcapps/niurvc) 
+To submit issues (must login with Github account): visit [Link](https://waffle.io/rvcapps/niurvc) 
