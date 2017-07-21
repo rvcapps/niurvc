@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/rvcapps/niurvc.png?label=ready&title=Ready)](https://waffle.io/rvcapps/niurvc?utm_source=badge)
 # niurvc
 app for niu@rvc 
 
