@@ -8,8 +8,19 @@
 
 import UIKit
 
-class VideoViewController: UIViewController {
-
+class VideoViewController: UIViewController,UIWebViewDelegate {
+    
+    
+    @IBOutlet weak var webview: UIWebView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //
+        webview.delegate = self
+        if let url = URL(string: "https://sites.google.com/site/niurvc/video") {
+            let request = URLRequest(url: url)
+            webview.loadRequest(request)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

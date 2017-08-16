@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -152,10 +152,28 @@ mgonser@niu.edu</string>
                     <view key="view" contentMode="scaleToFill" id="mMa-Gf-1B3">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TrP-44-w0s">
+                                <rect key="frame" x="0.0" y="28" width="667" height="298"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QFn-fy-Y3J" id="GtN-pV-G1a"/>
+                                </connections>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TrP-44-w0s" firstAttribute="leading" secondItem="mMa-Gf-1B3" secondAttribute="leading" id="H4d-f4-fgk"/>
+                            <constraint firstAttribute="trailing" secondItem="TrP-44-w0s" secondAttribute="trailing" id="Jbk-Ko-Euk"/>
+                            <constraint firstItem="TrP-44-w0s" firstAttribute="top" secondItem="oSh-qM-MUL" secondAttribute="bottom" constant="8" symbolic="YES" id="WxX-i8-KeE"/>
+                            <constraint firstItem="TrP-44-w0s" firstAttribute="bottom" secondItem="tyQ-9B-xXq" secondAttribute="top" id="qZ6-Mk-wAo"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Communicate" image="communicate.png" selectedImage="communicate.png" id="kQ8-us-Bf0"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webview" destination="TrP-44-w0s" id="WIT-Jd-fm7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDh-fi-ORl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,14 +190,32 @@ mgonser@niu.edu</string>
                     <view key="view" contentMode="scaleToFill" id="6x5-qE-8w0">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vV6-SY-oBO">
+                                <rect key="frame" x="0.0" y="28" width="667" height="298"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ujU-AS-Avk" id="h9n-GT-1hh"/>
+                                </connections>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vV6-SY-oBO" firstAttribute="top" secondItem="0AQ-qu-z17" secondAttribute="bottom" constant="8" symbolic="YES" id="EtW-qw-cbR"/>
+                            <constraint firstItem="vV6-SY-oBO" firstAttribute="leading" secondItem="6x5-qE-8w0" secondAttribute="leading" id="Ohy-GK-9gH"/>
+                            <constraint firstItem="vV6-SY-oBO" firstAttribute="bottom" secondItem="o2k-PA-qcA" secondAttribute="top" id="SwP-CI-i9F"/>
+                            <constraint firstAttribute="trailing" secondItem="vV6-SY-oBO" secondAttribute="trailing" id="hnM-1o-DV8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Video" image="video.png" selectedImage="video.png" id="n65-hJ-f6S"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webview" destination="vV6-SY-oBO" id="9lL-V5-X4j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJ1-E8-BQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="1873"/>
+            <point key="canvasLocation" x="747.9760119940031" y="1872.8"/>
         </scene>
         <!--Connections-->
         <scene sceneID="D36-Zo-CqD">

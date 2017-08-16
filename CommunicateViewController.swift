@@ -8,7 +8,10 @@
 
 import UIKit
 
-class CommunicateViewController: UIViewController {
+class CommunicateViewController: UIViewController, UIWebViewDelegate{
+    
+    
+    @IBOutlet weak var webview: UIWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,15 @@ class CommunicateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //
+        webview.delegate = self
+        if let url = URL(string: "https://sites.google.com/site/niurvc/communicate") {
+            let request = URLRequest(url: url)
+            webview.loadRequest(request)
+        }
+    }
+
 
     /*
     // MARK: - Navigation
