@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AD2D4981F5F8E5D001693E4 /* icons8-Calendar Filled-50Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D48E1F5F8E5D001693E4 /* icons8-Calendar Filled-50Blue.png */; };
+		0AD2D4991F5F8E5D001693E4 /* icons8-Chat Filled-50Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D48F1F5F8E5D001693E4 /* icons8-Chat Filled-50Blue.png */; };
+		0AD2D49A1F5F8E5D001693E4 /* icons8-Contacts Filled-50Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D4901F5F8E5D001693E4 /* icons8-Contacts Filled-50Blue.png */; };
+		0AD2D49B1F5F8E5D001693E4 /* icons8-FAQ-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D4911F5F8E5D001693E4 /* icons8-FAQ-blue.png */; };
+		0AD2D49C1F5F8E5D001693E4 /* icons8-Link Filled-50blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D4921F5F8E5D001693E4 /* icons8-Link Filled-50blue.png */; };
+		0AD2D49D1F5F8E5D001693E4 /* icons8-New Job Filled-50blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D4931F5F8E5D001693E4 /* icons8-New Job Filled-50blue.png */; };
+		0AD2D49E1F5F8E5D001693E4 /* icons8-Share Filled-50blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D4941F5F8E5D001693E4 /* icons8-Share Filled-50blue.png */; };
+		0AD2D49F1F5F8E5D001693E4 /* icons8-User Groups Filled-50 (1)blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D4951F5F8E5D001693E4 /* icons8-User Groups Filled-50 (1)blue.png */; };
+		0AD2D4A01F5F8E5D001693E4 /* scholarship-3-512blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D4961F5F8E5D001693E4 /* scholarship-3-512blue.png */; };
+		0AD2D4A11F5F8E5D001693E4 /* scholarship-icon blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AD2D4971F5F8E5D001693E4 /* scholarship-icon blue.png */; };
+		0AD2D4A31F648358001693E4 /* SubTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4A21F648358001693E4 /* SubTabViewController.swift */; };
+		0AD2D4A51F6484C4001693E4 /* HappeningsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4A41F6484C4001693E4 /* HappeningsViewController.swift */; };
+		0AD2D4A71F6484F2001693E4 /* PartnersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4A61F6484F2001693E4 /* PartnersViewController.swift */; };
+		0AD2D4A91F64850C001693E4 /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4A81F64850C001693E4 /* SocialMediaViewController.swift */; };
+		0AD2D4AB1F648531001693E4 /* JobInternshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AA1F648531001693E4 /* JobInternshipViewController.swift */; };
+		0AD2D4AD1F648551001693E4 /* ScholarshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AC1F648551001693E4 /* ScholarshipsViewController.swift */; };
+		0AD2D4AF1F64856A001693E4 /* ImportantLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AE1F64856A001693E4 /* ImportantLinksViewController.swift */; };
 		364E5B9C1F34122800F6C3AB /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364E5B9B1F34122800F6C3AB /* CourseViewController.swift */; };
 		364E5B9E1F34123C00F6C3AB /* ConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364E5B9D1F34123C00F6C3AB /* ConnectionsViewController.swift */; };
 		364E5BA01F34124F00F6C3AB /* CommunicateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364E5B9F1F34124F00F6C3AB /* CommunicateViewController.swift */; };
@@ -14,7 +31,7 @@
 		366298591F33E79E0084237F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366298581F33E79E0084237F /* AppDelegate.swift */; };
 		3662985B1F33E79E0084237F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3662985A1F33E79E0084237F /* FirstViewController.swift */; };
 		3662985D1F33E79E0084237F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3662985C1F33E79E0084237F /* SecondViewController.swift */; };
-		366298601F33E79E0084237F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3662985E1F33E79E0084237F /* Main.storyboard */; };
+		366298601F33E79E0084237F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3662985E1F33E79E0084237F /* Main.storyboard */; settings = {ASSET_TAGS = (Happenings, ); }; };
 		366298621F33E79E0084237F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366298611F33E79E0084237F /* Assets.xcassets */; };
 		366298651F33E79E0084237F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366298631F33E79E0084237F /* LaunchScreen.storyboard */; };
 		366298721F33F3BF0084237F /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = 3662986D1F33F3BF0084237F /* video.png */; };
@@ -37,6 +54,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AD2D48E1F5F8E5D001693E4 /* icons8-Calendar Filled-50Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-Calendar Filled-50Blue.png"; path = "images/icons8-Calendar Filled-50Blue.png"; sourceTree = "<group>"; };
+		0AD2D48F1F5F8E5D001693E4 /* icons8-Chat Filled-50Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-Chat Filled-50Blue.png"; path = "images/icons8-Chat Filled-50Blue.png"; sourceTree = "<group>"; };
+		0AD2D4901F5F8E5D001693E4 /* icons8-Contacts Filled-50Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-Contacts Filled-50Blue.png"; path = "images/icons8-Contacts Filled-50Blue.png"; sourceTree = "<group>"; };
+		0AD2D4911F5F8E5D001693E4 /* icons8-FAQ-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-FAQ-blue.png"; path = "images/icons8-FAQ-blue.png"; sourceTree = "<group>"; };
+		0AD2D4921F5F8E5D001693E4 /* icons8-Link Filled-50blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-Link Filled-50blue.png"; path = "images/icons8-Link Filled-50blue.png"; sourceTree = "<group>"; };
+		0AD2D4931F5F8E5D001693E4 /* icons8-New Job Filled-50blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-New Job Filled-50blue.png"; path = "images/icons8-New Job Filled-50blue.png"; sourceTree = "<group>"; };
+		0AD2D4941F5F8E5D001693E4 /* icons8-Share Filled-50blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-Share Filled-50blue.png"; path = "images/icons8-Share Filled-50blue.png"; sourceTree = "<group>"; };
+		0AD2D4951F5F8E5D001693E4 /* icons8-User Groups Filled-50 (1)blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-User Groups Filled-50 (1)blue.png"; path = "images/icons8-User Groups Filled-50 (1)blue.png"; sourceTree = "<group>"; };
+		0AD2D4961F5F8E5D001693E4 /* scholarship-3-512blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scholarship-3-512blue.png"; path = "images/scholarship-3-512blue.png"; sourceTree = "<group>"; };
+		0AD2D4971F5F8E5D001693E4 /* scholarship-icon blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scholarship-icon blue.png"; path = "images/scholarship-icon blue.png"; sourceTree = "<group>"; };
+		0AD2D4A21F648358001693E4 /* SubTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubTabViewController.swift; path = NIURVC/SubTabViewController.swift; sourceTree = "<group>"; };
+		0AD2D4A41F6484C4001693E4 /* HappeningsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappeningsViewController.swift; sourceTree = "<group>"; };
+		0AD2D4A61F6484F2001693E4 /* PartnersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnersViewController.swift; sourceTree = "<group>"; };
+		0AD2D4A81F64850C001693E4 /* SocialMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
+		0AD2D4AA1F648531001693E4 /* JobInternshipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobInternshipViewController.swift; sourceTree = "<group>"; };
+		0AD2D4AC1F648551001693E4 /* ScholarshipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarshipsViewController.swift; sourceTree = "<group>"; };
+		0AD2D4AE1F64856A001693E4 /* ImportantLinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantLinksViewController.swift; sourceTree = "<group>"; };
 		364E5B9B1F34122800F6C3AB /* CourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		364E5B9D1F34123C00F6C3AB /* ConnectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsViewController.swift; sourceTree = "<group>"; };
 		364E5B9F1F34124F00F6C3AB /* CommunicateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicateViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +120,13 @@
 				364E5B9D1F34123C00F6C3AB /* ConnectionsViewController.swift */,
 				364E5B9F1F34124F00F6C3AB /* CommunicateViewController.swift */,
 				364E5BA11F34126100F6C3AB /* VideoViewController.swift */,
+				0AD2D4A21F648358001693E4 /* SubTabViewController.swift */,
+				0AD2D4A41F6484C4001693E4 /* HappeningsViewController.swift */,
+				0AD2D4A61F6484F2001693E4 /* PartnersViewController.swift */,
+				0AD2D4A81F64850C001693E4 /* SocialMediaViewController.swift */,
+				0AD2D4AA1F648531001693E4 /* JobInternshipViewController.swift */,
+				0AD2D4AC1F648551001693E4 /* ScholarshipsViewController.swift */,
+				0AD2D4AE1F64856A001693E4 /* ImportantLinksViewController.swift */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -138,6 +179,16 @@
 		366298771F340CCB0084237F /* photos */ = {
 			isa = PBXGroup;
 			children = (
+				0AD2D48E1F5F8E5D001693E4 /* icons8-Calendar Filled-50Blue.png */,
+				0AD2D48F1F5F8E5D001693E4 /* icons8-Chat Filled-50Blue.png */,
+				0AD2D4901F5F8E5D001693E4 /* icons8-Contacts Filled-50Blue.png */,
+				0AD2D4911F5F8E5D001693E4 /* icons8-FAQ-blue.png */,
+				0AD2D4921F5F8E5D001693E4 /* icons8-Link Filled-50blue.png */,
+				0AD2D4931F5F8E5D001693E4 /* icons8-New Job Filled-50blue.png */,
+				0AD2D4941F5F8E5D001693E4 /* icons8-Share Filled-50blue.png */,
+				0AD2D4951F5F8E5D001693E4 /* icons8-User Groups Filled-50 (1)blue.png */,
+				0AD2D4961F5F8E5D001693E4 /* scholarship-3-512blue.png */,
+				0AD2D4971F5F8E5D001693E4 /* scholarship-icon blue.png */,
 				366298781F340CDE0084237F /* homepage.png */,
 				366298791F340CDE0084237F /* icon_award.png */,
 				3662987A1F340CDE0084237F /* icons8-Calendar Filled-50.png */,
@@ -180,6 +231,9 @@
 		3662984D1F33E79E0084237F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Happenings,
+				);
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Charles Konkol";
@@ -217,19 +271,29 @@
 				366298851F340CDE0084237F /* icon_award.png in Resources */,
 				366298761F33F3BF0084237F /* home.png in Resources */,
 				366298741F33F3BF0084237F /* connections.png in Resources */,
+				0AD2D4981F5F8E5D001693E4 /* icons8-Calendar Filled-50Blue.png in Resources */,
 				366298841F340CDE0084237F /* homepage.png in Resources */,
 				3662988A1F340CDE0084237F /* icons8-Link Filled-50.png in Resources */,
 				366298881F340CDE0084237F /* icons8-Contacts Filled-50.png in Resources */,
 				366298651F33E79E0084237F /* LaunchScreen.storyboard in Resources */,
 				3662988B1F340CDE0084237F /* icons8-New Job Filled-50.png in Resources */,
+				0AD2D49E1F5F8E5D001693E4 /* icons8-Share Filled-50blue.png in Resources */,
 				366298721F33F3BF0084237F /* video.png in Resources */,
 				366298621F33E79E0084237F /* Assets.xcassets in Resources */,
 				3662988C1F340CDE0084237F /* icons8-Share Filled-50.png in Resources */,
+				0AD2D49D1F5F8E5D001693E4 /* icons8-New Job Filled-50blue.png in Resources */,
+				0AD2D49B1F5F8E5D001693E4 /* icons8-FAQ-blue.png in Resources */,
+				0AD2D49F1F5F8E5D001693E4 /* icons8-User Groups Filled-50 (1)blue.png in Resources */,
+				0AD2D4A11F5F8E5D001693E4 /* scholarship-icon blue.png in Resources */,
 				3662988D1F340CDE0084237F /* icons8-User Groups Filled-50 (1).png in Resources */,
 				366298861F340CDE0084237F /* icons8-Calendar Filled-50.png in Resources */,
+				0AD2D4A01F5F8E5D001693E4 /* scholarship-3-512blue.png in Resources */,
+				0AD2D49A1F5F8E5D001693E4 /* icons8-Contacts Filled-50Blue.png in Resources */,
 				3662988F1F340CDE0084237F /* scholarship-icon.png in Resources */,
+				0AD2D49C1F5F8E5D001693E4 /* icons8-Link Filled-50blue.png in Resources */,
 				366298731F33F3BF0084237F /* communicate.png in Resources */,
 				366298751F33F3BF0084237F /* coursepath.png in Resources */,
+				0AD2D4991F5F8E5D001693E4 /* icons8-Chat Filled-50Blue.png in Resources */,
 				3662988E1F340CDE0084237F /* scholarship-3-512.png in Resources */,
 				366298601F33E79E0084237F /* Main.storyboard in Resources */,
 				366298891F340CDE0084237F /* icons8-FAQ-26.png in Resources */,
@@ -245,11 +309,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3662985D1F33E79E0084237F /* SecondViewController.swift in Sources */,
+				0AD2D4A71F6484F2001693E4 /* PartnersViewController.swift in Sources */,
+				0AD2D4A51F6484C4001693E4 /* HappeningsViewController.swift in Sources */,
 				364E5BA21F34126100F6C3AB /* VideoViewController.swift in Sources */,
 				364E5B9E1F34123C00F6C3AB /* ConnectionsViewController.swift in Sources */,
 				364E5BA01F34124F00F6C3AB /* CommunicateViewController.swift in Sources */,
 				366298591F33E79E0084237F /* AppDelegate.swift in Sources */,
+				0AD2D4AF1F64856A001693E4 /* ImportantLinksViewController.swift in Sources */,
+				0AD2D4A31F648358001693E4 /* SubTabViewController.swift in Sources */,
+				0AD2D4A91F64850C001693E4 /* SocialMediaViewController.swift in Sources */,
 				364E5B9C1F34122800F6C3AB /* CourseViewController.swift in Sources */,
+				0AD2D4AB1F648531001693E4 /* JobInternshipViewController.swift in Sources */,
+				0AD2D4AD1F648551001693E4 /* ScholarshipsViewController.swift in Sources */,
 				3662985B1F33E79E0084237F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

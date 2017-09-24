@@ -31,5 +31,49 @@ class ConnectionsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "Happenings"
+        {
+            if let destinationVC = segue.destination as? SubTabBarController {
+                destinationVC.pagetodisplay = 0
+            }
+        }
+        if segue.identifier == "Partners"
+        {
+            if let destinationVC = segue.destination as? SubTabBarController {
+                destinationVC.pagetodisplay = 1
+            }
+        }
+        if segue.identifier == "SocialMedia"
+        {
+            if let destinationVC = segue.destination as? SubTabBarController {
+                destinationVC.pagetodisplay = 5
+            }
+        }
+        if segue.identifier == "JobInternship"
+        {
+            if let destinationVC = segue.destination as? SubTabBarController {
+                destinationVC.pagetodisplay = 2
+            }
+        }
+        if segue.identifier == "Scholarships"
+        {
+            if let destinationVC = segue.destination as? SubTabBarController {
+                destinationVC.pagetodisplay = 3
+            }
+        }
+        if segue.identifier == "ImportantLinks"
+        {
+            if let destinationVC = segue.destination as? SubTabBarController {
+                destinationVC.pagetodisplay = 4
+            }
+        }
+    }
+    
+    
 }
+
+
