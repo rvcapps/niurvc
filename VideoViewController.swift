@@ -8,14 +8,22 @@
 
 import UIKit
 
-class VideoViewController: UIViewController {
+class VideoViewController: UIViewController,UIWebViewDelegate {
 
+     @IBOutlet weak var webview: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        //
+        webview.delegate = self
+        if let url = URL(string: "https://sites.google.com/site/niurvc/video") {
+            let request = URLRequest(url: url)
+            webview.loadRequest(request)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
