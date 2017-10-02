@@ -22,21 +22,23 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addPullToRefreshToWebView()
+      
+         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        web.delegate = self
+          web.delegate = self
         countweb=0;
-        loadwb()
+             loadwb()
+        
     }
     func loadwb()
     {
         if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+            web.isHidden = true
             let request = URLRequest(url: url)
             web.loadRequest(request)
-            web.reload()
+            //web.reload()
         }
     }
     override func didReceiveMemoryWarning() {
@@ -125,15 +127,23 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
         //  print("run")
         if countweb==0{
             countweb=1;
-            web.reload()
+             web.reload()
+            
+        }
+        if webView.isLoading{
+            return
+        }else
+        {
+            web.isHidden = false
         }
         
+        
     }
-    
+   
     func addPullToRefreshToWebView(){
         let refreshController:UIRefreshControl = UIRefreshControl()
         
-        refreshController.bounds = CGRect(x:0, y:50, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
+        refreshController.bounds = CGRect(x:0, y:0, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
         refreshController.addTarget(self, action: Selector(("refreshWebView:")), for: UIControlEvents.valueChanged)
         refreshController.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
         web.scrollView.addSubview(refreshController)

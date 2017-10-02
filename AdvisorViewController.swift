@@ -25,16 +25,17 @@ class AdvisorViewController: UIViewController,UIWebViewDelegate,UIScrollViewDele
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-                 webview.delegate = self
+        webview.delegate = self
         countweb=0;
         loadwb()
    }
     func loadwb()
     {
         if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+              webview.isHidden = true
             let request = URLRequest(url: url)
             webview.loadRequest(request)
-           
+          // webview.reload()
         }
     }
     override func didReceiveMemoryWarning() {
@@ -56,21 +57,26 @@ class AdvisorViewController: UIViewController,UIWebViewDelegate,UIScrollViewDele
         webView.delegate = self
         //after code when webview finishes
         let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
-     
+        
         webview.stringByEvaluatingJavaScript(from: ls)
         
         //  print("run")
         if countweb==0{
             countweb=1;
-  webview.reload()
+             webview.reload()
         }
-        
+        if webView.isLoading{
+            return
+        }else
+        {
+            webview.isHidden = false
         }
+ }
        
     func addPullToRefreshToWebView(){
         let refreshController:UIRefreshControl = UIRefreshControl()
         
-        refreshController.bounds = CGRect(x:0, y:50, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
+        refreshController.bounds = CGRect(x:0, y:0, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
         refreshController.addTarget(self, action: Selector(("refreshWebView:")), for: UIControlEvents.valueChanged)
         refreshController.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
         webview.scrollView.addSubview(refreshController)

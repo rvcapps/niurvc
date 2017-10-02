@@ -30,9 +30,10 @@ class FaqViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDelegat
     func loadwb()
     {
         if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+              webview.isHidden = true
             let request = URLRequest(url: url)
             webview.loadRequest(request)
-            webview.reload()
+           // webview.reload()
         }
     }
     override func didReceiveMemoryWarning() {
@@ -62,13 +63,19 @@ class FaqViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDelegat
             countweb=1;
             webview.reload()
         }
+        if webView.isLoading{
+            return
+        }else
+        {
+            webview.isHidden = false
+        }
         
     }
     
     func addPullToRefreshToWebView(){
         let refreshController:UIRefreshControl = UIRefreshControl()
         
-        refreshController.bounds = CGRect(x:0, y:50, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
+        refreshController.bounds = CGRect(x:0, y:0, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
         refreshController.addTarget(self, action: Selector(("refreshWebView:")), for: UIControlEvents.valueChanged)
         refreshController.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
         webview.scrollView.addSubview(refreshController)
