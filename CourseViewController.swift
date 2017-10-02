@@ -9,7 +9,7 @@
 import UIKit
 
 
-class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate,UIWebViewDelegate{
+class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate,UIWebViewDelegate,UIScrollViewDelegate{
     var countweb:integer_t!
     @IBOutlet weak var txtSelectMenu: UITextField!
     
@@ -22,19 +22,21 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-txtSelectMenu.delegate = self
-        web.delegate = self
-         countweb=0;
-        loadwb()
-       
+        
+        addPullToRefreshToWebView()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        web.delegate = self
+        countweb=0;
+        loadwb()
     }
     func loadwb()
     {
         if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
             let request = URLRequest(url: url)
             web.loadRequest(request)
-             web.reload()
+            web.reload()
         }
     }
     override func didReceiveMemoryWarning() {
@@ -114,20 +116,32 @@ txtSelectMenu.delegate = self
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-            //after code when webview finishes
-            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+        webView.delegate = self
+        //after code when webview finishes
+        let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         
-         webView.stringByEvaluatingJavaScript(from: ls)
-       //  print("run")
+        web.stringByEvaluatingJavaScript(from: ls)
+        
+        //  print("run")
         if countweb==0{
             countweb=1;
-            let scrollPoint = CGPoint(x: 0, y:txtSelectMenu.frame.origin.y - 44)
-            // webView.scrollView.setContentOffset(scrollPoint, animated: true)//Set false if you doesn't want animation
-            webView.scrollView.setContentOffset(scrollPoint, animated: true)
-            webView.scalesPageToFit = true
-            webView.scrollView.scrollsToTop=true
+            web.reload()
         }
-      
         
+    }
+    
+    func addPullToRefreshToWebView(){
+        let refreshController:UIRefreshControl = UIRefreshControl()
+        
+        refreshController.bounds = CGRect(x:0, y:50, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
+        refreshController.addTarget(self, action: Selector(("refreshWebView:")), for: UIControlEvents.valueChanged)
+        refreshController.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
+        web.scrollView.addSubview(refreshController)
+        
+    }
+    
+    func refreshWebView(refresh:UIRefreshControl){
+        web.reload()
+        refresh.endRefreshing()
     }
 }
