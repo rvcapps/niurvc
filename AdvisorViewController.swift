@@ -11,6 +11,7 @@ import WebKit
 
 class AdvisorViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate {
  var countweb:integer_t!
+ var sv:UIView!
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         self.dismiss(animated: false, completion: nil)
     }
@@ -26,16 +27,18 @@ class AdvisorViewController: UIViewController,UIWebViewDelegate,UIScrollViewDele
     }
     override func viewWillAppear(_ animated: Bool) {
         webview.delegate = self
+        webview.isHidden = true
         countweb=0;
         loadwb()
    }
     func loadwb()
     {
+        sv = UIViewController.displaySpinner(onView: self.view)
         if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
-              webview.isHidden = true
+            webview.scalesPageToFit = true
+            webview.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
             webview.loadRequest(request)
-          // webview.reload()
         }
     }
     override func didReceiveMemoryWarning() {
@@ -53,23 +56,25 @@ class AdvisorViewController: UIViewController,UIWebViewDelegate,UIScrollViewDele
         // Pass the selected object to the new view controller.
     }
     */
+    @objc func cleanweb(){
+        webview.isHidden = false
+        UIViewController.removeSpinner(spinner: sv)
+    }
+    
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        webView.delegate = self
-        //after code when webview finishes
-        let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
-        
-        webview.stringByEvaluatingJavaScript(from: ls)
-        
-        //  print("run")
-        if countweb==0{
-            countweb=1;
-             webview.reload()
-        }
         if webView.isLoading{
+            webView.delegate = self
+            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+            webView.stringByEvaluatingJavaScript(from: ls)
             return
         }else
         {
-            webview.isHidden = false
+            let script = "$('html, body').animate({scrollTop:0}, 'slow')"
+            webView.stringByEvaluatingJavaScript(from: script)
+            print("finished loading web")
+            webView.scrollView.scrollsToTop = true
+            // webView.isHidden = false
+            _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
  }
        

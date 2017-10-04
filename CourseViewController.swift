@@ -11,6 +11,7 @@ import UIKit
 
 class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate,UIWebViewDelegate,UIScrollViewDelegate{
     var countweb:integer_t!
+    var sv:UIView!
     @IBOutlet weak var txtSelectMenu: UITextField!
     
     @IBOutlet weak var pvSelect: UIPickerView!
@@ -27,18 +28,19 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-          web.delegate = self
+        web.delegate = self
+        web.isHidden = true
         countweb=0;
-             loadwb()
-        
+        loadwb()
     }
     func loadwb()
     {
+        sv = UIViewController.displaySpinner(onView: self.view)
         if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
-            web.isHidden = true
+            web.scalesPageToFit = true
+            web.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
             web.loadRequest(request)
-            //web.reload()
         }
     }
     override func didReceiveMemoryWarning() {
@@ -116,30 +118,35 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
         }
         
     }
-    
+    @objc func cleanweb(){
+        web.isHidden = false
+        UIViewController.removeSpinner(spinner: sv)
+    }
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        webView.delegate = self
-        //after code when webview finishes
-        let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
-        
-        web.stringByEvaluatingJavaScript(from: ls)
-        
-        //  print("run")
-        if countweb==0{
-            countweb=1;
-             web.reload()
-            
-        }
         if webView.isLoading{
+            webView.delegate = self
+            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+            webView.stringByEvaluatingJavaScript(from: ls)
             return
         }else
         {
-            web.isHidden = false
+            let script = "$('html, body').animate({scrollTop:0}, 'slow')"
+            webView.stringByEvaluatingJavaScript(from: script)
+            print("finished loading web")
+            webView.scrollView.scrollsToTop = true
+            // webView.isHidden = false
+            _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
-        
-        
     }
    
+//    func webViewScrollToBottom(_ webView: UIWebView)
+//    {
+//        CGFloat() scrollHeight = webView.scrollView.contentSize.height - webView.bounds.size.height;
+//    if (0.0f > scrollHeight)
+//    scrollHeight = 0.0f;
+//    webView.scrollView.contentOffset = CGPointMake(0.0f, scrollHeight);
+//    }
+    
     func addPullToRefreshToWebView(){
         let refreshController:UIRefreshControl = UIRefreshControl()
         
