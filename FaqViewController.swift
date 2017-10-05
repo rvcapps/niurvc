@@ -95,29 +95,5 @@ class FaqViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDelegat
         refresh.endRefreshing()
     }
 }
-extension UIViewController {
-    class func displaySpinner(onView : UIView) -> UIView {
-        let spinnerView = UIView.init(frame: onView.bounds)
-        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
-        ai.startAnimating()
-        ai.center = spinnerView.center
-        var txtField: UITextField = UITextField(frame: CGRect(x: ai.frame.origin.x - 10, y: ai.frame.origin.y, width: 300.00, height: 30.00));
-        txtField.textColor = UIColor.blue
-        txtField.text = "Loading"
-        DispatchQueue.main.async {
-            spinnerView.addSubview(ai)
-            spinnerView.addSubview(txtField)
-            onView.addSubview(spinnerView)
-        }
-        
-        return spinnerView
-    }
-    
-    class func removeSpinner(spinner :UIView) {
-        DispatchQueue.main.async {
-            spinner.removeFromSuperview()
-        }
-    }
-}
+
 

@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,11 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="JI6-cr-cKa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="JI6-cr-cKa">
                                 <rect key="frame" x="0.0" y="0.0" width="342" height="335"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-EM-nHx">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ti3-EM-nHx">
                                 <rect key="frame" x="350" y="153" width="317" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Prospective or current RVC student, contact 
 David Schneider | 815-921-4278 
@@ -39,31 +39,16 @@ mgonser@niu.edu</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gNV-VR-H03">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gNV-VR-H03">
                                 <rect key="frame" x="350" y="8" width="317" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="I4L-gs-STb"/>
-                                    <constraint firstAttribute="width" constant="317" id="RNg-XV-LEJ"/>
-                                </constraints>
                                 <string key="text">NIU Engineering @ RVC is your affordable, industry-integrated source for high-quality education that will build your career. Rockford-area companies have put their support behind this innovative program to build the workforce and engineer Rockford's future. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="JI6-cr-cKa" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="4VZ-VA-xLt"/>
-                            <constraint firstItem="ti3-EM-nHx" firstAttribute="top" secondItem="gNV-VR-H03" secondAttribute="bottom" constant="5" id="EMe-YI-CNh"/>
-                            <constraint firstItem="gNV-VR-H03" firstAttribute="leading" secondItem="ti3-EM-nHx" secondAttribute="leading" id="GxI-ss-h2Z"/>
-                            <constraint firstItem="JI6-cr-cKa" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="SXz-K9-nOg"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="JI6-cr-cKa" secondAttribute="bottom" constant="8" symbolic="YES" id="jT7-Zd-c0E"/>
-                            <constraint firstAttribute="trailing" secondItem="gNV-VR-H03" secondAttribute="trailing" id="kS2-KM-ybD"/>
-                            <constraint firstItem="gNV-VR-H03" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="ob8-aF-MaT"/>
-                            <constraint firstItem="gNV-VR-H03" firstAttribute="leading" secondItem="JI6-cr-cKa" secondAttribute="trailing" constant="8" symbolic="YES" id="qJF-uu-LFK"/>
-                            <constraint firstItem="gNV-VR-H03" firstAttribute="trailing" secondItem="ti3-EM-nHx" secondAttribute="trailing" id="qLD-GD-XsR"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="ti3-EM-nHx" secondAttribute="bottom" constant="8" symbolic="YES" id="sgm-ef-ojk"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home.png" selectedImage="home.png" id="acW-dT-cKf">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
@@ -71,7 +56,7 @@ mgonser@niu.edu</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.7751124437782" y="-320.80000000000001"/>
+            <point key="canvasLocation" x="1033" y="-514"/>
         </scene>
         <!--Course Path-->
         <scene sceneID="wg7-f3-ORb">
@@ -85,12 +70,14 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WIX-sH-I2r">
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WIX-sH-I2r">
                                 <rect key="frame" x="0.0" y="84" width="459" height="259"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Getting Started" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ii0-0j-UEl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Getting Started" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ii0-0j-UEl">
                                 <rect key="frame" x="0.0" y="52" width="459" height="36"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -99,20 +86,13 @@ mgonser@niu.edu</string>
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="hYw-xI-Trt"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="VGs-GJ-7GL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="VGs-GJ-7GL">
                                 <rect key="frame" x="484" y="104" width="183" height="166"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="183" id="lw8-bf-tyK"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uez-1K-caT">
-                                <rect key="frame" x="0.0" y="8" width="667" height="44"/>
-                                <items>
-                                    <navigationItem title="NIU &amp; RVC &quot;Engineering Our Future&quot;" id="ojN-Ji-csk"/>
-                                </items>
-                            </navigationBar>
-                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18k-Wd-1yz">
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18k-Wd-1yz">
                                 <rect key="frame" x="0.0" y="84" width="459" height="166"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.82225672800637728" green="0.90711641311645508" blue="0.5238860933832914" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -120,28 +100,15 @@ mgonser@niu.edu</string>
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="oQi-Rg-3SK"/>
                                 </connections>
                             </pickerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uez-1K-caT">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="NIU &amp; RVC &quot;Engineering Our Future&quot;" id="ojN-Ji-csk"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ii0-0j-UEl" firstAttribute="top" secondItem="Uez-1K-caT" secondAttribute="bottom" id="3m5-Iz-TGy"/>
-                            <constraint firstItem="WIX-sH-I2r" firstAttribute="leading" secondItem="18k-Wd-1yz" secondAttribute="leading" id="43S-7S-Mcd"/>
-                            <constraint firstItem="Uez-1K-caT" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="8E2-SM-DBq"/>
-                            <constraint firstItem="WIX-sH-I2r" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="AxK-gT-5hk"/>
-                            <constraint firstItem="VGs-GJ-7GL" firstAttribute="leading" secondItem="18k-Wd-1yz" secondAttribute="trailing" constant="25" id="CwO-f2-SVI"/>
-                            <constraint firstItem="ii0-0j-UEl" firstAttribute="leading" secondItem="18k-Wd-1yz" secondAttribute="leading" id="ISI-aQ-YQ8"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="VGs-GJ-7GL" secondAttribute="bottom" constant="73" id="La1-7x-Bg5"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="18k-Wd-1yz" secondAttribute="bottom" constant="93" id="Lm6-mI-s71"/>
-                            <constraint firstAttribute="trailing" secondItem="Uez-1K-caT" secondAttribute="trailing" id="Ob2-J0-VEm"/>
-                            <constraint firstItem="18k-Wd-1yz" firstAttribute="top" secondItem="WIX-sH-I2r" secondAttribute="top" id="Sxk-D0-Ppd"/>
-                            <constraint firstItem="Uez-1K-caT" firstAttribute="trailing" secondItem="VGs-GJ-7GL" secondAttribute="trailing" id="U7M-wK-ADe"/>
-                            <constraint firstItem="Uez-1K-caT" firstAttribute="leading" secondItem="ii0-0j-UEl" secondAttribute="leading" id="gvK-60-aiw"/>
-                            <constraint firstItem="18k-Wd-1yz" firstAttribute="top" secondItem="Uez-1K-caT" secondAttribute="bottom" constant="32" id="m82-M4-N8F"/>
-                            <constraint firstItem="Uez-1K-caT" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="maV-sG-irT"/>
-                            <constraint firstItem="VGs-GJ-7GL" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="oTG-dN-NQW"/>
-                            <constraint firstItem="ii0-0j-UEl" firstAttribute="trailing" secondItem="18k-Wd-1yz" secondAttribute="trailing" id="pF3-fm-IoW"/>
-                            <constraint firstItem="VGs-GJ-7GL" firstAttribute="top" secondItem="Uez-1K-caT" secondAttribute="bottom" constant="52" id="qAx-F7-Aj3"/>
-                            <constraint firstItem="18k-Wd-1yz" firstAttribute="trailing" secondItem="WIX-sH-I2r" secondAttribute="trailing" id="ytA-Kx-izN"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Course Path" image="coursepath.png" selectedImage="coursepath.png" id="cPa-gy-q4n"/>
                     <connections>
@@ -152,7 +119,7 @@ mgonser@niu.edu</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.7751124437782" y="396"/>
+            <point key="canvasLocation" x="171" y="353"/>
         </scene>
         <!--Communicate-->
         <scene sceneID="sob-nZ-ex5">
@@ -166,103 +133,70 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mct-kR-YX9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Live Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mct-kR-YX9">
                                 <rect key="frame" x="346" y="204" width="76" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljm-6i-a1M">
-                                <rect key="frame" x="474" y="203" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FAQ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljm-6i-a1M">
+                                <rect key="frame" x="466" y="203" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="niu-rvc-logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sg1-aj-oii">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="niu-rvc-logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sg1-aj-oii">
                                 <rect key="frame" x="10" y="87" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Kad-aV-e1N"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kX5-f3-YCW">
-                                <rect key="frame" x="0.0" y="11" width="667" height="44"/>
-                                <items>
-                                    <navigationItem title="NIU &amp; RVC &quot;Engineering Our Future&quot;" id="gDF-CU-Y9X"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrP-4L-fJz">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrP-4L-fJz">
                                 <rect key="frame" x="353" y="133" width="63" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="63" id="bfh-Tx-uTU"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="icons8-Chat Filled-50Blue.png"/>
                                 <connections>
                                     <segue destination="836-44-PyM" kind="presentation" id="Set-yz-wuN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHd-Do-tAT">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHd-Do-tAT">
                                 <rect key="frame" x="578" y="133" width="63" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="63" id="xWl-JY-FlD"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="icons8-Contacts Filled-50Blue.png"/>
                                 <connections>
                                     <segue destination="kEr-QY-Zsb" kind="presentation" id="us9-Mk-sjE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb8-LU-dZV">
-                                <rect key="frame" x="481" y="133" width="63" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="63" id="xJY-rn-Jq4"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb8-LU-dZV">
+                                <rect key="frame" x="473" y="133" width="63" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="icons8-FAQ-blue.png"/>
                                 <connections>
                                     <segue destination="Yv3-Cs-osS" kind="presentation" id="0Xu-HH-cyW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advisor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lat-fm-v2Y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advisor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lat-fm-v2Y">
                                 <rect key="frame" x="571" y="203" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kX5-f3-YCW">
+                                <rect key="frame" x="0.0" y="20" width="667" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="NIU &amp; RVC &quot;Engineering Our Future&quot;" id="gDF-CU-Y9X"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Ljm-6i-a1M" firstAttribute="leading" secondItem="Mct-kR-YX9" secondAttribute="trailing" constant="52" id="1D3-lP-vhc"/>
-                            <constraint firstItem="Mct-kR-YX9" firstAttribute="centerY" secondItem="Ljm-6i-a1M" secondAttribute="centerY" id="1Fw-FU-lXy"/>
-                            <constraint firstItem="sg1-aj-oii" firstAttribute="top" secondItem="kX5-f3-YCW" secondAttribute="bottom" constant="32" id="1Gm-L2-sfG"/>
-                            <constraint firstItem="Hb8-LU-dZV" firstAttribute="leading" secondItem="SrP-4L-fJz" secondAttribute="trailing" constant="65" id="3nt-ML-QIC"/>
-                            <constraint firstItem="oHd-Do-tAT" firstAttribute="leading" secondItem="Hb8-LU-dZV" secondAttribute="trailing" constant="34" id="4is-f8-Chi"/>
-                            <constraint firstItem="oHd-Do-tAT" firstAttribute="centerX" secondItem="Lat-fm-v2Y" secondAttribute="centerX" id="A7n-kL-J0t"/>
-                            <constraint firstItem="SrP-4L-fJz" firstAttribute="top" secondItem="Hb8-LU-dZV" secondAttribute="top" id="B7g-Np-rOq"/>
-                            <constraint firstItem="Lat-fm-v2Y" firstAttribute="trailing" secondItem="mMa-Gf-1B3" secondAttribute="trailingMargin" id="CVr-pU-oS0"/>
-                            <constraint firstItem="Mct-kR-YX9" firstAttribute="top" secondItem="SrP-4L-fJz" secondAttribute="bottom" constant="8" symbolic="YES" id="HRK-Xx-UNH"/>
-                            <constraint firstAttribute="trailing" secondItem="kX5-f3-YCW" secondAttribute="trailing" id="P4t-yV-xxW"/>
-                            <constraint firstItem="sg1-aj-oii" firstAttribute="leading" secondItem="mMa-Gf-1B3" secondAttribute="leadingMargin" constant="-10" id="Sk9-5l-fWf"/>
-                            <constraint firstItem="Lat-fm-v2Y" firstAttribute="leading" secondItem="Ljm-6i-a1M" secondAttribute="trailing" constant="21" id="UhI-FQ-F2J"/>
-                            <constraint firstItem="Hb8-LU-dZV" firstAttribute="bottom" secondItem="oHd-Do-tAT" secondAttribute="bottom" id="ZPy-NM-n1y"/>
-                            <constraint firstItem="Hb8-LU-dZV" firstAttribute="top" secondItem="oHd-Do-tAT" secondAttribute="top" id="duF-Tq-pAV"/>
-                            <constraint firstItem="Hb8-LU-dZV" firstAttribute="centerX" secondItem="Ljm-6i-a1M" secondAttribute="centerX" id="e9g-dq-NOc"/>
-                            <constraint firstItem="Ljm-6i-a1M" firstAttribute="firstBaseline" secondItem="Lat-fm-v2Y" secondAttribute="firstBaseline" id="jzY-xU-6t7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oHd-Do-tAT" secondAttribute="trailing" constant="6" id="knk-vI-vWN"/>
-                            <constraint firstItem="tyQ-9B-xXq" firstAttribute="top" secondItem="sg1-aj-oii" secondAttribute="bottom" constant="56" id="lMK-9z-a9O"/>
-                            <constraint firstItem="SrP-4L-fJz" firstAttribute="top" secondItem="kX5-f3-YCW" secondAttribute="bottom" constant="78" id="p29-wS-vOk"/>
-                            <constraint firstItem="kX5-f3-YCW" firstAttribute="leading" secondItem="mMa-Gf-1B3" secondAttribute="leading" id="p4k-Kq-KRo"/>
-                            <constraint firstItem="kX5-f3-YCW" firstAttribute="top" secondItem="oSh-qM-MUL" secondAttribute="bottom" constant="11" id="pJU-Eb-DEK"/>
-                            <constraint firstItem="SrP-4L-fJz" firstAttribute="centerX" secondItem="Mct-kR-YX9" secondAttribute="centerX" id="pWG-fX-rhU"/>
-                            <constraint firstItem="SrP-4L-fJz" firstAttribute="bottom" secondItem="Hb8-LU-dZV" secondAttribute="bottom" id="r6D-E1-bAQ"/>
-                            <constraint firstItem="sg1-aj-oii" firstAttribute="centerY" secondItem="mMa-Gf-1B3" secondAttribute="centerY" id="s57-a8-prV"/>
-                            <constraint firstItem="Mct-kR-YX9" firstAttribute="baseline" secondItem="Ljm-6i-a1M" secondAttribute="baseline" id="vPd-ov-xOi"/>
-                            <constraint firstItem="Ljm-6i-a1M" firstAttribute="baseline" secondItem="Lat-fm-v2Y" secondAttribute="baseline" id="xKP-KG-GOg"/>
-                            <constraint firstItem="tyQ-9B-xXq" firstAttribute="top" secondItem="Mct-kR-YX9" secondAttribute="bottom" constant="119" id="z4c-v7-cl4"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Communicate" image="communicate.png" selectedImage="communicate.png" id="kQ8-us-Bf0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDh-fi-ORl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743.47826086956525" y="1092"/>
+            <point key="canvasLocation" x="-2" y="890"/>
         </scene>
         <!--Advisor View Controller-->
         <scene sceneID="xlO-I6-dze">
@@ -276,8 +210,9 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfi-ND-1F4">
-                                <rect key="frame" x="0.0" y="8" width="667" height="32"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lfi-ND-1F4">
+                                <rect key="frame" x="0.0" y="20" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Advisor" id="1cl-OJ-wdP">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="5L0-ui-XP7">
@@ -288,21 +223,13 @@ mgonser@niu.edu</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofd-Pt-YfN">
-                                <rect key="frame" x="0.0" y="40" width="667" height="335"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ofd-Pt-YfN">
+                                <rect key="frame" x="0.0" y="52" width="667" height="323"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Lfi-ND-1F4" firstAttribute="leading" secondItem="ofd-Pt-YfN" secondAttribute="leading" id="0Lb-cF-T3C"/>
-                            <constraint firstItem="Lfi-ND-1F4" firstAttribute="leading" secondItem="qSH-GL-VqO" secondAttribute="leading" id="TGI-x0-J2w"/>
-                            <constraint firstAttribute="trailing" secondItem="Lfi-ND-1F4" secondAttribute="trailing" id="V4Q-UJ-cS0"/>
-                            <constraint firstItem="ofd-Pt-YfN" firstAttribute="top" secondItem="Lfi-ND-1F4" secondAttribute="bottom" id="VRg-ed-MQs"/>
-                            <constraint firstItem="ofd-Pt-YfN" firstAttribute="bottom" secondItem="uMD-w0-Gnf" secondAttribute="top" id="aMg-Zc-OMa"/>
-                            <constraint firstItem="Lfi-ND-1F4" firstAttribute="trailing" secondItem="ofd-Pt-YfN" secondAttribute="trailing" id="hQ1-Xf-nGz"/>
-                            <constraint firstItem="Lfi-ND-1F4" firstAttribute="top" secondItem="SHr-Q8-85i" secondAttribute="bottom" constant="8" id="zq0-My-ODZ"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="nav" destination="Lfi-ND-1F4" id="suQ-0J-Q4u"/>
@@ -311,7 +238,7 @@ mgonser@niu.edu</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97y-EW-1Hr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1366.8665667166417" y="264.80000000000001"/>
+            <point key="canvasLocation" x="1368" y="228"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="OVR-HW-UWx">
@@ -325,8 +252,14 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7x-G0-qhn">
-                                <rect key="frame" x="0.0" y="8" width="667" height="32"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gsF-DS-ZrR">
+                                <rect key="frame" x="0.0" y="52" width="667" height="323"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7x-G0-qhn">
+                                <rect key="frame" x="0.0" y="20" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Live Chat" id="k3U-gv-Ps3">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="vOq-AJ-d1v">
@@ -337,21 +270,8 @@ mgonser@niu.edu</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gsF-DS-ZrR">
-                                <rect key="frame" x="0.0" y="40" width="667" height="335"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gsF-DS-ZrR" firstAttribute="top" secondItem="X7x-G0-qhn" secondAttribute="bottom" id="Mho-ql-VQT"/>
-                            <constraint firstItem="X7x-G0-qhn" firstAttribute="top" secondItem="Bsk-za-PKh" secondAttribute="bottom" constant="8" id="TnE-Id-PDk"/>
-                            <constraint firstItem="X7x-G0-qhn" firstAttribute="leading" secondItem="gsF-DS-ZrR" secondAttribute="leading" id="fPG-wG-jLl"/>
-                            <constraint firstItem="X7x-G0-qhn" firstAttribute="trailing" secondItem="gsF-DS-ZrR" secondAttribute="trailing" id="njW-K9-auV"/>
-                            <constraint firstItem="X7x-G0-qhn" firstAttribute="leading" secondItem="de9-i8-G59" secondAttribute="leading" id="pGy-C5-SU6"/>
-                            <constraint firstItem="gsF-DS-ZrR" firstAttribute="bottom" secondItem="x99-OC-pSz" secondAttribute="top" id="pxp-lc-xJf"/>
-                            <constraint firstAttribute="trailing" secondItem="X7x-G0-qhn" secondAttribute="trailing" id="rLi-CQ-cnX"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="web" destination="gsF-DS-ZrR" id="CRp-3P-LLK"/>
@@ -359,7 +279,7 @@ mgonser@niu.edu</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B7O-dp-Ve1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368" y="975"/>
+            <point key="canvasLocation" x="1367.7661169415294" y="973.60000000000002"/>
         </scene>
         <!--Faq View Controller-->
         <scene sceneID="Exb-PP-HJ0">
@@ -373,8 +293,9 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3Y-1K-upp">
-                                <rect key="frame" x="0.0" y="8" width="667" height="32"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3Y-1K-upp">
+                                <rect key="frame" x="0.0" y="20" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="FAQ" id="ciS-iK-AuS">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="43B-V1-D3g">
@@ -385,21 +306,13 @@ mgonser@niu.edu</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1l4-xc-DF2">
-                                <rect key="frame" x="0.0" y="40" width="667" height="335"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1l4-xc-DF2">
+                                <rect key="frame" x="0.0" y="52" width="667" height="323"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="c3Y-1K-upp" secondAttribute="trailing" id="3aJ-mO-7aM"/>
-                            <constraint firstItem="c3Y-1K-upp" firstAttribute="trailing" secondItem="1l4-xc-DF2" secondAttribute="trailing" id="Bs6-W5-63v"/>
-                            <constraint firstItem="c3Y-1K-upp" firstAttribute="leading" secondItem="1l4-xc-DF2" secondAttribute="leading" id="tBs-Iu-ey1"/>
-                            <constraint firstItem="c3Y-1K-upp" firstAttribute="top" secondItem="fZ2-tn-xXc" secondAttribute="bottom" constant="8" id="vtg-0m-Ial"/>
-                            <constraint firstItem="1l4-xc-DF2" firstAttribute="bottom" secondItem="bLC-qx-jYg" secondAttribute="top" id="wwM-bn-Svv"/>
-                            <constraint firstItem="c3Y-1K-upp" firstAttribute="leading" secondItem="f0I-6I-7Bh" secondAttribute="leading" id="x0V-8V-LRm"/>
-                            <constraint firstItem="1l4-xc-DF2" firstAttribute="top" secondItem="c3Y-1K-upp" secondAttribute="bottom" id="ziN-Fa-9dc"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webview" destination="1l4-xc-DF2" id="wkB-wQ-39Z"/>
@@ -421,31 +334,23 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RRE-Zc-g9J">
-                                <rect key="frame" x="0.0" y="52" width="667" height="291"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRE-Zc-g9J">
+                                <rect key="frame" x="0.0" y="64" width="667" height="279"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="6x5-qE-8w0" id="cJX-BN-K0p"/>
                                 </connections>
                             </webView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BbQ-ER-seC">
-                                <rect key="frame" x="0.0" y="23" width="667" height="44"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BbQ-ER-seC">
+                                <rect key="frame" x="0.0" y="20" width="667" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="NIU &amp; RVC &quot;Engineering Our Future&quot;" id="VsH-wO-YcC"/>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="RRE-Zc-g9J" firstAttribute="top" secondItem="0AQ-qu-z17" secondAttribute="bottom" constant="52" id="0lU-KW-ARF"/>
-                            <constraint firstItem="BbQ-ER-seC" firstAttribute="leading" secondItem="6x5-qE-8w0" secondAttribute="leading" id="D6K-63-loD"/>
-                            <constraint firstAttribute="trailing" secondItem="BbQ-ER-seC" secondAttribute="trailing" id="FW0-Aj-jCm"/>
-                            <constraint firstItem="BbQ-ER-seC" firstAttribute="trailing" secondItem="RRE-Zc-g9J" secondAttribute="trailing" id="Fww-La-Ycn"/>
-                            <constraint firstItem="BbQ-ER-seC" firstAttribute="leading" secondItem="RRE-Zc-g9J" secondAttribute="leading" id="H6d-xP-pDw"/>
-                            <constraint firstItem="o2k-PA-qcA" firstAttribute="top" secondItem="BbQ-ER-seC" secondAttribute="bottom" constant="276" id="MxW-np-8EN"/>
-                            <constraint firstItem="RRE-Zc-g9J" firstAttribute="bottom" secondItem="o2k-PA-qcA" secondAttribute="top" id="bX0-9G-4FJ"/>
-                            <constraint firstItem="BbQ-ER-seC" firstAttribute="top" secondItem="0AQ-qu-z17" secondAttribute="bottom" constant="23" id="tPN-BS-1j5"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Media" image="video.png" selectedImage="video.png" id="n65-hJ-f6S"/>
                     <connections>
@@ -454,7 +359,7 @@ mgonser@niu.edu</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJ1-E8-BQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.4977511244378" y="1872.8"/>
+            <point key="canvasLocation" x="736.28185907046486" y="1752.8"/>
         </scene>
         <!--Partners-->
         <scene sceneID="QQK-L2-4XT">
@@ -481,20 +386,20 @@ mgonser@niu.edu</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-Nf-Rov">
+                                <rect key="frame" x="184" y="51" width="483" height="292"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv4-Bq-uD3">
-                                <rect key="frame" x="0.0" y="64" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="51" width="148" height="85"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="titleEdgeInsets" minX="-52" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-67" maxY="22"/>
                                 <state key="normal" title="Partners" image="icons8-Contacts Filled-50Blue.png">
                                     <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-Nf-Rov">
-                                <rect key="frame" x="257" y="82" width="390" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -521,15 +426,6 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL6-tm-64f">
-                                <rect key="frame" x="0.0" y="64" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-89" maxY="22"/>
-                                <state key="normal" title="Happenings" image="icons8-Calendar Filled-50Blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVd-Lh-u58">
                                 <rect key="frame" x="0.0" y="20" width="667" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -544,10 +440,19 @@ mgonser@niu.edu</string>
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="neI-pF-CYD">
-                                <rect key="frame" x="233" y="86" width="388" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="183" y="54" width="483" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL6-tm-64f">
+                                <rect key="frame" x="0.0" y="54" width="148" height="85"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-89" maxY="22"/>
+                                <state key="normal" title="Happenings" image="icons8-Calendar Filled-50Blue.png">
+                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -560,7 +465,7 @@ mgonser@niu.edu</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RYE-DS-GUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-696" y="2033"/>
+            <point key="canvasLocation" x="-696.7016491754124" y="2032.8"/>
         </scene>
         <!--Sub Tab Bar Controller-->
         <scene sceneID="xNi-cU-rC2">
@@ -581,7 +486,7 @@ mgonser@niu.edu</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSM-PQ-whn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1514" y="2046"/>
+            <point key="canvasLocation" x="-1425" y="2129"/>
         </scene>
         <!--Connections-->
         <scene sceneID="D36-Zo-CqD">
@@ -595,84 +500,66 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-LU-sQp">
-                                <rect key="frame" x="0.0" y="20" width="667" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="mcf-7U-W2w"/>
-                                </constraints>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-LU-sQp">
+                                <rect key="frame" x="0.0" y="21" width="667" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="NIU &amp; RVC &quot;Engineering Our Future&quot;" id="y0m-jX-85C"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHW-KT-148">
-                                <rect key="frame" x="498" y="219" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHW-KT-148">
+                                <rect key="frame" x="452" y="191" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <inset key="titleEdgeInsets" minX="-21" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="27" minY="0.0" maxX="-8" maxY="24"/>
-                                <state key="normal" title="Links" image="icons8-Link Filled-50blue.png">
+                                <state key="normal" image="icons8-Link Filled-50blue.png">
                                     <color key="titleColor" red="0.12114353477954865" green="0.31837347149848938" blue="0.5479966402053833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="aqn-kB-hfP" kind="presentation" identifier="ImportantLinks" id="LVG-dU-pTm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-Yw-ZEE">
-                                <rect key="frame" x="283" y="65" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="tRm-Is-Y5x"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-Yw-ZEE">
+                                <rect key="frame" x="283" y="83" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <inset key="titleEdgeInsets" minX="-52" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="22"/>
-                                <state key="normal" title="Partners" image="icons8-Contacts Filled-50Blue.png">
+                                <state key="normal" image="icons8-Contacts Filled-50Blue.png">
                                     <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="aqn-kB-hfP" kind="presentation" identifier="Partners" id="YtA-78-AMB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="niu-rvc-logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vgc-pH-oqV">
-                                <rect key="frame" x="283" y="225" width="101" height="85"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="Dbh-k1-yYP"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="niu-rvc-logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vgc-pH-oqV">
+                                <rect key="frame" x="283" y="191" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axL-ln-H63">
-                                <rect key="frame" x="70" y="211" width="100" height="102"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axL-ln-H63">
+                                <rect key="frame" x="115" y="191" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <inset key="titleEdgeInsets" minX="-50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-68" maxY="22"/>
-                                <state key="normal" title="Internship" image="icons8-New Job Filled-50blue.png">
+                                <state key="normal" image="icons8-New Job Filled-50blue.png">
                                     <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="aqn-kB-hfP" kind="presentation" identifier="JobInternship" id="5cS-Vv-W0W"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvS-sB-ejW">
-                                <rect key="frame" x="498" y="65" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="zvL-yE-KrF"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvS-sB-ejW">
+                                <rect key="frame" x="452" y="83" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <inset key="titleEdgeInsets" minX="-50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="21" minY="0.0" maxX="0.0" maxY="24"/>
-                                <state key="normal" title="Social" image="icons8-Share Filled-50blue.png">
+                                <state key="normal" image="icons8-Share Filled-50blue.png">
                                     <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="96I-mw-b5Z" kind="presentation" identifier="SocialMedia" id="7Xl-bS-dtg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6d-gW-cEz">
-                                <rect key="frame" x="70" y="65" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="IeB-M4-qN3"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6d-gW-cEz">
+                                <rect key="frame" x="115" y="83" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <inset key="titleEdgeInsets" minX="-59" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="22"/>
-                                <state key="normal" title="Happenings" image="icons8-Calendar Filled-50Blue.png">
+                                <state key="normal" title="Events" image="icons8-Calendar Filled-50Blue.png">
                                     <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -681,37 +568,19 @@ mgonser@niu.edu</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="yTN-Yw-ZEE" firstAttribute="leading" secondItem="vgc-pH-oqV" secondAttribute="leading" id="6gr-zd-774"/>
-                            <constraint firstItem="M6d-gW-cEz" firstAttribute="bottom" secondItem="yTN-Yw-ZEE" secondAttribute="bottom" id="BWW-nR-kYC"/>
-                            <constraint firstItem="axL-ln-H63" firstAttribute="top" secondItem="M6d-gW-cEz" secondAttribute="bottom" constant="46" id="Fqz-ht-gHc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JvS-sB-ejW" secondAttribute="trailing" constant="49" id="Gew-CA-Wz4"/>
-                            <constraint firstItem="JvS-sB-ejW" firstAttribute="trailing" secondItem="UHW-KT-148" secondAttribute="trailing" id="HvT-VR-jhO"/>
-                            <constraint firstItem="hfk-LU-sQp" firstAttribute="top" secondItem="Hld-kB-rDm" secondAttribute="bottom" constant="20" id="InT-eO-ScR"/>
-                            <constraint firstItem="M6d-gW-cEz" firstAttribute="leading" secondItem="axL-ln-H63" secondAttribute="leading" id="JCF-kf-tWV"/>
-                            <constraint firstItem="vgc-pH-oqV" firstAttribute="top" secondItem="yTN-Yw-ZEE" secondAttribute="bottom" constant="60" id="JoU-YL-tgL"/>
-                            <constraint firstItem="JCa-IR-DQG" firstAttribute="top" secondItem="UHW-KT-148" secondAttribute="bottom" constant="24" id="Llc-vc-dFc"/>
-                            <constraint firstItem="yTN-Yw-ZEE" firstAttribute="top" secondItem="JvS-sB-ejW" secondAttribute="top" id="P5N-Ua-Vnk"/>
-                            <constraint firstItem="JCa-IR-DQG" firstAttribute="top" secondItem="vgc-pH-oqV" secondAttribute="bottom" constant="33" id="QdD-eh-66V"/>
-                            <constraint firstItem="UHW-KT-148" firstAttribute="top" secondItem="JvS-sB-ejW" secondAttribute="bottom" constant="54" id="SfK-dg-T0Z"/>
-                            <constraint firstItem="M6d-gW-cEz" firstAttribute="trailing" secondItem="axL-ln-H63" secondAttribute="trailing" id="Ty8-8H-t2t"/>
-                            <constraint firstItem="hfk-LU-sQp" firstAttribute="leading" secondItem="rNe-sI-ipY" secondAttribute="leading" id="UhW-XJ-48A"/>
-                            <constraint firstItem="yTN-Yw-ZEE" firstAttribute="centerX" secondItem="vgc-pH-oqV" secondAttribute="centerX" id="Vra-yY-aLt"/>
-                            <constraint firstItem="M6d-gW-cEz" firstAttribute="top" secondItem="hfk-LU-sQp" secondAttribute="bottom" constant="1" id="dnb-bv-VWE"/>
-                            <constraint firstItem="JCa-IR-DQG" firstAttribute="top" secondItem="axL-ln-H63" secondAttribute="bottom" constant="30" id="e98-J2-0yD"/>
-                            <constraint firstItem="JvS-sB-ejW" firstAttribute="leading" secondItem="UHW-KT-148" secondAttribute="leading" id="gAd-nh-LAK"/>
-                            <constraint firstItem="M6d-gW-cEz" firstAttribute="leading" secondItem="rNe-sI-ipY" secondAttribute="leadingMargin" constant="50" id="gZA-eT-iI7"/>
-                            <constraint firstItem="yTN-Yw-ZEE" firstAttribute="baseline" secondItem="JvS-sB-ejW" secondAttribute="baseline" id="j4T-fB-uWu"/>
-                            <constraint firstItem="hfk-LU-sQp" firstAttribute="centerX" secondItem="yTN-Yw-ZEE" secondAttribute="centerX" id="j6t-dQ-5Yq"/>
-                            <constraint firstAttribute="trailing" secondItem="hfk-LU-sQp" secondAttribute="trailing" id="odp-LY-dmI"/>
-                            <constraint firstItem="M6d-gW-cEz" firstAttribute="top" secondItem="yTN-Yw-ZEE" secondAttribute="top" id="uuf-Tr-L0Z"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Connections" image="connections.png" selectedImage="connections.png" id="mYP-bW-Xrw"/>
+                    <connections>
+                        <outlet property="btnEvents" destination="M6d-gW-cEz" id="6nN-DY-9EA"/>
+                        <outlet property="btnInterns" destination="axL-ln-H63" id="Ya3-2Z-alN"/>
+                        <outlet property="btnLinks" destination="UHW-KT-148" id="Ohf-ZB-F6t"/>
+                        <outlet property="btnPartners" destination="yTN-Yw-ZEE" id="z3N-Mj-YDn"/>
+                        <outlet property="btnSocial" destination="JvS-sB-ejW" id="nrI-IV-Zuk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYX-Wc-AFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2534.4827586206898" y="2080.8000000000002"/>
+            <point key="canvasLocation" x="-1865" y="1418"/>
         </scene>
         <!--JobIntership-->
         <scene sceneID="bxi-c3-9pU">
@@ -725,26 +594,14 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-lA-hbJ">
-                                <rect key="frame" x="0.0" y="64" width="148" height="85"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="148" id="sm1-ki-yuV"/>
-                                </constraints>
-                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-117" maxY="22"/>
-                                <state key="normal" title="Job / Internship" image="icons8-New Job Filled-50blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoL-7x-hKu">
-                                <rect key="frame" x="156" y="101" width="491" height="217"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WoL-7x-hKu">
+                                <rect key="frame" x="184" y="52" width="483" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7R-I9-a3z">
-                                <rect key="frame" x="0.0" y="28" width="667" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="ODs-ca-vTN"/>
-                                </constraints>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S7R-I9-a3z">
+                                <rect key="frame" x="0.0" y="20" width="667" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="NIU &amp; RVC &quot;Engineering Our Future&quot;" id="IdH-ZD-K20">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="hLw-R9-AUv">
@@ -755,20 +612,17 @@ mgonser@niu.edu</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-lA-hbJ">
+                                <rect key="frame" x="0.0" y="52" width="148" height="85"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-117" maxY="22"/>
+                                <state key="normal" title="Job / Internship" image="icons8-New Job Filled-50blue.png">
+                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="S7R-I9-a3z" firstAttribute="leading" secondItem="hXH-xE-1d8" secondAttribute="leading" id="7Be-RA-3Iz"/>
-                            <constraint firstItem="WoL-7x-hKu" firstAttribute="trailing" secondItem="hXH-xE-1d8" secondAttribute="trailingMargin" id="KUn-0k-fgs"/>
-                            <constraint firstItem="dps-uq-ba3" firstAttribute="top" secondItem="WoL-7x-hKu" secondAttribute="bottom" constant="25" id="LxB-eC-2WK"/>
-                            <constraint firstItem="WoL-7x-hKu" firstAttribute="top" secondItem="S7R-I9-a3z" secondAttribute="bottom" constant="29" id="e7W-X9-vDL"/>
-                            <constraint firstItem="dps-uq-ba3" firstAttribute="top" secondItem="Odj-lA-hbJ" secondAttribute="bottom" constant="194" id="fJv-os-mlS"/>
-                            <constraint firstAttribute="trailing" secondItem="S7R-I9-a3z" secondAttribute="trailing" id="gAs-1U-log"/>
-                            <constraint firstItem="S7R-I9-a3z" firstAttribute="top" secondItem="kZa-JE-jyp" secondAttribute="bottom" constant="28" id="gwZ-vS-Yx7"/>
-                            <constraint firstItem="WoL-7x-hKu" firstAttribute="leading" secondItem="Odj-lA-hbJ" secondAttribute="trailing" constant="8" symbolic="YES" id="mK4-qQ-WeV"/>
-                            <constraint firstItem="S7R-I9-a3z" firstAttribute="leading" secondItem="Odj-lA-hbJ" secondAttribute="leading" id="nf8-Mn-GRu"/>
-                            <constraint firstItem="Odj-lA-hbJ" firstAttribute="top" secondItem="kZa-JE-jyp" secondAttribute="bottom" constant="64" id="oXy-so-ZJZ"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Job / Internship" image="icons8-New Job Filled-50blue.png" id="Qbk-SW-HFF">
                         <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
@@ -829,13 +683,13 @@ mgonser@niu.edu</string>
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oih-ll-myc">
-                                <rect key="frame" x="173" y="72" width="474" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="173" y="53" width="494" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTJ-BK-ven">
                                 <rect key="frame" x="0.0" y="64" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-89" maxY="22"/>
                                 <state key="normal" title="Scholarhips" image="scholarship-3-512blue.png">
@@ -854,7 +708,7 @@ mgonser@niu.edu</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQ5-9r-OfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-501" y="4634"/>
+            <point key="canvasLocation" x="-501.49925037481262" y="4632.8000000000002"/>
         </scene>
         <!--SocialMedia-->
         <scene sceneID="f6B-1q-A4C">
@@ -882,8 +736,8 @@ mgonser@niu.edu</string>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvt-9b-Avd">
-                                <rect key="frame" x="0.0" y="64" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="55" width="148" height="85"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-89" maxY="24"/>
                                 <state key="normal" title="Social Media" image="icons8-Share Filled-50blue.png">
@@ -891,8 +745,8 @@ mgonser@niu.edu</string>
                                 </state>
                             </button>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e3c-4O-rbK">
-                                <rect key="frame" x="291" y="78" width="300" height="277"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="184" y="55" width="483" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
@@ -907,7 +761,7 @@ mgonser@niu.edu</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNE-cE-plx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1514.392803598201" y="3493.5999999999999"/>
+            <point key="canvasLocation" x="-1387" y="3369"/>
         </scene>
         <!--ImportantLinks-->
         <scene sceneID="O78-vf-ld1">
@@ -921,11 +775,9 @@ mgonser@niu.edu</string>
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5n-j4-ZHw">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q5n-j4-ZHw">
                                 <rect key="frame" x="0.0" y="20" width="667" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="ItN-8a-6RG"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="NIU &amp; RVC &quot;Engineering Our Future&quot;" id="6Iz-bv-12t">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Hr3-Wa-eeX">
@@ -936,52 +788,22 @@ mgonser@niu.edu</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkd-kr-rB7">
-                                <rect key="frame" x="0.0" y="64" width="148" height="85"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="148" id="8m2-Wt-Kmg"/>
-                                    <constraint firstAttribute="height" constant="85" id="mpa-qY-aZc"/>
-                                </constraints>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-qH-y2K">
+                                <rect key="frame" x="184" y="53" width="483" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkd-kr-rB7">
+                                <rect key="frame" x="0.0" y="53" width="148" height="85"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-114" maxY="22"/>
                                 <state key="normal" title="Important Links" image="icons8-Link Filled-50blue.png">
                                     <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-qH-y2K">
-                                <rect key="frame" x="266" y="77" width="337" height="241"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="337" id="pZc-94-1QN"/>
-                                </constraints>
-                            </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-6l-Bsi">
-                                <rect key="frame" x="0.0" y="217" width="148" height="85"/>
-                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-89" maxY="22"/>
-                                <state key="normal" title="Scholarhips" image="scholarship-3-512blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aqn-kB-hfP" kind="presentation" identifier="Scholarships" id="iEv-tr-rUf"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="q5n-j4-ZHw" firstAttribute="leading" secondItem="bkd-kr-rB7" secondAttribute="leading" id="PTN-l5-Fws"/>
-                            <constraint firstItem="YgS-Yn-27U" firstAttribute="top" secondItem="dNd-6l-Bsi" secondAttribute="bottom" constant="41" id="SR5-m4-wQf"/>
-                            <constraint firstItem="bkd-kr-rB7" firstAttribute="leading" secondItem="dNd-6l-Bsi" secondAttribute="leading" id="WTZ-Jm-ptk"/>
-                            <constraint firstItem="YgS-Yn-27U" firstAttribute="top" secondItem="Dje-qH-y2K" secondAttribute="bottom" constant="25" id="YUO-n5-Yhe"/>
-                            <constraint firstItem="q5n-j4-ZHw" firstAttribute="top" secondItem="iUr-np-j1b" secondAttribute="bottom" constant="20" id="aF5-HJ-dGo"/>
-                            <constraint firstItem="dNd-6l-Bsi" firstAttribute="top" secondItem="bkd-kr-rB7" secondAttribute="bottom" constant="68" id="adO-GR-kpa"/>
-                            <constraint firstItem="bkd-kr-rB7" firstAttribute="top" secondItem="q5n-j4-ZHw" secondAttribute="bottom" id="hvN-IE-ECD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Dje-qH-y2K" secondAttribute="trailing" constant="44" id="kVD-7i-afp"/>
-                            <constraint firstItem="Dje-qH-y2K" firstAttribute="top" secondItem="q5n-j4-ZHw" secondAttribute="bottom" constant="13" id="msh-xe-BPG"/>
-                            <constraint firstItem="bkd-kr-rB7" firstAttribute="trailing" secondItem="dNd-6l-Bsi" secondAttribute="trailing" id="nFO-qr-THO"/>
-                            <constraint firstAttribute="trailing" secondItem="q5n-j4-ZHw" secondAttribute="trailing" id="nLG-0a-gMV"/>
-                            <constraint firstItem="q5n-j4-ZHw" firstAttribute="leading" secondItem="Fje-be-LoZ" secondAttribute="leading" id="pS0-4L-nHZ"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Importank Links" image="icons8-Link Filled-50blue.png" id="4xb-YY-cmE">
                         <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
@@ -992,7 +814,7 @@ mgonser@niu.edu</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Dt-wr-3E2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500.59970014992507" y="2768.8000000000002"/>
+            <point key="canvasLocation" x="-697" y="2748"/>
         </scene>
     </scenes>
     <resources>

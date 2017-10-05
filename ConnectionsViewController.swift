@@ -10,9 +10,37 @@ import UIKit
 
 class ConnectionsViewController: UIViewController {
 
+    @IBOutlet weak var btnEvents: UIButton!
+    
+    @IBOutlet weak var btnPartners: UIButton!
+    
+    @IBOutlet weak var btnSocial: UIButton!
+    
+    @IBOutlet weak var btnInterns: UIButton!
+    
+    @IBOutlet weak var btnLinks: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      btnEvents.setTitle("Happenings",for: .normal)
+       btnEvents.alignImageAndTitleVertically(padding: -30)
+        
+        btnPartners.setTitle("Partners",for: .normal)
+        btnPartners.alignImageAndTitleVertically(padding: -30)
+        
+        btnSocial.setTitle("Social",for: .normal)
+        btnSocial.alignImageAndTitleVertically(padding: -30)
+        
+        btnInterns.setTitle("Internships",for: .normal)
+        btnInterns.alignImageAndTitleVertically(padding: -30)
+        
+     
+        btnLinks.setTitle("Links",for: .normal)
+        btnLinks.alignImageAndTitleVertically(padding: -30)
+        
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -75,5 +103,27 @@ class ConnectionsViewController: UIViewController {
     
     
 }
-
+extension UIButton {
+    
+    func alignImageAndTitleVertically(padding: CGFloat = 0.0) {
+        let imageSize = self.imageView!.frame.size
+        let titleSize = self.titleLabel!.frame.size
+        let totalHeight = imageSize.height + titleSize.height + padding
+        
+        self.imageEdgeInsets = UIEdgeInsets(
+            top: -(totalHeight - imageSize.height),
+            left: 0,
+            bottom: 0,
+            right: -titleSize.width
+        )
+        
+        self.titleEdgeInsets = UIEdgeInsets(
+            top: 0,
+            left: -imageSize.width,
+            bottom: -(totalHeight - titleSize.height),
+            right: 0
+        )
+    }
+    
+}
 
