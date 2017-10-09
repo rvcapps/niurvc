@@ -23,20 +23,20 @@ class ConnectionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       btnEvents.setTitle("Happenings",for: .normal)
-       btnEvents.alignImageAndTitleVertically(padding: -30)
+       btnEvents.alignImageAndTitleVertically(padding: 20)
         
         btnPartners.setTitle("Partners",for: .normal)
-        btnPartners.alignImageAndTitleVertically(padding: -30)
+        btnPartners.alignImageAndTitleVertically(padding: 20)
         
         btnSocial.setTitle("Social",for: .normal)
-        btnSocial.alignImageAndTitleVertically(padding: -30)
+        btnSocial.alignImageAndTitleVertically(padding: 20)
         
         btnInterns.setTitle("Internships",for: .normal)
-        btnInterns.alignImageAndTitleVertically(padding: -30)
+        btnInterns.alignImageAndTitleVertically(padding: 20)
         
      
         btnLinks.setTitle("Links",for: .normal)
-        btnLinks.alignImageAndTitleVertically(padding: -30)
+        btnLinks.alignImageAndTitleVertically(padding: 20)
         
         
         

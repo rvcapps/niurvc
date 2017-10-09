@@ -10,6 +10,7 @@ import UIKit
 
 
 class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate,UIWebViewDelegate,UIScrollViewDelegate{
+     var refreshController = UIRefreshControl()
     var countweb:integer_t!
     var sv:UIView!
     @IBOutlet weak var txtSelectMenu: UITextField!
@@ -19,24 +20,27 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var web: UIWebView!
    
-    var list = ["Select below","Getting Started", "Mechanical Engineering","Manufacturing Technology"]
+    var list = ["Getting Started", "Mechanical Engineering","Manufacturing Technology"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-         addPullToRefreshToWebView()
+        web.delegate = self
+        addPullToRefreshToWebView()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        web.delegate = self
-        web.isHidden = true
-        countweb=0;
-        loadwb()
+        if Reachability.isConnectedToNetwork(){
+            web.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
     }
     func loadwb()
     {
-        sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+          if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+            sv = UIViewController.displaySpinner(onView: self.view)
             web.scalesPageToFit = true
             web.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
@@ -72,34 +76,42 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
          countweb=0;
         self.txtSelectMenu.text = self.list[row]
-        if row == 1
+        if row == 0
         {
-            //web.loadRequest(URLRequest(url: URL(string: "http://google.com")!))
-            web.delegate = self
+            web.isHidden = true
+            countweb=0;
+            sv = UIViewController.displaySpinner(onView: self.view)
             if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+                web.scalesPageToFit = true
+                web.contentMode = .scaleAspectFit
                 let request = URLRequest(url: url)
                 web.loadRequest(request)
             }
            
         }
-        if row == 2
+        if row == 1
         {
-            //web.loadRequest(URLRequest(url: URL(string: "http://google.com")!))
-            web.delegate = self
-            if let url = URL(string: "https://www.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/index.cfm#cs_control_168893") {
+            web.isHidden = true
+            countweb=0;
+            sv = UIViewController.displaySpinner(onView: self.view)
+            if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/mechanicalengineering.cfm") {
+                web.scalesPageToFit = true
+                web.contentMode = .scaleAspectFit
                 let request = URLRequest(url: url)
                 web.loadRequest(request)
             }
             
         }
-        if row == 3
+        if row == 2
         {
-            //web.loadRequest(URLRequest(url: URL(string: "http://google.com")!))
-            web.delegate = self
-            if let url = URL(string: "https://www.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/index.cfm#cs_control_168893") {
+            web.isHidden = true
+            countweb=0;
+            sv = UIViewController.displaySpinner(onView: self.view)
+            if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/manufacturingtechnology.cfm") {
+                web.scalesPageToFit = true
+                web.contentMode = .scaleAspectFit
                 let request = URLRequest(url: url)
                 web.loadRequest(request)
-               
             }
             
         }
@@ -119,46 +131,54 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
         
     }
     @objc func cleanweb(){
-        web.isHidden = false
+        let ls = "$(document).ready(function() { $('.powered-by').hide();$('.toggle-options').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+        web.stringByEvaluatingJavaScript(from: ls)
         UIViewController.removeSpinner(spinner: sv)
+        let script = "$('html, body').animate({scrollTop:0}, 'slow')"
+        web.stringByEvaluatingJavaScript(from: script)
+           web.isHidden = false
+        print("cleanweb")
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading{
             webView.delegate = self
+            // $('.powered-by').hide();
             let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
             webView.stringByEvaluatingJavaScript(from: ls)
             return
         }else
         {
-            let script = "$('html, body').animate({scrollTop:0}, 'slow')"
-            webView.stringByEvaluatingJavaScript(from: script)
-            print("finished loading web")
             webView.scrollView.scrollsToTop = true
-            // webView.isHidden = false
+            print("else webViewDidFinishLoad")
             _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
     }
    
-//    func webViewScrollToBottom(_ webView: UIWebView)
-//    {
-//        CGFloat() scrollHeight = webView.scrollView.contentSize.height - webView.bounds.size.height;
-//    if (0.0f > scrollHeight)
-//    scrollHeight = 0.0f;
-//    webView.scrollView.contentOffset = CGPointMake(0.0f, scrollHeight);
-//    }
     
-    func addPullToRefreshToWebView(){
-        let refreshController:UIRefreshControl = UIRefreshControl()
-        
-        refreshController.bounds = CGRect(x:0, y:0, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
-        refreshController.addTarget(self, action: Selector(("refreshWebView:")), for: UIControlEvents.valueChanged)
-        refreshController.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
-        web.scrollView.addSubview(refreshController)
-        
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+       // web.isHidden = false
+       // UIViewController.removeSpinner(spinner: sv)
     }
     
-    func refreshWebView(refresh:UIRefreshControl){
-        web.reload()
-        refresh.endRefreshing()
+    func addPullToRefreshToWebView(){
+      
+            refreshController = UIRefreshControl()
+            refreshController.bounds = CGRect(x:0, y:0, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
+            refreshController.addTarget(self, action: #selector(refreshWebView(refresh:)), for: UIControlEvents.valueChanged)
+            refreshController.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
+            web.scrollView.addSubview(refreshController)
+       
+    }
+    
+    @objc func refreshWebView(refresh:UIRefreshControl){
+        if Reachability.isConnectedToNetwork(){
+            web.isHidden = true
+            sv = UIViewController.displaySpinner(onView: self.view)
+            web.reload()
+            refresh.endRefreshing()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Swipe down on browser to try again")
+            refresh.endRefreshing()
+        }
     }
 }

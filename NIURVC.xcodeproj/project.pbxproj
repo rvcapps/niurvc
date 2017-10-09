@@ -24,6 +24,10 @@
 		0AD2D4AB1F648531001693E4 /* JobInternshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AA1F648531001693E4 /* JobInternshipViewController.swift */; };
 		0AD2D4AD1F648551001693E4 /* ScholarshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AC1F648551001693E4 /* ScholarshipsViewController.swift */; };
 		0AD2D4AF1F64856A001693E4 /* ImportantLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AE1F64856A001693E4 /* ImportantLinksViewController.swift */; };
+		361C89B01F878DAF00BB45B2 /* discuss-issue (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 361C89AD1F878DAE00BB45B2 /* discuss-issue (1).png */; };
+		361C89B11F878DAF00BB45B2 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 361C89AE1F878DAF00BB45B2 /* profile.png */; };
+		361C89B21F878DAF00BB45B2 /* chatting.png in Resources */ = {isa = PBXBuildFile; fileRef = 361C89AF1F878DAF00BB45B2 /* chatting.png */; };
+		361C89B41F879B4900BB45B2 /* comments.png in Resources */ = {isa = PBXBuildFile; fileRef = 361C89B31F879B4800BB45B2 /* comments.png */; };
 		3632AE0A1F81E4C5003F5714 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3632AE091F81E4C5003F5714 /* ChatViewController.swift */; };
 		3632AE0C1F81E4D3003F5714 /* FaqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3632AE0B1F81E4D3003F5714 /* FaqViewController.swift */; };
 		3632AE0E1F81E4EF003F5714 /* AdvisorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3632AE0D1F81E4EF003F5714 /* AdvisorViewController.swift */; };
@@ -55,6 +59,7 @@
 		3662988E1F340CDE0084237F /* scholarship-3-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 366298821F340CDE0084237F /* scholarship-3-512.png */; };
 		3662988F1F340CDE0084237F /* scholarship-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 366298831F340CDE0084237F /* scholarship-icon.png */; };
 		369630D21F7DF02600E22DDD /* niu-rvc-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 369630D11F7DF02500E22DDD /* niu-rvc-logo.jpg */; };
+		36DA0CB21F8B41C800DBCB47 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA0CB11F8B41C800DBCB47 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +80,10 @@
 		0AD2D4AA1F648531001693E4 /* JobInternshipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobInternshipViewController.swift; sourceTree = "<group>"; };
 		0AD2D4AC1F648551001693E4 /* ScholarshipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarshipsViewController.swift; sourceTree = "<group>"; };
 		0AD2D4AE1F64856A001693E4 /* ImportantLinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantLinksViewController.swift; sourceTree = "<group>"; };
+		361C89AD1F878DAE00BB45B2 /* discuss-issue (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discuss-issue (1).png"; sourceTree = "<group>"; };
+		361C89AE1F878DAF00BB45B2 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		361C89AF1F878DAF00BB45B2 /* chatting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatting.png; sourceTree = "<group>"; };
+		361C89B31F879B4800BB45B2 /* comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comments.png; sourceTree = "<group>"; };
 		3632AE091F81E4C5003F5714 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		3632AE0B1F81E4D3003F5714 /* FaqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqViewController.swift; sourceTree = "<group>"; };
 		3632AE0D1F81E4EF003F5714 /* AdvisorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisorViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +117,7 @@
 		366298821F340CDE0084237F /* scholarship-3-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scholarship-3-512.png"; path = "images/scholarship-3-512.png"; sourceTree = "<group>"; };
 		366298831F340CDE0084237F /* scholarship-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scholarship-icon.png"; path = "images/scholarship-icon.png"; sourceTree = "<group>"; };
 		369630D11F7DF02500E22DDD /* niu-rvc-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "niu-rvc-logo.jpg"; sourceTree = "<group>"; };
+		36DA0CB11F8B41C800DBCB47 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +155,7 @@
 		3662984C1F33E79E0084237F = {
 			isa = PBXGroup;
 			children = (
+				36DA0CB01F8B417500DBCB47 /* CheckInternetConnection */,
 				364E5B9A1F34120000F6C3AB /* Pages */,
 				366298771F340CCB0084237F /* photos */,
 				3662986C1F33F3A90084237F /* icons */,
@@ -166,8 +177,8 @@
 			children = (
 				366298581F33E79E0084237F /* AppDelegate.swift */,
 				3662985A1F33E79E0084237F /* FirstViewController.swift */,
-				3662985C1F33E79E0084237F /* SecondViewController.swift */,
 				3662985E1F33E79E0084237F /* Main.storyboard */,
+				3662985C1F33E79E0084237F /* SecondViewController.swift */,
 				366298611F33E79E0084237F /* Assets.xcassets */,
 				366298631F33E79E0084237F /* LaunchScreen.storyboard */,
 				366298661F33E79E0084237F /* Info.plist */,
@@ -190,6 +201,10 @@
 		366298771F340CCB0084237F /* photos */ = {
 			isa = PBXGroup;
 			children = (
+				361C89B31F879B4800BB45B2 /* comments.png */,
+				361C89AF1F878DAF00BB45B2 /* chatting.png */,
+				361C89AD1F878DAE00BB45B2 /* discuss-issue (1).png */,
+				361C89AE1F878DAF00BB45B2 /* profile.png */,
 				369630D11F7DF02500E22DDD /* niu-rvc-logo.jpg */,
 				0AD2D48E1F5F8E5D001693E4 /* icons8-Calendar Filled-50Blue.png */,
 				0AD2D48F1F5F8E5D001693E4 /* icons8-Chat Filled-50Blue.png */,
@@ -215,6 +230,14 @@
 				366298831F340CDE0084237F /* scholarship-icon.png */,
 			);
 			name = photos;
+			sourceTree = "<group>";
+		};
+		36DA0CB01F8B417500DBCB47 /* CheckInternetConnection */ = {
+			isa = PBXGroup;
+			children = (
+				36DA0CB11F8B41C800DBCB47 /* Reachability.swift */,
+			);
+			path = CheckInternetConnection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,17 +323,21 @@
 				0AD2D49F1F5F8E5D001693E4 /* icons8-User Groups Filled-50 (1)blue.png in Resources */,
 				0AD2D4A11F5F8E5D001693E4 /* scholarship-icon blue.png in Resources */,
 				3662988D1F340CDE0084237F /* icons8-User Groups Filled-50 (1).png in Resources */,
+				361C89B11F878DAF00BB45B2 /* profile.png in Resources */,
 				366298861F340CDE0084237F /* icons8-Calendar Filled-50.png in Resources */,
 				0AD2D4A01F5F8E5D001693E4 /* scholarship-3-512blue.png in Resources */,
 				0AD2D49A1F5F8E5D001693E4 /* icons8-Contacts Filled-50Blue.png in Resources */,
 				3662988F1F340CDE0084237F /* scholarship-icon.png in Resources */,
 				0AD2D49C1F5F8E5D001693E4 /* icons8-Link Filled-50blue.png in Resources */,
 				366298731F33F3BF0084237F /* communicate.png in Resources */,
+				361C89B41F879B4900BB45B2 /* comments.png in Resources */,
 				366298751F33F3BF0084237F /* coursepath.png in Resources */,
 				0AD2D4991F5F8E5D001693E4 /* icons8-Chat Filled-50Blue.png in Resources */,
 				3662988E1F340CDE0084237F /* scholarship-3-512.png in Resources */,
 				366298601F33E79E0084237F /* Main.storyboard in Resources */,
 				366298891F340CDE0084237F /* icons8-FAQ-26.png in Resources */,
+				361C89B21F878DAF00BB45B2 /* chatting.png in Resources */,
+				361C89B01F878DAF00BB45B2 /* discuss-issue (1).png in Resources */,
 				366298871F340CDE0084237F /* icons8-Chat Filled-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +363,7 @@
 				0AD2D4A91F64850C001693E4 /* SocialMediaViewController.swift in Sources */,
 				364E5B9C1F34122800F6C3AB /* CourseViewController.swift in Sources */,
 				0AD2D4AB1F648531001693E4 /* JobInternshipViewController.swift in Sources */,
+				36DA0CB21F8B41C800DBCB47 /* Reachability.swift in Sources */,
 				0AD2D4AD1F648551001693E4 /* ScholarshipsViewController.swift in Sources */,
 				3632AE0A1F81E4C5003F5714 /* ChatViewController.swift in Sources */,
 				3662985B1F33E79E0084237F /* FirstViewController.swift in Sources */,
@@ -474,7 +502,7 @@
 		3662986A1F33E79E0084237F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = DQDSR75JMK;
@@ -493,7 +521,7 @@
 		3662986B1F33E79E0084237F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = DQDSR75JMK;
