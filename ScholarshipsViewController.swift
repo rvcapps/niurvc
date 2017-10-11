@@ -15,6 +15,15 @@ class ScholarshipViewController: UIViewController ,UIWebViewDelegate,UIScrollVie
         self.dismiss(animated: false, completion: nil)
     }
     
+    @IBAction func btnScholarships(_ sender: UIButton) {
+        if Reachability.isConnectedToNetwork(){
+            ScholarshipsWebView.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
+    }
     
     @IBOutlet weak var ScholarshipsWebView: UIWebView!
     

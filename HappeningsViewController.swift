@@ -16,6 +16,17 @@ class HappeningsViewController: UIViewController,UIWebViewDelegate,UIScrollViewD
         self.dismiss(animated: false, completion: nil)
     }
     
+    @IBAction func btnHappenings(_ sender: UIButton) {
+        if Reachability.isConnectedToNetwork(){
+            HappeningsWebView.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
+    }
+    
+    
     @IBOutlet weak var HappeningsWebView: UIWebView!
     
     var countweb:integer_t!
@@ -40,7 +51,7 @@ class HappeningsViewController: UIViewController,UIWebViewDelegate,UIScrollViewD
     func loadwb()
     {
         sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/happenings.cfm") {
+        if let url = URL(string: "http://www.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/happenings.cfm") {
             HappeningsWebView.scalesPageToFit = true
             HappeningsWebView.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
@@ -63,23 +74,30 @@ class HappeningsViewController: UIViewController,UIWebViewDelegate,UIScrollViewD
      }
      */
     @objc func cleanweb(){
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+        HappeningsWebView.stringByEvaluatingJavaScript(from: ls)
+        let script = "$('body').animate({scrollTop:0}, 'slow')"
+        //"$('body').margin-top({scrollTop:0}, 'slow')"
+        HappeningsWebView.stringByEvaluatingJavaScript(from: script)
+        let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+        HappeningsWebView.stringByEvaluatingJavaScript(from: tops)
+        print("cleanweb")
         HappeningsWebView.isHidden = false
         UIViewController.removeSpinner(spinner: sv)
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        webView.delegate = self
         if webView.isLoading{
+            print("webViewDidFinishLoad")
             let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
             webView.stringByEvaluatingJavaScript(from: ls)
+            let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+            webView.stringByEvaluatingJavaScript(from: tops)
             return
         }else
         {
-            print("finished loading web")
-            let script = "$('html, body').animate({scrollTop:0}, 'slow')"
-            webView.stringByEvaluatingJavaScript(from: script)
             webView.scrollView.scrollsToTop = true
-            // webView.isHidden = false
+            print("else webViewDidFinishLoad")
             _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
     }

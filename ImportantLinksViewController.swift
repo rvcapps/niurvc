@@ -16,6 +16,17 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
         self.dismiss(animated: false, completion: nil)
     }
     
+    @IBAction func btnLinks(_ sender: UIButton) {
+        if Reachability.isConnectedToNetwork(){
+            ImportantLinksWebView.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
+    }
+    
+    
     @IBOutlet weak var ImportantLinksWebView: UIWebView!
     
     

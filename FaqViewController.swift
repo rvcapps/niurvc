@@ -159,7 +159,6 @@ func removefooter()
 //        print(webView.stringByEvaluatingJavaScript(from: "window.location.href"))
     }
     @objc func cleanweb(){
-//        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
           let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
         webview.stringByEvaluatingJavaScript(from: ls)
         let script = "$('body').animate({scrollTop:0}, 'slow')"
@@ -174,9 +173,6 @@ func removefooter()
          UIViewController.removeSpinner(spinner: sv)
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
-       //#headline-wrapper
-        // webView.delegate = self
-        //#branding
         if webView.isLoading{
             print("webViewDidFinishLoad")
             let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"

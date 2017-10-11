@@ -15,6 +15,15 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
         self.dismiss(animated: false, completion: nil)
     }
     
+    @IBAction func btnPartners(_ sender: UIButton) {
+        if Reachability.isConnectedToNetwork(){
+            PartnersWebView.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
+    }
     
     @IBOutlet weak var PartnersWebView: UIWebView!
     

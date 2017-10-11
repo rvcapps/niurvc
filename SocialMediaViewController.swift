@@ -16,6 +16,15 @@ class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollView
         self.dismiss(animated: false, completion: nil)
     }
     
+    @IBAction func btnSocial(_ sender: UIButton) {
+        if Reachability.isConnectedToNetwork(){
+            SocialMediaWebView.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
+    }
     
     @IBOutlet weak var SocialMediaWebView: UIWebView!
     

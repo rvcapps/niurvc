@@ -20,7 +20,7 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var web: UIWebView!
    
-    var list = ["Getting Started", "Mechanical Engineering","Manufacturing Technology"]
+    var list = ["Getting Started", "Mechanical Engineering","Manufacturing Technology (Online)"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
