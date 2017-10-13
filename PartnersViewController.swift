@@ -72,7 +72,18 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
      // Pass the selected object to the new view controller.
      }
      */
+    func webViewDidStartLoad(_ webView: UIWebView) {
+//           sv = UIViewController.displaySpinner(onView: self.view)
+//        PartnersWebView.isHidden = true
+    }
     @objc func cleanweb(){
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+        PartnersWebView.stringByEvaluatingJavaScript(from: ls)
+        let script = "$('body').animate({scrollTop:0}, 'slow')"
+        PartnersWebView.stringByEvaluatingJavaScript(from: script)
+        let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+        PartnersWebView.stringByEvaluatingJavaScript(from: tops)
+        print("cleanweb")
         PartnersWebView.isHidden = false
         UIViewController.removeSpinner(spinner: sv)
     }
@@ -85,11 +96,8 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
             return
         }else
         {
-            print("finished loading web")
-            let script = "$('html, body').animate({scrollTop:0}, 'slow')"
-            webView.stringByEvaluatingJavaScript(from: script)
             webView.scrollView.scrollsToTop = true
-            // webView.isHidden = false
+            print("else webViewDidFinishLoad")
             _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
     }

@@ -22,13 +22,13 @@ class CommunicateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btnlive.setTitle("Live Chat",for: .normal)
-        btnlive.alignImageAndTitleVertically(padding: 30)
+        btnlive.alignImageAndTitleVertically(padding: 10)
         
         btnfaq.setTitle("FAQ",for: .normal)
-        btnfaq.alignImageAndTitleVertically(padding: 30)
+        btnfaq.alignImageAndTitleVertically(padding: 10)
         
         btnadvisor.setTitle("Advisors",for: .normal)
-        btnadvisor.alignImageAndTitleVertically(padding: 30)
+        btnadvisor.alignImageAndTitleVertically(padding:10)
        
     }
 

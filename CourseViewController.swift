@@ -130,14 +130,20 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
         }
         
     }
+    func webViewDidStartLoad(_ webView: UIWebView) {
+//           sv = UIViewController.displaySpinner(onView: self.view)
+// web.isHidden = true
+    }
     @objc func cleanweb(){
-        let ls = "$(document).ready(function() { $('.powered-by').hide();$('.toggle-options').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         web.stringByEvaluatingJavaScript(from: ls)
-        UIViewController.removeSpinner(spinner: sv)
-        let script = "$('html, body').animate({scrollTop:0}, 'slow')"
+        let script = "$('body').animate({scrollTop:0}, 'slow')"
         web.stringByEvaluatingJavaScript(from: script)
-           web.isHidden = false
+        let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+        web.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
+        web.isHidden = false
+        UIViewController.removeSpinner(spinner: sv)
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading{

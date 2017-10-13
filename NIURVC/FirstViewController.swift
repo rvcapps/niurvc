@@ -45,20 +45,20 @@ class FirstViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func webViewDidStartLoad(_ webView: UIWebView) {
+//        web.isHidden = true
+    }
     @objc func cleanweb(){
        
-        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         web.stringByEvaluatingJavaScript(from: ls)
         let script = "$('body').animate({scrollTop:0}, 'slow')"
-        //"$('body').margin-top({scrollTop:0}, 'slow')"
         web.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         web.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
         web.isHidden = false
         UIViewController.removeSpinner(spinner: sv)
-        //.navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {

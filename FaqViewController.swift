@@ -26,15 +26,6 @@ class FaqViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDelegat
     }
     @objc func webload(){
         print("webload: \(webview .stringByEvaluatingJavaScript(from: "window.location.href")!)")
-//        if (wl! == webview .stringByEvaluatingJavaScript(from: "window.location.href")!){
-//
-//        }else{
-//            webview.isHidden = true
-//            sv = UIViewController.displaySpinner(onView: self.view)
-//            print("webload")
-//            _ = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(self.cleanweb2), userInfo: nil, repeats: false)
-//        }
-//        wl = webview .stringByEvaluatingJavaScript(from: "window.location.href")!
     }
     
 //    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool
@@ -151,15 +142,11 @@ func removefooter()
          UIViewController.removeSpinner(spinner: sv)
     }
     func webViewDidStartLoad(_ webView: UIWebView) {
-        webview.isHidden = false
- print("webdidstart")
-//        print("-------")
-//        print(webView.request?.url?.absoluteString)
-//        print("-------")
-//        print(webView.stringByEvaluatingJavaScript(from: "window.location.href"))
+//           sv = UIViewController.displaySpinner(onView: self.view)
+// webview.isHidden = true
     }
     @objc func cleanweb(){
-          let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
+     let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         webview.stringByEvaluatingJavaScript(from: ls)
         let script = "$('body').animate({scrollTop:0}, 'slow')"
         //"$('body').margin-top({scrollTop:0}, 'slow')"
@@ -191,8 +178,8 @@ func removefooter()
   
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        webview.isHidden = false
-        UIViewController.removeSpinner(spinner: sv)
+//        webview.isHidden = false
+//        UIViewController.removeSpinner(spinner: sv)
     }
     
     func addPullToRefreshToWebView(){

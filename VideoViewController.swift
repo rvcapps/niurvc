@@ -8,21 +8,24 @@
 
 import UIKit
 
-class VideoViewController: UIViewController,UIWebViewDelegate {
+class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDelegate,UIGestureRecognizerDelegate,UINavigationControllerDelegate{
      var refreshController = UIRefreshControl()
     
-   
+    var wl:String!
     
-    
-    @IBAction func btnPhotos(_ sender: UIBarButtonItem) {
+    @objc func webload(){
+        print("webload: \(webview .stringByEvaluatingJavaScript(from: "window.location.href")!)")
         webview.isHidden = true
-        countweb=0;
-        sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/media.cfm") {
-            webview.scalesPageToFit = true
-            webview.contentMode = .scaleAspectFit
-            let request = URLRequest(url: url)
-            webview.loadRequest(request)
+         sv = UIViewController.displaySpinner(onView: self.view)
+    }
+    @IBAction func btnPhotos(_ sender: UIBarButtonItem) {
+        if Reachability.isConnectedToNetwork(){
+            webview.isHidden = true
+            countweb=0;
+            loadwb()
+             _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb2), userInfo: nil, repeats: false)
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
         }
     }
     
@@ -33,6 +36,9 @@ class VideoViewController: UIViewController,UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         webview.delegate = self
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(webload))
+        tap.delegate = self
+        webview.addGestureRecognizer(tap)
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.
     }
@@ -48,13 +54,25 @@ class VideoViewController: UIViewController,UIWebViewDelegate {
     func loadwb()
     {
         sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/media.cfm") {
+        if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/media.cfm") {
             webview.scalesPageToFit = true
             webview.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
             webview.loadRequest(request)
         }
     }
+    
+    @objc func webload2(){
+        print("old2 \(webview .stringByEvaluatingJavaScript(from: "window.location.href")!)")
+        print("new2 \(wl!)")
+//        wl = webview .stringByEvaluatingJavaScript(from: "window.location.href")!
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        print("gesture")
+   return true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -70,31 +88,56 @@ class VideoViewController: UIViewController,UIWebViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+   
+    func webViewDidStartLoad(_ webView: UIWebView) {
+      
+    }
+    @objc func cleanweb2(){
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
+        webview.stringByEvaluatingJavaScript(from: ls)
+        let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+        webview.stringByEvaluatingJavaScript(from: tops)
+        print("cleanweb")
+        _ = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
+    }
+    @objc func hideweb(){
+        webview.isHidden = false
+        UIViewController.removeSpinner(spinner: sv)
+    }
     @objc func cleanweb(){
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
+        webview.stringByEvaluatingJavaScript(from: ls)
+        let script = "$('body').animate({scrollTop:0}, 'slow')"
+        //"$('body').margin-top({scrollTop:0}, 'slow')"
+        webview.stringByEvaluatingJavaScript(from: script)
+        let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+        webview.stringByEvaluatingJavaScript(from: tops)
+        print("cleanweb")
         webview.isHidden = false
         UIViewController.removeSpinner(spinner: sv)
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        
         if webView.isLoading{
-            webView.delegate = self
-            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top',0);})"
+            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
             webView.stringByEvaluatingJavaScript(from: ls)
+            let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+            webview.stringByEvaluatingJavaScript(from: tops)
+           print("webViewDidFinishLoad")
             return
         }else
         {
-            let script = "$('html, body').animate({scrollTop:0}, 'slow')"
-            webView.stringByEvaluatingJavaScript(from: script)
-            print("finished loading web")
             webView.scrollView.scrollsToTop = true
-            // webView.isHidden = false
-            _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
+            print("else webViewDidFinishLoad")
+            _ = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
+      
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        webview.isHidden = false
-        UIViewController.removeSpinner(spinner: sv)
+//        webview.isHidden = false
+//        UIViewController.removeSpinner(spinner: sv)
+     
     }
     
     func addPullToRefreshToWebView(){

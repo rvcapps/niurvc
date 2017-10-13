@@ -73,7 +73,18 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
      // Pass the selected object to the new view controller.
      }
      */
+    func webViewDidStartLoad(_ webView: UIWebView) {
+//        ImportantLinksWebView.isHidden = true
+    }
     @objc func cleanweb(){
+      
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+        ImportantLinksWebView.stringByEvaluatingJavaScript(from: ls)
+        let script = "$('body').animate({scrollTop:0}, 'slow')"
+        ImportantLinksWebView.stringByEvaluatingJavaScript(from: script)
+        let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+        ImportantLinksWebView.stringByEvaluatingJavaScript(from: tops)
+        print("cleanweb")
         ImportantLinksWebView.isHidden = false
         UIViewController.removeSpinner(spinner: sv)
     }
@@ -86,11 +97,8 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
             return
         }else
         {
-            print("finished loading web")
-            let script = "$('html, body').animate({scrollTop:0}, 'slow')"
-            webView.stringByEvaluatingJavaScript(from: script)
             webView.scrollView.scrollsToTop = true
-            // webView.isHidden = false
+            print("else webViewDidFinishLoad")
             _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
     }
