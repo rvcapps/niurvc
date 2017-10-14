@@ -24,6 +24,11 @@
 		0AD2D4AB1F648531001693E4 /* JobInternshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AA1F648531001693E4 /* JobInternshipViewController.swift */; };
 		0AD2D4AD1F648551001693E4 /* ScholarshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AC1F648551001693E4 /* ScholarshipsViewController.swift */; };
 		0AD2D4AF1F64856A001693E4 /* ImportantLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AE1F64856A001693E4 /* ImportantLinksViewController.swift */; };
+		3606F09A1F9261EB00ACDB68 /* job-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606F0951F9261E800ACDB68 /* job-search.png */; };
+		3606F09B1F9261EB00ACDB68 /* calendar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606F0961F9261E900ACDB68 /* calendar-icon.png */; };
+		3606F09C1F9261EB00ACDB68 /* link.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606F0971F9261E900ACDB68 /* link.png */; };
+		3606F09D1F9261EB00ACDB68 /* partners.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606F0981F9261EA00ACDB68 /* partners.png */; };
+		3606F09E1F9261EB00ACDB68 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606F0991F9261EB00ACDB68 /* share.png */; };
 		361C89B01F878DAF00BB45B2 /* discuss-issue (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 361C89AD1F878DAE00BB45B2 /* discuss-issue (1).png */; };
 		361C89B11F878DAF00BB45B2 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 361C89AE1F878DAF00BB45B2 /* profile.png */; };
 		361C89B21F878DAF00BB45B2 /* chatting.png in Resources */ = {isa = PBXBuildFile; fileRef = 361C89AF1F878DAF00BB45B2 /* chatting.png */; };
@@ -80,6 +85,11 @@
 		0AD2D4AA1F648531001693E4 /* JobInternshipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobInternshipViewController.swift; sourceTree = "<group>"; };
 		0AD2D4AC1F648551001693E4 /* ScholarshipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarshipsViewController.swift; sourceTree = "<group>"; };
 		0AD2D4AE1F64856A001693E4 /* ImportantLinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantLinksViewController.swift; sourceTree = "<group>"; };
+		3606F0951F9261E800ACDB68 /* job-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "job-search.png"; sourceTree = "<group>"; };
+		3606F0961F9261E900ACDB68 /* calendar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-icon.png"; sourceTree = "<group>"; };
+		3606F0971F9261E900ACDB68 /* link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = link.png; sourceTree = "<group>"; };
+		3606F0981F9261EA00ACDB68 /* partners.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = partners.png; sourceTree = "<group>"; };
+		3606F0991F9261EB00ACDB68 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		361C89AD1F878DAE00BB45B2 /* discuss-issue (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "discuss-issue (1).png"; sourceTree = "<group>"; };
 		361C89AE1F878DAF00BB45B2 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		361C89AF1F878DAF00BB45B2 /* chatting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatting.png; sourceTree = "<group>"; };
@@ -189,6 +199,11 @@
 		3662986C1F33F3A90084237F /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				3606F0961F9261E900ACDB68 /* calendar-icon.png */,
+				3606F0951F9261E800ACDB68 /* job-search.png */,
+				3606F0971F9261E900ACDB68 /* link.png */,
+				3606F0981F9261EA00ACDB68 /* partners.png */,
+				3606F0991F9261EB00ACDB68 /* share.png */,
 				3662986D1F33F3BF0084237F /* video.png */,
 				3662986E1F33F3BF0084237F /* communicate.png */,
 				3662986F1F33F3BF0084237F /* connections.png */,
@@ -307,14 +322,18 @@
 				366298851F340CDE0084237F /* icon_award.png in Resources */,
 				366298761F33F3BF0084237F /* home.png in Resources */,
 				366298741F33F3BF0084237F /* connections.png in Resources */,
+				3606F09B1F9261EB00ACDB68 /* calendar-icon.png in Resources */,
 				0AD2D4981F5F8E5D001693E4 /* icons8-Calendar Filled-50Blue.png in Resources */,
 				366298841F340CDE0084237F /* homepage.png in Resources */,
 				3662988A1F340CDE0084237F /* icons8-Link Filled-50.png in Resources */,
+				3606F09E1F9261EB00ACDB68 /* share.png in Resources */,
 				369630D21F7DF02600E22DDD /* niu-rvc-logo.jpg in Resources */,
 				366298881F340CDE0084237F /* icons8-Contacts Filled-50.png in Resources */,
 				366298651F33E79E0084237F /* LaunchScreen.storyboard in Resources */,
 				3662988B1F340CDE0084237F /* icons8-New Job Filled-50.png in Resources */,
 				0AD2D49E1F5F8E5D001693E4 /* icons8-Share Filled-50blue.png in Resources */,
+				3606F09A1F9261EB00ACDB68 /* job-search.png in Resources */,
+				3606F09D1F9261EB00ACDB68 /* partners.png in Resources */,
 				366298721F33F3BF0084237F /* video.png in Resources */,
 				366298621F33E79E0084237F /* Assets.xcassets in Resources */,
 				3662988C1F340CDE0084237F /* icons8-Share Filled-50.png in Resources */,
@@ -333,6 +352,7 @@
 				361C89B41F879B4900BB45B2 /* comments.png in Resources */,
 				366298751F33F3BF0084237F /* coursepath.png in Resources */,
 				0AD2D4991F5F8E5D001693E4 /* icons8-Chat Filled-50Blue.png in Resources */,
+				3606F09C1F9261EB00ACDB68 /* link.png in Resources */,
 				3662988E1F340CDE0084237F /* scholarship-3-512.png in Resources */,
 				366298601F33E79E0084237F /* Main.storyboard in Resources */,
 				366298891F340CDE0084237F /* icons8-FAQ-26.png in Resources */,
