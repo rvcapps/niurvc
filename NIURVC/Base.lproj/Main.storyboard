@@ -238,8 +238,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleAspectFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gsF-DS-ZrR">
-                                <rect key="frame" x="0.0" y="51" width="667" height="354"/>
+                            <webView contentMode="scaleAspectFit" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gsF-DS-ZrR">
+                                <rect key="frame" x="0.0" y="51" width="667" height="324"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -374,18 +374,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv4-Bq-uD3">
-                                <rect key="frame" x="0.0" y="51" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="-52" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-67" maxY="22"/>
-                                <state key="normal" title="Partners" image="icons8-Contacts Filled-50Blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnPartners:" destination="zpm-NZ-Pmt" eventType="touchUpInside" id="sZ1-XU-A6t"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dze-lf-2Ik">
                                 <rect key="frame" x="0.0" y="20" width="667" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -399,12 +387,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv4-Bq-uD3">
+                                <rect key="frame" x="20" y="64" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" backgroundImage="people-connection.png">
+                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPartners:" destination="zpm-NZ-Pmt" eventType="touchUpInside" id="sZ1-XU-A6t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Partners" image="icons8-Contacts Filled-50Blue.png" selectedImage="icons8-Contacts Filled-50Blue.png" id="9ca-DS-3Zb"/>
+                    <tabBarItem key="tabBarItem" title="Partners" image="50people-connection.png" selectedImage="50people-connection.png" id="9ca-DS-3Zb"/>
                     <connections>
                         <outlet property="PartnersWebView" destination="UWh-Nf-Rov" id="eRJ-4g-PFp"/>
+                        <outlet property="btnPartners" destination="wv4-Bq-uD3" id="Mr4-nm-SeM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11F-rh-gdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -429,18 +429,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL6-tm-64f">
-                                <rect key="frame" x="0.0" y="54" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-89" maxY="22"/>
-                                <state key="normal" title="Happenings" image="icons8-Calendar Filled-50Blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnHappenings:" destination="xMt-iV-ZHZ" eventType="touchUpInside" id="79k-dD-cyr"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVd-Lh-u58">
                                 <rect key="frame" x="0.0" y="20" width="667" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -454,12 +442,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL6-tm-64f">
+                                <rect key="frame" x="20" y="64" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" backgroundImage="weekly-calendar.png">
+                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnHappenings:" destination="xMt-iV-ZHZ" eventType="touchUpInside" id="79k-dD-cyr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Happenings" image="icons8-Calendar Filled-50Blue.png" selectedImage="icons8-Calendar Filled-50Blue.png" id="TLA-mR-3L7"/>
+                    <tabBarItem key="tabBarItem" title="Happenings" image="50weekly-calendar.png" selectedImage="50weekly-calendar.png" id="TLA-mR-3L7"/>
                     <connections>
                         <outlet property="HappeningsWebView" destination="neI-pF-CYD" id="klM-Z2-R8I"/>
+                        <outlet property="btnevents" destination="DL6-tm-64f" id="obN-SS-idV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RYE-DS-GUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -485,7 +485,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSM-PQ-whn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1425" y="2129"/>
+            <point key="canvasLocation" x="-1883" y="2406"/>
         </scene>
         <!--Connections-->
         <scene sceneID="D36-Zo-CqD">
@@ -509,9 +509,9 @@
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHW-KT-148">
                                 <rect key="frame" x="462" y="196" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" backgroundImage="icons8-Link Filled-50blue.png">
-                                    <color key="titleColor" red="0.12114353477954865" green="0.31837347149848938" blue="0.5479966402053833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" backgroundImage="web-link.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="aqn-kB-hfP" kind="presentation" identifier="ImportantLinks" id="LVG-dU-pTm"/>
@@ -520,25 +520,21 @@
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTN-Yw-ZEE">
                                 <rect key="frame" x="297" y="103" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" backgroundImage="icons8-Contacts Filled-50Blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" backgroundImage="people-connection.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="aqn-kB-hfP" kind="presentation" identifier="Partners" id="YtA-78-AMB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="niu-rvc-logo.jpg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vgc-pH-oqV">
-                                <rect key="frame" x="298" y="196" width="75" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axL-ln-H63">
                                 <rect key="frame" x="130" y="196" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" backgroundImage="icons8-New Job Filled-50blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" backgroundImage="job-search-in-newspapers.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="aqn-kB-hfP" kind="presentation" identifier="JobInternship" id="5cS-Vv-W0W"/>
@@ -547,9 +543,9 @@
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvS-sB-ejW">
                                 <rect key="frame" x="461" y="103" width="75" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" backgroundImage="icons8-Share Filled-50blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" backgroundImage="share (1).png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="96I-mw-b5Z" kind="presentation" identifier="SocialMedia" id="7Xl-bS-dtg"/>
@@ -558,12 +554,23 @@
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6d-gW-cEz">
                                 <rect key="frame" x="129" y="103" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" backgroundImage="icons8-Calendar Filled-50Blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" backgroundImage="weekly-calendar.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="aqn-kB-hfP" kind="presentation" identifier="Happenings" id="jKY-gt-Lmo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utc-kX-PXn">
+                                <rect key="frame" x="296" y="196" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" backgroundImage="scholarship-icon blue.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aqn-kB-hfP" kind="presentation" identifier="scholarships" id="1Ib-7x-cEJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -576,11 +583,12 @@
                         <outlet property="btnLinks" destination="UHW-KT-148" id="Ohf-ZB-F6t"/>
                         <outlet property="btnPartners" destination="yTN-Yw-ZEE" id="z3N-Mj-YDn"/>
                         <outlet property="btnSocial" destination="JvS-sB-ejW" id="nrI-IV-Zuk"/>
+                        <outlet property="btnscholars" destination="utc-kX-PXn" id="vR5-iW-gNZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYX-Wc-AFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1865" y="1418"/>
+            <point key="canvasLocation" x="-2022" y="1358"/>
         </scene>
         <!--JobIntership-->
         <scene sceneID="bxi-c3-9pU">
@@ -599,18 +607,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-lA-hbJ">
-                                <rect key="frame" x="0.0" y="52" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-117" maxY="22"/>
-                                <state key="normal" title="Job / Internship" image="icons8-New Job Filled-50blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnJobs:" destination="GGh-4k-804" eventType="touchUpInside" id="QAI-vt-AeX"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S7R-I9-a3z">
                                 <rect key="frame" x="0.0" y="20" width="667" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -624,12 +620,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odj-lA-hbJ">
+                                <rect key="frame" x="20" y="64" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" backgroundImage="job-search-in-newspapers.png">
+                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnJobs:" destination="GGh-4k-804" eventType="touchUpInside" id="QAI-vt-AeX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Job / Internship" image="icons8-New Job Filled-50blue.png" selectedImage="icons8-New Job Filled-50blue.png" id="Qbk-SW-HFF"/>
+                    <tabBarItem key="tabBarItem" title="Job / Internship" image="50job-search-in-newspapers.png" selectedImage="50job-search-in-newspapers.png" id="Qbk-SW-HFF"/>
                     <connections>
                         <outlet property="JobInternshipWebView" destination="WoL-7x-hKu" id="JU5-pS-c1X"/>
+                        <outlet property="btnjobs" destination="Odj-lA-hbJ" id="vwK-Tt-QR8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8x-bP-DRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -675,18 +683,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTJ-BK-ven">
-                                <rect key="frame" x="0.0" y="64" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-89" maxY="22"/>
-                                <state key="normal" title="Scholarhips" image="scholarship-3-512blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnScholarships:" destination="RFw-Wk-EAY" eventType="touchUpInside" id="Cml-QQ-mwv"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndQ-0x-hch">
                                 <rect key="frame" x="0.0" y="20" width="667" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -700,12 +696,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTJ-BK-ven">
+                                <rect key="frame" x="20" y="64" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" backgroundImage="scholarship-icon blue.png">
+                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnScholarships:" destination="RFw-Wk-EAY" eventType="touchUpInside" id="Cml-QQ-mwv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scholarships" image="scholarship-3-512blue.png" selectedImage="scholarship-3-512blue.png" id="De6-qy-2Ti"/>
+                    <tabBarItem key="tabBarItem" title="Scholarships" image="50scholarship-icon blue.png" selectedImage="50scholarship-icon blue.png" id="De6-qy-2Ti"/>
                     <connections>
                         <outlet property="ScholarshipsWebView" destination="oih-ll-myc" id="IsP-dd-JvL"/>
+                        <outlet property="btnscholarships" destination="PTJ-BK-ven" id="GjJ-24-vfA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQ5-9r-OfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -733,18 +741,6 @@
                                     <outlet property="delegate" destination="96I-mw-b5Z" id="yPF-bX-vqq"/>
                                 </connections>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvt-9b-Avd">
-                                <rect key="frame" x="0.0" y="55" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-89" maxY="24"/>
-                                <state key="normal" title="Social Media" image="icons8-Share Filled-50blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnSocial:" destination="96I-mw-b5Z" eventType="touchUpInside" id="ajP-es-M4a"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKi-QW-e3X">
                                 <rect key="frame" x="0.0" y="20" width="667" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -758,6 +754,16 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvt-9b-Avd">
+                                <rect key="frame" x="20" y="64" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="share (1).png">
+                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSocial:" destination="96I-mw-b5Z" eventType="touchUpInside" id="ajP-es-M4a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -766,6 +772,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="SocialMediaWebView" destination="e3c-4O-rbK" id="jsi-c0-mP4"/>
+                        <outlet property="btnSocial" destination="pvt-9b-Avd" id="LG1-mM-vd9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNE-cE-plx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -789,18 +796,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkd-kr-rB7">
-                                <rect key="frame" x="0.0" y="53" width="148" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-114" maxY="22"/>
-                                <state key="normal" title="Important Links" image="icons8-Link Filled-50blue.png">
-                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnLinks:" destination="PLW-VA-iTh" eventType="touchUpInside" id="km0-rW-Sn4"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q5n-j4-ZHw">
                                 <rect key="frame" x="0.0" y="20" width="667" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -814,12 +809,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkd-kr-rB7">
+                                <rect key="frame" x="20" y="64" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" backgroundImage="web-link.png">
+                                    <color key="titleColor" red="0.0" green="0.21960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLinks:" destination="PLW-VA-iTh" eventType="touchUpInside" id="km0-rW-Sn4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Importank Links" image="icons8-Link Filled-50blue.png" selectedImage="icons8-Link Filled-50blue.png" id="4xb-YY-cmE"/>
+                    <tabBarItem key="tabBarItem" title="Importank Links" image="50web-link.png" selectedImage="50web-link.png" id="4xb-YY-cmE"/>
                     <connections>
                         <outlet property="ImportantLinksWebView" destination="Dje-qH-y2K" id="Ms8-fh-Mtz"/>
+                        <outlet property="btnLinks" destination="bkd-kr-rB7" id="icR-9Z-5PB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Dt-wr-3E2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -828,6 +835,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="50job-search-in-newspapers.png" width="50" height="50"/>
+        <image name="50people-connection.png" width="50" height="50"/>
+        <image name="50scholarship-icon blue.png" width="50" height="50"/>
+        <image name="50web-link.png" width="50" height="50"/>
+        <image name="50weekly-calendar.png" width="50" height="50"/>
         <image name="comments.png" width="128" height="128"/>
         <image name="communicate.png" width="35" height="35"/>
         <image name="connections.png" width="35" height="35"/>
@@ -835,18 +847,19 @@
         <image name="discuss-issue (1).png" width="128" height="128"/>
         <image name="home.png" width="35" height="35"/>
         <image name="homepage.png" width="323" height="237"/>
-        <image name="icons8-Calendar Filled-50Blue.png" width="50" height="50"/>
-        <image name="icons8-Contacts Filled-50Blue.png" width="50" height="50"/>
-        <image name="icons8-Link Filled-50blue.png" width="50" height="50"/>
-        <image name="icons8-New Job Filled-50blue.png" width="50" height="50"/>
         <image name="icons8-Share Filled-50blue.png" width="50" height="50"/>
+        <image name="job-search-in-newspapers.png" width="128" height="128"/>
         <image name="niu-rvc-logo.jpg" width="400" height="400"/>
+        <image name="people-connection.png" width="128" height="128"/>
         <image name="profile.png" width="128" height="128"/>
-        <image name="scholarship-3-512blue.png" width="50" height="50"/>
+        <image name="scholarship-icon blue.png" width="417" height="417"/>
+        <image name="share (1).png" width="128" height="128"/>
         <image name="video.png" width="35" height="35"/>
+        <image name="web-link.png" width="128" height="128"/>
+        <image name="weekly-calendar.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jKY-gt-Lmo"/>
+        <segue reference="1Ib-7x-cEJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.2196078431372549" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

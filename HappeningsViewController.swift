@@ -11,6 +11,10 @@ import UIKit
 
 class HappeningsViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate {
      var refreshController = UIRefreshControl()
+    
+    @IBOutlet weak var btnevents: UIButton!
+    
+    
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: false, completion: nil)
@@ -34,6 +38,8 @@ class HappeningsViewController: UIViewController,UIWebViewDelegate,UIScrollViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnevents.setTitle("Happenings",for: .normal)
+        btnevents.alignImageAndTitleVertically(padding: 18)
         HappeningsWebView.delegate = self
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.

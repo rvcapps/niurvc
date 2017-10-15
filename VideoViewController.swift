@@ -17,13 +17,14 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
         print("webload: \(webview .stringByEvaluatingJavaScript(from: "window.location.href")!)")
         webview.isHidden = true
          sv = UIViewController.displaySpinner(onView: self.view)
+           _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
     }
     @IBAction func btnPhotos(_ sender: UIBarButtonItem) {
         if Reachability.isConnectedToNetwork(){
             webview.isHidden = true
             countweb=0;
             loadwb()
-             _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb2), userInfo: nil, repeats: false)
+             _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.cleanweb2), userInfo: nil, repeats: false)
         }else{
             UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
         }
@@ -91,7 +92,7 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
     
    
     func webViewDidStartLoad(_ webView: UIWebView) {
-      
+       
     }
     @objc func cleanweb2(){
         let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
@@ -129,7 +130,7 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
         {
             webView.scrollView.scrollsToTop = true
             print("else webViewDidFinishLoad")
-            _ = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
+            _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
       
     }

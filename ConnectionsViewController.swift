@@ -20,24 +20,29 @@ class ConnectionsViewController: UIViewController {
     
     @IBOutlet weak var btnLinks: UIButton!
     
+    @IBOutlet weak var btnscholars: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
       btnEvents.setTitle("Happenings",for: .normal)
-       btnEvents.alignImageAndTitleVertically(padding: 8)
+       btnEvents.alignImageAndTitleVertically(padding: 18)
         
         btnPartners.setTitle("Partners",for: .normal)
-        btnPartners.alignImageAndTitleVertically(padding: 8)
+        btnPartners.alignImageAndTitleVertically(padding: 18)
         
         btnSocial.setTitle("Social",for: .normal)
-        btnSocial.alignImageAndTitleVertically(padding: 8)
+        btnSocial.alignImageAndTitleVertically(padding: 18)
         
-        btnInterns.setTitle("Internships",for: .normal)
-        btnInterns.alignImageAndTitleVertically(padding: 8)
+        btnscholars.setTitle("Scholarships",for: .normal)
+        btnscholars.alignImageAndTitleVertically(padding: 18)
+        
+        btnInterns.setTitle("Job Search",for: .normal)
+        btnInterns.alignImageAndTitleVertically(padding: 18)
         
      
         btnLinks.setTitle("Links",for: .normal)
-        btnLinks.alignImageAndTitleVertically(padding: 8)
+        btnLinks.alignImageAndTitleVertically(padding: 18)
         
         
         
@@ -76,19 +81,19 @@ class ConnectionsViewController: UIViewController {
                 destinationVC.pagetodisplay = 1
             }
         }
-        if segue.identifier == "SocialMedia"
-        {
-            if let destinationVC = segue.destination as? SubTabBarController {
-                destinationVC.pagetodisplay = 5
-            }
-        }
+//        if segue.identifier == "SocialMedia"
+//        {
+//            if let destinationVC = segue.destination as? SubTabBarController {
+//                destinationVC.pagetodisplay = 5
+//            }
+//        }
         if segue.identifier == "JobInternship"
         {
             if let destinationVC = segue.destination as? SubTabBarController {
                 destinationVC.pagetodisplay = 2
             }
         }
-        if segue.identifier == "Scholarships"
+        if segue.identifier == "scholarships"
         {
             if let destinationVC = segue.destination as? SubTabBarController {
                 destinationVC.pagetodisplay = 3

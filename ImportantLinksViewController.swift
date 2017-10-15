@@ -11,6 +11,10 @@ import UIKit
 
 class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScrollViewDelegate{
      var refreshController = UIRefreshControl()
+    
+    @IBOutlet weak var btnLinks: UIButton!
+    
+    
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: false, completion: nil)
@@ -35,6 +39,8 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnLinks.setTitle("Links",for: .normal)
+        btnLinks.alignImageAndTitleVertically(padding: 18)
         ImportantLinksWebView.delegate = self
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.

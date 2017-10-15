@@ -10,6 +10,8 @@ import UIKit
 
 class JobInternshipViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate{
     
+    @IBOutlet weak var btnjobs: UIButton!
+    
     @IBAction func btnJobs(_ sender: UIButton) {
         if Reachability.isConnectedToNetwork(){
             JobInternshipWebView.isHidden = true
@@ -39,6 +41,8 @@ class JobInternshipViewController: UIViewController,UIWebViewDelegate,UIScrollVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnjobs.setTitle("Job Search",for: .normal)
+        btnjobs.alignImageAndTitleVertically(padding: 5)
         JobInternshipWebView.delegate = self
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.
@@ -54,8 +58,8 @@ class JobInternshipViewController: UIViewController,UIWebViewDelegate,UIScrollVi
     }
     func loadwb()
     {
-       // sv = UIViewController.displaySpinner(onView: self.view)
         if let url = URL(string: "http://myjobs.ckonkol.com/") {
+             sv = UIViewController.displaySpinner(onView: self.view)
             JobInternshipWebView.scalesPageToFit = true
             JobInternshipWebView.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
@@ -91,8 +95,8 @@ class JobInternshipViewController: UIViewController,UIWebViewDelegate,UIScrollVi
         //.navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom, .well, .job-rss
     }
     func webViewDidStartLoad(_ webView: UIWebView) {
-         sv = UIViewController.displaySpinner(onView: self.view)
-        JobInternshipWebView.isHidden = true
+//         sv = UIViewController.displaySpinner(onView: self.view)
+ //       JobInternshipWebView.isHidden = true
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading{

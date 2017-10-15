@@ -10,6 +10,9 @@ import UIKit
 
 class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate {
      var refreshController = UIRefreshControl()
+    
+    @IBOutlet weak var btnPartners: UIButton!
+    
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: false, completion: nil)
@@ -33,6 +36,8 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnPartners.setTitle("Partners",for: .normal)
+        btnPartners.alignImageAndTitleVertically(padding: 18)
         PartnersWebView.delegate = self
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.

@@ -10,6 +10,9 @@ import UIKit
 
 class ScholarshipViewController: UIViewController ,UIWebViewDelegate,UIScrollViewDelegate{
      var refreshController = UIRefreshControl()
+    
+    @IBOutlet weak var btnscholarships: UIButton!
+    
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: false, completion: nil)
@@ -33,6 +36,9 @@ class ScholarshipViewController: UIViewController ,UIWebViewDelegate,UIScrollVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnscholarships.setTitle("Scholarships",for: .normal)
+        btnscholarships.alignImageAndTitleVertically(padding: 5)
         ScholarshipsWebView.delegate = self
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.

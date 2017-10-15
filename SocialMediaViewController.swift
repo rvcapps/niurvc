@@ -11,6 +11,9 @@ import UIKit
 class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate {
      var refreshController = UIRefreshControl()
     
+    @IBOutlet weak var btnSocial: UIButton!
+    
+    
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: false, completion: nil)
@@ -33,6 +36,8 @@ class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnSocial.setTitle("Social",for: .normal)
+        btnSocial.alignImageAndTitleVertically(padding: 18)
         SocialMediaWebView.delegate = self
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.
