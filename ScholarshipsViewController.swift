@@ -55,7 +55,7 @@ class ScholarshipViewController: UIViewController ,UIWebViewDelegate,UIScrollVie
     func loadwb()
     {
         sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/scholarships.cfm") {
+        if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/scholarships.cfm") {
             ScholarshipsWebView.scalesPageToFit = true
             ScholarshipsWebView.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)

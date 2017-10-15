@@ -146,7 +146,7 @@ func removefooter()
 // webview.isHidden = true
     }
     @objc func cleanweb(){
-     let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+     let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
         webview.stringByEvaluatingJavaScript(from: ls)
         let script = "$('body').animate({scrollTop:0}, 'slow')"
         //"$('body').margin-top({scrollTop:0}, 'slow')"
@@ -209,8 +209,8 @@ extension UIAlertView {
     {
         //Create Alert
         let alert = UIAlertView()
-        alert.title = "Alert: Internet Required!"
-        alert.message = "Internet Connection Required. Swipe down on browser to try again"
+        alert.title = "Alert!"
+        alert.message = message
         alert.addButton(withTitle: "OK")
         alert.show()
         

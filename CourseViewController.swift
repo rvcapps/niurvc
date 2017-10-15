@@ -39,7 +39,7 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     }
     func loadwb()
     {
-          if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+          if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
             sv = UIViewController.displaySpinner(onView: self.view)
             web.scalesPageToFit = true
             web.contentMode = .scaleAspectFit
@@ -81,7 +81,7 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
             web.isHidden = true
             countweb=0;
             sv = UIViewController.displaySpinner(onView: self.view)
-            if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+            if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
                 web.scalesPageToFit = true
                 web.contentMode = .scaleAspectFit
                 let request = URLRequest(url: url)
@@ -94,7 +94,7 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
             web.isHidden = true
             countweb=0;
             sv = UIViewController.displaySpinner(onView: self.view)
-            if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/mechanicalengineering.cfm") {
+            if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/mechanicalengineering.cfm") {
                 web.scalesPageToFit = true
                 web.contentMode = .scaleAspectFit
                 let request = URLRequest(url: url)
@@ -107,7 +107,7 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
             web.isHidden = true
             countweb=0;
             sv = UIViewController.displaySpinner(onView: self.view)
-            if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/manufacturingtechnology.cfm") {
+            if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/manufacturingtechnology.cfm") {
                 web.scalesPageToFit = true
                 web.contentMode = .scaleAspectFit
                 let request = URLRequest(url: url)

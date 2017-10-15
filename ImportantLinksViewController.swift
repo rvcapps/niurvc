@@ -57,7 +57,7 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
     func loadwb()
     {
         sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/links.cfm") {
+        if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/links.cfm") {
             ImportantLinksWebView.scalesPageToFit = true
             ImportantLinksWebView.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)

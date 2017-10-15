@@ -75,6 +75,7 @@
 		36A840191F92F25100D30B07 /* 50web-link.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A840141F92F25100D30B07 /* 50web-link.png */; };
 		36A8401A1F92F25100D30B07 /* 50share (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 36A840151F92F25100D30B07 /* 50share (1).png */; };
 		36A8401C1F92F3B300D30B07 /* 50scholarship-icon blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A8401B1F92F3B100D30B07 /* 50scholarship-icon blue.png */; };
+		36ABB22E1F934BCD00564CE1 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 36ABB22D1F934BCD00564CE1 /* facebook.png */; };
 		36DA0CB21F8B41C800DBCB47 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DA0CB11F8B41C800DBCB47 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +150,7 @@
 		36A840141F92F25100D30B07 /* 50web-link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "50web-link.png"; sourceTree = "<group>"; };
 		36A840151F92F25100D30B07 /* 50share (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "50share (1).png"; sourceTree = "<group>"; };
 		36A8401B1F92F3B100D30B07 /* 50scholarship-icon blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "50scholarship-icon blue.png"; path = "images/50scholarship-icon blue.png"; sourceTree = "<group>"; };
+		36ABB22D1F934BCD00564CE1 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		36DA0CB11F8B41C800DBCB47 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +224,7 @@
 		3662986C1F33F3A90084237F /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				36ABB22D1F934BCD00564CE1 /* facebook.png */,
 				3606F0961F9261E900ACDB68 /* calendar-icon.png */,
 				3606F0951F9261E800ACDB68 /* job-search.png */,
 				3606F0971F9261E900ACDB68 /* link.png */,
@@ -409,6 +412,7 @@
 				366298891F340CDE0084237F /* icons8-FAQ-26.png in Resources */,
 				361C89B21F878DAF00BB45B2 /* chatting.png in Resources */,
 				361C89B01F878DAF00BB45B2 /* discuss-issue (1).png in Resources */,
+				36ABB22E1F934BCD00564CE1 /* facebook.png in Resources */,
 				36A8401A1F92F25100D30B07 /* 50share (1).png in Resources */,
 				366298871F340CDE0084237F /* icons8-Chat Filled-50.png in Resources */,
 			);

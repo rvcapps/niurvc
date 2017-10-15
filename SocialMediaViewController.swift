@@ -8,11 +8,17 @@
 
 import UIKit
 
-class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate {
+class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate,UIGestureRecognizerDelegate {
      var refreshController = UIRefreshControl()
     
     @IBOutlet weak var btnSocial: UIButton!
     
+    @IBAction func btnFacebook(_ sender: UIButton) {
+        UIApplication.tryURL(urls: [
+            "fb://profile/265763433886265", // App
+            "http://www.facebook.com/265763433886265" // Website if app fails
+            ])
+    }
     
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         
@@ -24,6 +30,7 @@ class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollView
             SocialMediaWebView.isHidden = true
             countweb=0;
             loadwb()
+            fb()
         }else{
             UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
         }
@@ -42,12 +49,28 @@ class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollView
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.
     }
+    @objc func webload(){
+        print("webload: \(SocialMediaWebView.stringByEvaluatingJavaScript(from: "window.location.href")!)")
+    }
+    func fb(){
+        if UIApplication.shared.canOpenURL(NSURL(string: "fb://")! as URL) {
+            // Facebook app is installed
+        }else
+        {
+            UIAlertView.MsgBox("Facebook app needs installed to view NIU&RVC Facebook page")
+            
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
        
         if Reachability.isConnectedToNetwork(){
+            let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(webload))
+            tap.delegate = self
+            SocialMediaWebView.addGestureRecognizer(tap)
             SocialMediaWebView.isHidden = true
             countweb=0;
             loadwb()
+            fb()
         }else{
             UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
         }
@@ -55,7 +78,7 @@ class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollView
     func loadwb()
     {
         sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/social.cfm") {
+        if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/social.cfm") {
             SocialMediaWebView.scalesPageToFit = true
             SocialMediaWebView.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
@@ -79,6 +102,7 @@ class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollView
      */
     func webViewDidStartLoad(_ webView: UIWebView) {
 //        SocialMediaWebView.isHidden = true
+        print("old \(SocialMediaWebView.stringByEvaluatingJavaScript(from: "window.location.href")!)")
     }
     @objc func cleanweb(){
         let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
@@ -125,6 +149,17 @@ class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollView
         }else{
             UIAlertView.MsgBox("Internet Connection Required, Swipe down on browser to try again")
             refresh.endRefreshing()
+        }
+    }
+}
+extension UIApplication {
+    class func tryURL(urls: [String]) {
+        let application = UIApplication.shared
+        for url in urls {
+            if application.canOpenURL(NSURL(string: url)! as URL) {
+                application.openURL(NSURL(string: url)! as URL)
+                return
+            }
         }
     }
 }

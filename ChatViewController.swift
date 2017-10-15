@@ -43,7 +43,7 @@ var sv:UIView!
     func loadwb()
     {
         sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/chat.cfm") {
+        if let url = URL(string: "https://konkolchat.herokuapp.com/livechat?mode=popout") {
             web.scalesPageToFit = true
             web.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
@@ -64,21 +64,24 @@ var sv:UIView!
 //        web.isHidden = true
     }
     @objc func cleanweb(){
-        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('.new-message.not').hide();$('.options-menu').hide();$('.powered-by').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         web.stringByEvaluatingJavaScript(from: ls)
         let script = "$('body').animate({scrollTop:0}, 'slow')"
         web.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         web.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
+         web.scalesPageToFit = true
         web.isHidden = false
+        //.new-message.not .livechat-room .messages .new-message.not
+        //.options-menu  .powered-by
         UIViewController.removeSpinner(spinner: sv)
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading{
             print("webViewDidFinishLoad")
-            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('.new-message.not').hide();$('.options-menu').hide();$('.powered-by').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
             webView.stringByEvaluatingJavaScript(from: ls)
             let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
             webView.stringByEvaluatingJavaScript(from: tops)

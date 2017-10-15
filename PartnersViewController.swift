@@ -55,7 +55,7 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
     func loadwb()
     {
         sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/partners.cfm") {
+        if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/partners.cfm") {
             PartnersWebView.scalesPageToFit = true
             PartnersWebView.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)

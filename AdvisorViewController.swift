@@ -41,7 +41,7 @@ class AdvisorViewController: UIViewController,UIWebViewDelegate,UIScrollViewDele
     func loadwb()
     {
         sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/advisors.cfm") {
+        if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/advisors.cfm") {
             webview.scalesPageToFit = true
             webview.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
