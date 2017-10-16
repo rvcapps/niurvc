@@ -24,6 +24,7 @@
 		0AD2D4AB1F648531001693E4 /* JobInternshipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AA1F648531001693E4 /* JobInternshipViewController.swift */; };
 		0AD2D4AD1F648551001693E4 /* ScholarshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AC1F648551001693E4 /* ScholarshipsViewController.swift */; };
 		0AD2D4AF1F64856A001693E4 /* ImportantLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD2D4AE1F64856A001693E4 /* ImportantLinksViewController.swift */; };
+		323CA7F6AFE54DB9F88E7771 /* Pods_NIURVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B68037742DF34DAF0C263C4 /* Pods_NIURVC.framework */; };
 		3606F09A1F9261EB00ACDB68 /* job-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606F0951F9261E800ACDB68 /* job-search.png */; };
 		3606F09B1F9261EB00ACDB68 /* calendar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606F0961F9261E900ACDB68 /* calendar-icon.png */; };
 		3606F09C1F9261EB00ACDB68 /* link.png in Resources */ = {isa = PBXBuildFile; fileRef = 3606F0971F9261E900ACDB68 /* link.png */; };
@@ -63,6 +64,8 @@
 		3662988D1F340CDE0084237F /* icons8-User Groups Filled-50 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 366298811F340CDE0084237F /* icons8-User Groups Filled-50 (1).png */; };
 		3662988E1F340CDE0084237F /* scholarship-3-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 366298821F340CDE0084237F /* scholarship-3-512.png */; };
 		3662988F1F340CDE0084237F /* scholarship-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 366298831F340CDE0084237F /* scholarship-icon.png */; };
+		3695A24D1F953BD9009CFBD4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3695A24C1F953BD8009CFBD4 /* Podfile */; };
+		3695A2531F9551E3009CFBD4 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 3695A2521F955041009CFBD4 /* GoogleService-Info.plist */; };
 		369630D21F7DF02600E22DDD /* niu-rvc-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 369630D11F7DF02500E22DDD /* niu-rvc-logo.jpg */; };
 		36A8400A1F92E3D100D30B07 /* share (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 36A840051F92E3D000D30B07 /* share (1).png */; };
 		36A8400B1F92E3D100D30B07 /* web-link.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A840061F92E3D000D30B07 /* web-link.png */; };
@@ -97,6 +100,7 @@
 		0AD2D4AA1F648531001693E4 /* JobInternshipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobInternshipViewController.swift; sourceTree = "<group>"; };
 		0AD2D4AC1F648551001693E4 /* ScholarshipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScholarshipsViewController.swift; sourceTree = "<group>"; };
 		0AD2D4AE1F64856A001693E4 /* ImportantLinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportantLinksViewController.swift; sourceTree = "<group>"; };
+		2B68037742DF34DAF0C263C4 /* Pods_NIURVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIURVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3606F0951F9261E800ACDB68 /* job-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "job-search.png"; sourceTree = "<group>"; };
 		3606F0961F9261E900ACDB68 /* calendar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-icon.png"; sourceTree = "<group>"; };
 		3606F0971F9261E900ACDB68 /* link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = link.png; sourceTree = "<group>"; };
@@ -138,6 +142,9 @@
 		366298811F340CDE0084237F /* icons8-User Groups Filled-50 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-User Groups Filled-50 (1).png"; path = "images/icons8-User Groups Filled-50 (1).png"; sourceTree = "<group>"; };
 		366298821F340CDE0084237F /* scholarship-3-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scholarship-3-512.png"; path = "images/scholarship-3-512.png"; sourceTree = "<group>"; };
 		366298831F340CDE0084237F /* scholarship-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "scholarship-icon.png"; path = "images/scholarship-icon.png"; sourceTree = "<group>"; };
+		3695A2401F951C26009CFBD4 /* NIURVC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NIURVC.entitlements; sourceTree = "<group>"; };
+		3695A24C1F953BD8009CFBD4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		3695A2521F955041009CFBD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		369630D11F7DF02500E22DDD /* niu-rvc-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "niu-rvc-logo.jpg"; sourceTree = "<group>"; };
 		36A840051F92E3D000D30B07 /* share (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share (1).png"; sourceTree = "<group>"; };
 		36A840061F92E3D000D30B07 /* web-link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web-link.png"; sourceTree = "<group>"; };
@@ -152,6 +159,8 @@
 		36A8401B1F92F3B100D30B07 /* 50scholarship-icon blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "50scholarship-icon blue.png"; path = "images/50scholarship-icon blue.png"; sourceTree = "<group>"; };
 		36ABB22D1F934BCD00564CE1 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		36DA0CB11F8B41C800DBCB47 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		A4B200DB11528F99763359F4 /* Pods-NIURVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIURVC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NIURVC/Pods-NIURVC.debug.xcconfig"; sourceTree = "<group>"; };
+		DAE2100CDF1F649D3D2B76B9 /* Pods-NIURVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIURVC.release.xcconfig"; path = "Pods/Target Support Files/Pods-NIURVC/Pods-NIURVC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323CA7F6AFE54DB9F88E7771 /* Pods_NIURVC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +199,8 @@
 		3662984C1F33E79E0084237F = {
 			isa = PBXGroup;
 			children = (
+				3695A24C1F953BD8009CFBD4 /* Podfile */,
+				3695A2521F955041009CFBD4 /* GoogleService-Info.plist */,
 				36A840041F92E3AC00D30B07 /* Connections */,
 				36DA0CB01F8B417500DBCB47 /* CheckInternetConnection */,
 				364E5B9A1F34120000F6C3AB /* Pages */,
@@ -196,6 +208,8 @@
 				3662986C1F33F3A90084237F /* icons */,
 				366298571F33E79E0084237F /* NIURVC */,
 				366298561F33E79E0084237F /* Products */,
+				D213942C236DE689FBB5E508 /* Pods */,
+				BD6931178039B4A3AE35B047 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +224,7 @@
 		366298571F33E79E0084237F /* NIURVC */ = {
 			isa = PBXGroup;
 			children = (
+				3695A2401F951C26009CFBD4 /* NIURVC.entitlements */,
 				366298581F33E79E0084237F /* AppDelegate.swift */,
 				3662985A1F33E79E0084237F /* FirstViewController.swift */,
 				3662985E1F33E79E0084237F /* Main.storyboard */,
@@ -299,6 +314,23 @@
 			path = CheckInternetConnection;
 			sourceTree = "<group>";
 		};
+		BD6931178039B4A3AE35B047 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B68037742DF34DAF0C263C4 /* Pods_NIURVC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D213942C236DE689FBB5E508 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4B200DB11528F99763359F4 /* Pods-NIURVC.debug.xcconfig */,
+				DAE2100CDF1F649D3D2B76B9 /* Pods-NIURVC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,9 +338,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 366298691F33E79E0084237F /* Build configuration list for PBXNativeTarget "NIURVC" */;
 			buildPhases = (
+				2194F5583C51019AF45A16C7 /* [CP] Check Pods Manifest.lock */,
 				366298511F33E79E0084237F /* Sources */,
 				366298521F33E79E0084237F /* Frameworks */,
 				366298531F33E79E0084237F /* Resources */,
+				F4C26EA2897239ABBA946808 /* [CP] Embed Pods Frameworks */,
+				8ADEE88F78249D5482B3351E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,6 +372,11 @@
 						DevelopmentTeam = DQDSR75JMK;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -384,6 +424,7 @@
 				3606F09A1F9261EB00ACDB68 /* job-search.png in Resources */,
 				3606F09D1F9261EB00ACDB68 /* partners.png in Resources */,
 				366298721F33F3BF0084237F /* video.png in Resources */,
+				3695A24D1F953BD9009CFBD4 /* Podfile in Resources */,
 				366298621F33E79E0084237F /* Assets.xcassets in Resources */,
 				3662988C1F340CDE0084237F /* icons8-Share Filled-50.png in Resources */,
 				0AD2D49D1F5F8E5D001693E4 /* icons8-New Job Filled-50blue.png in Resources */,
@@ -420,11 +461,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2194F5583C51019AF45A16C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8ADEE88F78249D5482B3351E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NIURVC/Pods-NIURVC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C26EA2897239ABBA946808 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NIURVC/Pods-NIURVC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		366298511F33E79E0084237F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3695A2531F9551E3009CFBD4 /* GoogleService-Info.plist in Sources */,
 				3662985D1F33E79E0084237F /* SecondViewController.swift in Sources */,
 				0AD2D4A71F6484F2001693E4 /* PartnersViewController.swift in Sources */,
 				3632AE0E1F81E4EF003F5714 /* AdvisorViewController.swift in Sources */,
@@ -518,10 +608,15 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -568,17 +663,24 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		3662986A1F33E79E0084237F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4B200DB11528F99763359F4 /* Pods-NIURVC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = NIURVC/NIURVC.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = DQDSR75JMK;
@@ -591,13 +693,16 @@
 				PROVISIONING_PROFILE_SPECIFIER = NIURVCAdHoc;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		3662986B1F33E79E0084237F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE2100CDF1F649D3D2B76B9 /* Pods-NIURVC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = NIURVC/NIURVC.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = DQDSR75JMK;
@@ -610,6 +715,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = NIURVCAdHoc;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
