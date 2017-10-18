@@ -3,7 +3,7 @@
 # NIU&RVC Engineeing for Our Future
 iOS App 
 
-To view prototype visit [Website](http://www.rvchourofcode.com/niurvc.html)
+- To view prototype visit [Website](http://www.rvchourofcode.com/niurvc.html)
 
 # We Need Testers
 
