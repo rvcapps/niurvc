@@ -4,7 +4,7 @@
 
 - To view prototype visit [Website](http://www.rvchourofcode.com/niurvc.html)
 
-# We Need Testers
+# Beta App Testers
 
 ## Requirements: 
 - 5-10 minutes a day(at most) testing new features and submitting bugs you find
