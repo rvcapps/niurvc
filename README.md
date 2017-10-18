@@ -7,7 +7,9 @@
 # Beta App Testers
 
 ## Requirements: 
-- 5-10 minutes a day(at most) testing new features and submitting bugs you find
+- iPhone \ iPad
+- Free Github account
+- 5-10 minutes a day(at most) testing new features and submitting issues you find
 
 ## How do I get started?
 
