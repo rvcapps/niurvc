@@ -29,7 +29,7 @@ In order to make comments and submit new issues you need an Github account.
 - Create a FREE Github account [here](https://github.com/join)
 
 ### Testing App Time
-[Go here](https://konkolapps.github.io)
+- [Go here](https://konkolapps.github.io)
 
 
 
