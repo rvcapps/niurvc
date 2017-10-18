@@ -16,16 +16,18 @@ iOS App
 - Send your iOS devices UDID to c.konkol@rockvalleycollege.edu
 
 #### Video Walk Through
-The UDID of IOS devices are needed in order to install the beta NIU&RVC App. Follow the steps in the podcast below to get the UDID of your device.  Do not attempt to install the beta app until you get a confirmation email stating I have received your UDID. <br>
-[Podcast](https://youtu.be/yOYIJ7sa_Gk)
+   The UDID of IOS devices are needed in order to install the beta NIU&RVC App. Follow the steps in the podcast below to get  
+   the UDID of your device.  Do not attempt to install the beta app until you get a confirmation email stating I have received 
+   your UDID. <br>
+   [Podcast](https://youtu.be/yOYIJ7sa_Gk)
 
 #### Text Walkthrough
-- Go [here](https://www.getudid.io) from your iPhone or iPad
-- Accept installation of the OTA certificate
-- Once certificate has installed, the UDID will be shown
-- Select button to email and send UDID to c.konkol@rockvalleycollege.edu
-- Within 24 hours a confirmation email will be sent
-- Once confirmation email received, from iOS device go to [link](https://konkolapps.github.io)
+   - Go [here](https://www.getudid.io) from your iPhone or iPad
+   - Accept installation of the OTA certificate
+   - Once certificate has installed, the UDID will be shown
+   - Select button to email and send UDID to c.konkol@rockvalleycollege.edu
+   - Within 24 hours a confirmation email will be sent
+   - Once confirmation email received, from iOS device go to [link](https://konkolapps.github.io)
 
 ### Access Bug System
 - Create a FREE Github account [here](https://github.com/join)
