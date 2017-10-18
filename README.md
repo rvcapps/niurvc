@@ -27,23 +27,9 @@ The UDID of IOS devices are needed in order to install the beta NIU&RVC App. Fol
 
 ### Access Bug System
 - Create a FREE Github account [here](https://github.com/join)
-- Go to [Issues](https://waffle.io/rvcapps/niurvc/join)
-- Login with your Github username/password
 
-### Testing New Features
-- Under the "In Progress" column look for issues that start with the word "Test"
-- Open the NIURVC app and test this new feature
-- Make comment on issue (tap on the comment icon in issue box): 
-   example: 
-   - worked
-   - worked but had issues (explain)
-   - didn't work (explain what you tried that didn't work) 
-   
-### Submitting New Issues
-- Go to [Issues](https://waffle.io/rvcapps/niurvc/join)
-- Login with your Github username/password
-- Tap on the "Add Issue" button
-- Type issue in provided textboxes (Title and Description)
-- Select label "new bug"
-- Tap Add
+### Testing App Time
+[Go here](https://konkolapps.github.io)
+
+
 
