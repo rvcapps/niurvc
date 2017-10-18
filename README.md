@@ -13,9 +13,6 @@ iOS App
 ## How do I get started?
 
 ### Send UDID
-- Send your iOS devices UDID to c.konkol@rockvalleycollege.edu
-
-#### Video Walk Through Getting UDID
 The UDID of IOS devices are needed in order to install the beta NIU&RVC App. Follow the steps in the podcast below to get the UDID of your device. Do not attempt to install the beta app until you get a confirmation email stating I have received your UDID. [Podcast](https://youtu.be/yOYIJ7sa_Gk)
 
 #### Text Walkthrough Getting UDID
