@@ -14,17 +14,17 @@ iOS App
 
 ### Install App
 - Send your iOS devices UDID to c.konkol@rockvalleycollege.edu
-- Go to https://www.getudid.io from your iPhone or iPad
+- Go [here](https://www.getudid.io) from your iPhone or iPad
 - Accept installation of the OTA certificate
 - Once certificate has installed, the UDID will be shown
 - Select button to email and send UDID to c.konkol@rockvalleycollege.edu
 - Within 24 hours a confirmation email will be sent
 - Once confirmation email received, from iOS device go to below URL:
-  https://konkolapps.github.io 
+  [link](https://konkolapps.github.io)
 
 ### Access Bug System
-- Create a FREE Github account at https://github.com/join
-- Go to https://waffle.io/rvcapps/niurvc/join 
+- Create a FREE Github account [here](https://github.com/join)
+- Go to [Issues](https://waffle.io/rvcapps/niurvc/join)
 - Login with your Github username/password
 
 ### Testing New Features
@@ -37,7 +37,7 @@ iOS App
    - didn't work (explain what you tried that didn't work) 
    
 ### Submitting New Issues
-- Go to https://waffle.io/rvcapps/niurvc/join 
+- Go to [Issues](https://waffle.io/rvcapps/niurvc/join)
 - Login with your Github username/password
 - Tap on the "Add Issue" button
 - Type issue in provided textboxes (Title and Description)
