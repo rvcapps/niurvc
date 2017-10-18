@@ -21,11 +21,11 @@ The UDID of IOS devices are needed in order to install the beta NIU&RVC App. Fol
    - Select button to email and send UDID to c.konkol@rockvalleycollege.edu
    - Within 24 hours a confirmation email will be sent
    
-#### Install iOS App
-   - Make sure you received a confirmation email from c.konkol@rockvalleycollege.edu
-   - From iOS device go to [link](itms-services://?action=download-manifest&url=https://konkolapps.github.io/manifest.plist)
-
-### Access Issue System
+#### Confirmation Email 
+   - Make sure you received a confirmation email from c.konkol@rockvalleycollege.edu that you are ready to install app and begin testing.
+   
+### Create Github Account 
+In order to make comments and submit new issues you need an Github account.
 - Create a FREE Github account [here](https://github.com/join)
 
 ### Testing App Time
