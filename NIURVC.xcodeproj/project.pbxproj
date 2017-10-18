@@ -66,6 +66,19 @@
 		3662988F1F340CDE0084237F /* scholarship-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 366298831F340CDE0084237F /* scholarship-icon.png */; };
 		3695A24D1F953BD9009CFBD4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3695A24C1F953BD8009CFBD4 /* Podfile */; };
 		3695A2531F9551E3009CFBD4 /* GoogleService-Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 3695A2521F955041009CFBD4 /* GoogleService-Info.plist */; };
+		3695A2551F95A676009CFBD4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A2541F95A675009CFBD4 /* AdSupport.framework */; };
+		3695A25A1F963EE3009CFBD4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A2591F963EE2009CFBD4 /* AudioToolbox.framework */; };
+		3695A25C1F963EEF009CFBD4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A25B1F963EEF009CFBD4 /* CFNetwork.framework */; };
+		3695A25E1F963F0A009CFBD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A25D1F963F0A009CFBD4 /* CoreGraphics.framework */; };
+		3695A2601F963F12009CFBD4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A25F1F963F12009CFBD4 /* CoreLocation.framework */; };
+		3695A2621F963F23009CFBD4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A2611F963F23009CFBD4 /* QuartzCore.framework */; };
+		3695A2641F963F2C009CFBD4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A2631F963F2C009CFBD4 /* Security.framework */; };
+		3695A2661F963F40009CFBD4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A2651F963F40009CFBD4 /* StoreKit.framework */; };
+		3695A2681F963F4A009CFBD4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A2671F963F4A009CFBD4 /* SystemConfiguration.framework */; };
+		3695A26A1F963F54009CFBD4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A2691F963F54009CFBD4 /* libz.tbd */; };
+		3695A26C1F963F60009CFBD4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A26B1F963F5F009CFBD4 /* libsqlite3.tbd */; };
+		3695A26E1F964177009CFBD4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A2581F963E83009CFBD4 /* Parse.framework */; };
+		3695A26F1F9641B1009CFBD4 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3695A2571F963E60009CFBD4 /* Bolts.framework */; };
 		369630D21F7DF02600E22DDD /* niu-rvc-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 369630D11F7DF02500E22DDD /* niu-rvc-logo.jpg */; };
 		36A8400A1F92E3D100D30B07 /* share (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 36A840051F92E3D000D30B07 /* share (1).png */; };
 		36A8400B1F92E3D100D30B07 /* web-link.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A840061F92E3D000D30B07 /* web-link.png */; };
@@ -145,6 +158,19 @@
 		3695A2401F951C26009CFBD4 /* NIURVC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NIURVC.entitlements; sourceTree = "<group>"; };
 		3695A24C1F953BD8009CFBD4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		3695A2521F955041009CFBD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3695A2541F95A675009CFBD4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		3695A2571F963E60009CFBD4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		3695A2581F963E83009CFBD4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		3695A2591F963EE2009CFBD4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3695A25B1F963EEF009CFBD4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3695A25D1F963F0A009CFBD4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3695A25F1F963F12009CFBD4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3695A2611F963F23009CFBD4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3695A2631F963F2C009CFBD4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3695A2651F963F40009CFBD4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3695A2671F963F4A009CFBD4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3695A2691F963F54009CFBD4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		3695A26B1F963F5F009CFBD4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		369630D11F7DF02500E22DDD /* niu-rvc-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "niu-rvc-logo.jpg"; sourceTree = "<group>"; };
 		36A840051F92E3D000D30B07 /* share (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share (1).png"; sourceTree = "<group>"; };
 		36A840061F92E3D000D30B07 /* web-link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web-link.png"; sourceTree = "<group>"; };
@@ -168,6 +194,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3695A26F1F9641B1009CFBD4 /* Bolts.framework in Frameworks */,
+				3695A26E1F964177009CFBD4 /* Parse.framework in Frameworks */,
+				3695A26C1F963F60009CFBD4 /* libsqlite3.tbd in Frameworks */,
+				3695A26A1F963F54009CFBD4 /* libz.tbd in Frameworks */,
+				3695A2681F963F4A009CFBD4 /* SystemConfiguration.framework in Frameworks */,
+				3695A2661F963F40009CFBD4 /* StoreKit.framework in Frameworks */,
+				3695A2641F963F2C009CFBD4 /* Security.framework in Frameworks */,
+				3695A2621F963F23009CFBD4 /* QuartzCore.framework in Frameworks */,
+				3695A2601F963F12009CFBD4 /* CoreLocation.framework in Frameworks */,
+				3695A25E1F963F0A009CFBD4 /* CoreGraphics.framework in Frameworks */,
+				3695A25C1F963EEF009CFBD4 /* CFNetwork.framework in Frameworks */,
+				3695A25A1F963EE3009CFBD4 /* AudioToolbox.framework in Frameworks */,
+				3695A2551F95A676009CFBD4 /* AdSupport.framework in Frameworks */,
 				323CA7F6AFE54DB9F88E7771 /* Pods_NIURVC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +238,7 @@
 		3662984C1F33E79E0084237F = {
 			isa = PBXGroup;
 			children = (
+				3695A2561F963D48009CFBD4 /* Parse */,
 				3695A24C1F953BD8009CFBD4 /* Podfile */,
 				3695A2521F955041009CFBD4 /* GoogleService-Info.plist */,
 				36A840041F92E3AC00D30B07 /* Connections */,
@@ -289,6 +329,15 @@
 			name = photos;
 			sourceTree = "<group>";
 		};
+		3695A2561F963D48009CFBD4 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				3695A2581F963E83009CFBD4 /* Parse.framework */,
+				3695A2571F963E60009CFBD4 /* Bolts.framework */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
 		36A840041F92E3AC00D30B07 /* Connections */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +366,17 @@
 		BD6931178039B4A3AE35B047 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3695A26B1F963F5F009CFBD4 /* libsqlite3.tbd */,
+				3695A2691F963F54009CFBD4 /* libz.tbd */,
+				3695A2671F963F4A009CFBD4 /* SystemConfiguration.framework */,
+				3695A2651F963F40009CFBD4 /* StoreKit.framework */,
+				3695A2631F963F2C009CFBD4 /* Security.framework */,
+				3695A2611F963F23009CFBD4 /* QuartzCore.framework */,
+				3695A25F1F963F12009CFBD4 /* CoreLocation.framework */,
+				3695A25D1F963F0A009CFBD4 /* CoreGraphics.framework */,
+				3695A25B1F963EEF009CFBD4 /* CFNetwork.framework */,
+				3695A2591F963EE2009CFBD4 /* AudioToolbox.framework */,
+				3695A2541F95A675009CFBD4 /* AdSupport.framework */,
 				2B68037742DF34DAF0C263C4 /* Pods_NIURVC.framework */,
 			);
 			name = Frameworks;
@@ -371,7 +431,7 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = DQDSR75JMK;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -608,10 +668,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					"$(OTHER_LDFLAGS)",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -648,7 +705,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -663,10 +720,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = (
-					"$(OTHER_LDFLAGS)",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -681,16 +735,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_ENTITLEMENTS = NIURVC/NIURVC.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQDSR75JMK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Parse",
+				);
 				INFOPLIST_FILE = NIURVC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ckonkol.NIURVC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8176d62e-629c-4dba-a059-a76af4789950";
-				PROVISIONING_PROFILE_SPECIFIER = NIURVCAdHoc;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -703,16 +762,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_ENTITLEMENTS = NIURVC/NIURVC.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQDSR75JMK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Parse",
+				);
 				INFOPLIST_FILE = NIURVC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ckonkol.NIURVC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8176d62e-629c-4dba-a059-a76af4789950";
-				PROVISIONING_PROFILE_SPECIFIER = NIURVCAdHoc;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				USER_HEADER_SEARCH_PATHS = "";

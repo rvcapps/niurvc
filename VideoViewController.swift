@@ -171,6 +171,7 @@ extension UIViewController {
         ai.startAnimating()
         ai.center = spinnerView.center
         let txtField: UITextField = UITextField(frame: CGRect(x: ai.frame.origin.x - 60, y: ai.frame.origin.y, width: 300.00, height: 30.00));
+        txtField.isEnabled = false
         txtField.textColor = UIColor.blue
         txtField.text = "Loading Innovation..."
         DispatchQueue.main.async {

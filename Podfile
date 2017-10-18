@@ -7,4 +7,5 @@ target 'NIURVC' do
 
   # Pods for NIURVC
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 end

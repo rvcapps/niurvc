@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class FirstViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate {
 //http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/home.cfm
@@ -17,11 +18,18 @@ class FirstViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackground { (success: Bool!,nil) -> Void in
+            print("Object has been saved.")
+        }
+      
         web.delegate = self
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func viewWillAppear(_ animated: Bool) {
+        
         if Reachability.isConnectedToNetwork(){
             web.isHidden = true
             countweb=0;
