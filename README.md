@@ -1,7 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/rvcapps/niurvc.png?label=active&title=Active)](https://waffle.io/rvcapps/niurvc?utm_source=badge)
 
 # NIU&RVC Engineeing for Our Future
-iOS App 
 
 - To view prototype visit [Website](http://www.rvchourofcode.com/niurvc.html)
 
@@ -23,9 +22,10 @@ The UDID of IOS devices are needed in order to install the beta NIU&RVC App. Fol
    - Within 24 hours a confirmation email will be sent
    
 #### Install iOS App
-   - Once confirmation email received, from iOS device go to [link](https://konkolapps.github.io)
+   - Make sure you received a confirmation email from c.konkol@rockvalleycollege.edu
+   - From iOS device go to [link](itms-services://?action=download-manifest&url=https://konkolapps.github.io/manifest.plist)
 
-### Access Bug System
+### Access Issue System
 - Create a FREE Github account [here](https://github.com/join)
 
 ### Testing App Time
