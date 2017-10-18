@@ -34,7 +34,4 @@ In order to make comments and submit new issues you need an Github account.
 Once steps 1-3 have been completed above you have fulfilled prerequisites to begin testing!
 - [Go here](https://konkolapps.github.io)
 
-
-
-
-
+Questions? email Professor Chuck Konkol at c.konkol@rockvalleycollege.edu
