@@ -13,6 +13,17 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
     
     @IBOutlet weak var btnPartners: UIButton!
     
+    
+    @IBAction func btnrefresh(_ sender: UIButton) {
+        if Reachability.isConnectedToNetwork(){
+            PartnersWebView.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
+    }
+    
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: false, completion: nil)
@@ -127,6 +138,7 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
             refresh.endRefreshing()
         }
     }
+    
 }
 
 

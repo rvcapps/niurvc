@@ -15,6 +15,15 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
     @IBOutlet weak var btnLinks: UIButton!
     
     
+    @IBAction func btnrefresh(_ sender: UIButton) {
+        if Reachability.isConnectedToNetwork(){
+            ImportantLinksWebView.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
+    }
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: false, completion: nil)
@@ -128,6 +137,24 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
         }else{
             UIAlertView.MsgBox("Internet Connection Required, Swipe down on browser to try again")
             refresh.endRefreshing()
+        }
+    }
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        switch navigationType {
+        case .linkClicked:
+            // Open links in Safari
+            guard let url = request.url else { return true }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                // openURL(_:) is deprecated in iOS 10+.
+                UIApplication.shared.openURL(url)
+            }
+            return false
+        default:
+            // Handle other navigation types...
+            return true
         }
     }
 }

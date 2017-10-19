@@ -12,6 +12,17 @@ class JobInternshipViewController: UIViewController,UIWebViewDelegate,UIScrollVi
     
     @IBOutlet weak var btnjobs: UIButton!
     
+    
+    @IBAction func btnrefresh(_ sender: UIButton) {
+        if Reachability.isConnectedToNetwork(){
+            JobInternshipWebView.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
+    }
+    
     @IBAction func btnJobs(_ sender: UIButton) {
         if Reachability.isConnectedToNetwork(){
             JobInternshipWebView.isHidden = true
