@@ -1,44 +1,29 @@
 //
-//  ImportantLinksViewController.swift
+//  NotificationsViewController.swift
 //  NIURVC
 //
-//  Created by Jesus Quezada on 9/9/17.
+//  Created by Charles Konkol on 10/21/17.
 //  Copyright © 2017 Charles Konkol. All rights reserved.
 //
 
-
 import UIKit
 
-class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScrollViewDelegate{
-     var refreshController = UIRefreshControl()
-    
-    @IBOutlet weak var btnLinks: UIButton!
-    
-    @IBOutlet weak var btnrefresh: UIButton!
-    
-    @IBAction func btnrefresh(_ sender: UIButton) {
-        if Reachability.isConnectedToNetwork(){
-            ImportantLinksWebView.isHidden = true
-            countweb=0;
-            loadwb()
-        }else{
-            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
-        }
+class NotificationsViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate {
+
+ 
+    @IBAction func btnMain(_ sender: UIBarButtonItem) {
+      
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeNav") as! MainViewController
+        newViewController.pagetodisplay = 3
+        self.present(newViewController, animated: true, completion: nil)
+
     }
-    @IBAction func btnBack(_ sender: UIBarButtonItem) {
-        
-        self.dismiss(animated: false, completion: nil)
-    }
+    var refreshController = UIRefreshControl()
     
-    @IBAction func btnLinks(_ sender: UIButton) {
-        if Reachability.isConnectedToNetwork(){
-            ImportantLinksWebView.isHidden = true
-            countweb=0;
-            loadwb()
-        }else{
-            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
-        }
-    }
+   
+    
+  
     
     
     @IBOutlet weak var ImportantLinksWebView: UIWebView!
@@ -49,11 +34,7 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnrefresh.setTitle("reload",for: .normal)
-        btnrefresh.alignImageAndTitleVertically(padding: 18)
-        btnLinks.setTitle("Links",for: .normal)
-        btnLinks.alignImageAndTitleVertically(padding: 18)
-        ImportantLinksWebView.delegate = self
+       ImportantLinksWebView.delegate = self
         addPullToRefreshToWebView()
         // Do any additional setup after loading the view.
     }
@@ -68,8 +49,9 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
     }
     func loadwb()
     {
-        sv = UIViewController.displaySpinner(onView: self.view)
-        if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/links.cfm") {
+       
+        if let url = URL(string: "http://www.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/notifications.cfm") {
+             sv = UIViewController.displaySpinner(onView: self.view)
             ImportantLinksWebView.scalesPageToFit = true
             ImportantLinksWebView.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
@@ -92,14 +74,14 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
      }
      */
     func webViewDidStartLoad(_ webView: UIWebView) {
-//        ImportantLinksWebView.isHidden = true
+        //        ImportantLinksWebView.isHidden = true
     }
     @objc func cleanweb(){
-      
+        
         let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         ImportantLinksWebView.stringByEvaluatingJavaScript(from: ls)
-//        let script = "$('body').animate({scrollTop:0}, 'slow')"
-//        ImportantLinksWebView.stringByEvaluatingJavaScript(from: script)
+        //        let script = "$('body').animate({scrollTop:0}, 'slow')"
+        //        ImportantLinksWebView.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         ImportantLinksWebView.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
@@ -124,13 +106,13 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
     }
     
     func addPullToRefreshToWebView(){
-       
-            refreshController = UIRefreshControl()
-            refreshController.bounds = CGRect(x:0, y:0, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
-            refreshController.addTarget(self, action: #selector(refreshWebView(refresh:)), for: UIControlEvents.valueChanged)
-            refreshController.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
-            ImportantLinksWebView.scrollView.addSubview(refreshController)
-       
+        
+        refreshController = UIRefreshControl()
+        refreshController.bounds = CGRect(x:0, y:0, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
+        refreshController.addTarget(self, action: #selector(refreshWebView(refresh:)), for: UIControlEvents.valueChanged)
+        refreshController.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
+        ImportantLinksWebView.scrollView.addSubview(refreshController)
+        
     }
     
     @objc func refreshWebView(refresh:UIRefreshControl){
@@ -144,6 +126,7 @@ class ImportantLinksViewController: UIViewController ,UIWebViewDelegate,UIScroll
             refresh.endRefreshing()
         }
     }
+    
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         switch navigationType {
         case .linkClicked:

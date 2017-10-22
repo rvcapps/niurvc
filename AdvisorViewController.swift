@@ -70,8 +70,8 @@ class AdvisorViewController: UIViewController,UIWebViewDelegate,UIScrollViewDele
     @objc func cleanweb(){
         let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         webview.stringByEvaluatingJavaScript(from: ls)
-        let script = "$('body').animate({scrollTop:0}, 'slow')"
-        webview.stringByEvaluatingJavaScript(from: script)
+//        let script = "$('body').animate({scrollTop:0}, 'slow')"
+//        webview.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         webview.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
@@ -80,12 +80,13 @@ class AdvisorViewController: UIViewController,UIWebViewDelegate,UIScrollViewDele
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-         webView.delegate = self
         if webView.isLoading{
+            print("webViewDidFinishLoad")
             let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
             webView.stringByEvaluatingJavaScript(from: ls)
+            let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+            webView.stringByEvaluatingJavaScript(from: tops)
             return
-            //CS_Element_sideBarContainer
         }else
         {
             webView.scrollView.scrollsToTop = true

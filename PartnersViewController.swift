@@ -13,6 +13,7 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
     
     @IBOutlet weak var btnPartners: UIButton!
     
+    @IBOutlet weak var btnrefresh: UIButton!
     
     @IBAction func btnrefresh(_ sender: UIButton) {
         if Reachability.isConnectedToNetwork(){
@@ -47,6 +48,8 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnrefresh.setTitle("reload",for: .normal)
+        btnrefresh.alignImageAndTitleVertically(padding: 18)
         btnPartners.setTitle("Partners",for: .normal)
         btnPartners.alignImageAndTitleVertically(padding: 18)
         PartnersWebView.delegate = self
@@ -95,8 +98,8 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
     @objc func cleanweb(){
         let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         PartnersWebView.stringByEvaluatingJavaScript(from: ls)
-        let script = "$('body').animate({scrollTop:0}, 'slow')"
-        PartnersWebView.stringByEvaluatingJavaScript(from: script)
+//        let script = "$('body').animate({scrollTop:0}, 'slow')"
+//        PartnersWebView.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         PartnersWebView.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")

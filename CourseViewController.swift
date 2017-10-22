@@ -137,8 +137,8 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     @objc func cleanweb(){
         let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         web.stringByEvaluatingJavaScript(from: ls)
-        let script = "$('body').animate({scrollTop:0}, 'slow')"
-        web.stringByEvaluatingJavaScript(from: script)
+//        let script = "$('body').animate({scrollTop:0}, 'slow')"
+//        web.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         web.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
@@ -147,10 +147,11 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading{
-            webView.delegate = self
-            // $('.powered-by').hide();
+            print("webViewDidFinishLoad")
             let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
             webView.stringByEvaluatingJavaScript(from: ls)
+            let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+            webView.stringByEvaluatingJavaScript(from: tops)
             return
         }else
         {

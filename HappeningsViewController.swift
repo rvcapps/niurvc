@@ -24,6 +24,9 @@ class HappeningsViewController: UIViewController,UIWebViewDelegate,UIScrollViewD
         }
     }
     
+    @IBOutlet weak var btnrefresh: UIButton!
+    
+    
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
         
         self.dismiss(animated: false, completion: nil)
@@ -47,12 +50,11 @@ class HappeningsViewController: UIViewController,UIWebViewDelegate,UIScrollViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnrefresh.setTitle("reload",for: .normal)
+        btnrefresh.alignImageAndTitleVertically(padding: 18)
+        
         btnevents.setTitle("Happenings",for: .normal)
-//        let str = NSMutableAttributedString(string: "Happenings\nrefresh")
-//        str.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 14), range: NSMakeRange(0, 10))
-//        str.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 12), range: NSMakeRange(11, 7))
-//        btnevents.titleLabel?.numberOfLines = 0
-//         btnevents.setAttributedTitle(str, for: .normal)
         btnevents.alignImageAndTitleVertically(padding: 18)
         HappeningsWebView.delegate = self
         addPullToRefreshToWebView()
@@ -99,11 +101,11 @@ class HappeningsViewController: UIViewController,UIWebViewDelegate,UIScrollViewD
 //        HappeningsWebView.isHidden = true
     }
     @objc func cleanweb(){
-      let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+      let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#CS_Element_BreadcrumbTitle').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         HappeningsWebView.stringByEvaluatingJavaScript(from: ls)
-        let script = "$('body').animate({scrollTop:0}, 'slow')"
-        //"$('body').margin-top({scrollTop:0}, 'slow')"
-        HappeningsWebView.stringByEvaluatingJavaScript(from: script)
+//        let script = "$('body').animate({scrollTop:0}, 'slow')"
+//        //"$('body').margin-top({scrollTop:0}, 'slow')"
+//        HappeningsWebView.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         HappeningsWebView.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")

@@ -107,8 +107,8 @@ class SocialMediaViewController: UIViewController,UIWebViewDelegate,UIScrollView
     @objc func cleanweb(){
         let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         SocialMediaWebView.stringByEvaluatingJavaScript(from: ls)
-        let script = "$('body').animate({scrollTop:0}, 'slow')"
-        SocialMediaWebView.stringByEvaluatingJavaScript(from: script)
+//        let script = "$('body').animate({scrollTop:0}, 'slow')"
+//        SocialMediaWebView.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         SocialMediaWebView.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")

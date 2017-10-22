@@ -12,6 +12,7 @@ class JobInternshipViewController: UIViewController,UIWebViewDelegate,UIScrollVi
     
     @IBOutlet weak var btnjobs: UIButton!
     
+    @IBOutlet weak var btnrefresh: UIButton!
     
     @IBAction func btnrefresh(_ sender: UIButton) {
         if Reachability.isConnectedToNetwork(){
@@ -52,6 +53,8 @@ class JobInternshipViewController: UIViewController,UIWebViewDelegate,UIScrollVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnrefresh.setTitle("reload",for: .normal)
+        btnrefresh.alignImageAndTitleVertically(padding: 18)
         btnjobs.setTitle("Job Search",for: .normal)
         btnjobs.alignImageAndTitleVertically(padding: 5)
         JobInternshipWebView.delegate = self

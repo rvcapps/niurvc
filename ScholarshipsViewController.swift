@@ -11,6 +11,7 @@ import UIKit
 class ScholarshipViewController: UIViewController ,UIWebViewDelegate,UIScrollViewDelegate{
      var refreshController = UIRefreshControl()
     
+    @IBOutlet weak var btnrefresh: UIButton!
     @IBAction func btnrefresh(_ sender: UIButton) {
         if Reachability.isConnectedToNetwork(){
             ScholarshipsWebView.isHidden = true
@@ -48,7 +49,8 @@ class ScholarshipViewController: UIViewController ,UIWebViewDelegate,UIScrollVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        btnrefresh.setTitle("reload",for: .normal)
+        btnrefresh.alignImageAndTitleVertically(padding: 18)
         btnscholarships.setTitle("Scholarships",for: .normal)
         btnscholarships.alignImageAndTitleVertically(padding: 5)
         ScholarshipsWebView.delegate = self
@@ -95,8 +97,8 @@ class ScholarshipViewController: UIViewController ,UIWebViewDelegate,UIScrollVie
     @objc func cleanweb(){
         let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         ScholarshipsWebView.stringByEvaluatingJavaScript(from: ls)
-        let script = "$('body').animate({scrollTop:0}, 'slow')"
-        ScholarshipsWebView.stringByEvaluatingJavaScript(from: script)
+//        let script = "$('body').animate({scrollTop:0}, 'slow')"
+//        ScholarshipsWebView.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         ScholarshipsWebView.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
@@ -105,10 +107,12 @@ class ScholarshipViewController: UIViewController ,UIWebViewDelegate,UIScrollVie
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        webView.delegate = self
         if webView.isLoading{
+            print("webViewDidFinishLoad")
             let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
             webView.stringByEvaluatingJavaScript(from: ls)
+            let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+            webView.stringByEvaluatingJavaScript(from: tops)
             return
         }else
         {

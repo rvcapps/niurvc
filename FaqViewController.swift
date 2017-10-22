@@ -148,9 +148,9 @@ func removefooter()
     @objc func cleanweb(){
      let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
         webview.stringByEvaluatingJavaScript(from: ls)
-        let script = "$('body').animate({scrollTop:0}, 'slow')"
-        //"$('body').margin-top({scrollTop:0}, 'slow')"
-        webview.stringByEvaluatingJavaScript(from: script)
+//        let script = "$('body').animate({scrollTop:0}, 'slow')"
+//        //"$('body').margin-top({scrollTop:0}, 'slow')"
+//        webview.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
          webview.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
@@ -162,17 +162,17 @@ func removefooter()
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading{
             print("webViewDidFinishLoad")
-            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
+            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
             webView.stringByEvaluatingJavaScript(from: ls)
             let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
-            webview.stringByEvaluatingJavaScript(from: tops)
+            webView.stringByEvaluatingJavaScript(from: tops)
             return
         }else
         {
             webView.scrollView.scrollsToTop = true
-              print("else webViewDidFinishLoad")
+            print("else webViewDidFinishLoad")
             _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
-         }
+        }
     }
     
   

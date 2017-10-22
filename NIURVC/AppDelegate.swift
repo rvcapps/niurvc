@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 else
                 {
                     print("Notification access accepted.")
-                    UIApplication.shared.registerForRemoteNotifications();
+                    UIApplication.shared.registerForRemoteNotifications()
                 }
             }
         }
@@ -62,7 +62,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
             application.applicationIconBadgeNumber = 0
         }
-    
+        
+        
         return true
     }
     
@@ -74,6 +75,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+//        let notification = UILocalNotification()
+//        notification.alertBody = "This is a fake notification"
+//        notification.fireDate  = NSDate(timeIntervalSinceNow: 2) as Date
+//        UIApplication.shared.scheduleLocalNotification(notification)
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -97,9 +102,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let otherVC = sb.instantiateViewController(withIdentifier: "HomeNav") as! MainViewController
+//         otherVC.pagetodisplay = 0
+//        window?.rootViewController = otherVC;
         
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let otherVC = sb.instantiateViewController(withIdentifier: "notif") as! NotificationsViewController
+        window?.rootViewController = otherVC;
         
     }
+ 
     
     @objc(application:didRegisterForRemoteNotificationsWithDeviceToken:) func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let installation = PFInstallation.current()
@@ -108,8 +121,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         PFPush.subscribeToChannel(inBackground: "niurvc")
     }
     
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let otherVC = sb.instantiateViewController(withIdentifier: "home") as! FirstViewController
+        window?.rootViewController = otherVC;
+    }
+    
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         PFPush.handle(userInfo)
+        
+       
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let otherVC = sb.instantiateViewController(withIdentifier: "HomeNav") as! MainViewController
+//        otherVC.pagetodisplay = 0
+//        window?.rootViewController = otherVC;
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let otherVC = sb.instantiateViewController(withIdentifier: "notif") as! NotificationsViewController
+       // otherVC.pagetodisplay = 0
+        window?.rootViewController = otherVC;
+      
           application.applicationIconBadgeNumber = 0
         switch application.applicationState {
         case .active:
