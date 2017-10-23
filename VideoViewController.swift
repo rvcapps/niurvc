@@ -17,7 +17,7 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
         print("webload: \(webview .stringByEvaluatingJavaScript(from: "window.location.href")!)")
         webview.isHidden = true
          sv = UIViewController.displaySpinner(onView: self.view)
-           _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
+           _ = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
     }
     @IBAction func btnPhotos(_ sender: UIBarButtonItem) {
         if Reachability.isConnectedToNetwork(){
@@ -100,7 +100,7 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         webview.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
-        _ = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
+        _ = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
     }
     @objc func hideweb(){
         webview.isHidden = false
@@ -115,8 +115,7 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         webview.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
-        webview.isHidden = false
-        UIViewController.removeSpinner(spinner: sv)
+         _ = Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading{

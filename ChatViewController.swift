@@ -15,7 +15,10 @@ class ChatViewController: UIViewController ,UIWebViewDelegate,UIScrollViewDelega
  var countweb:integer_t!
 var sv:UIView!
     @IBAction func btnBack(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: false, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "HomeNav") as! MainViewController
+        newViewController.pagetodisplay = 3
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     @IBOutlet weak var web: UIWebView!

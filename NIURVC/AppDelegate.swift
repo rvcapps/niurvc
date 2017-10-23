@@ -115,10 +115,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
  
     
     @objc(application:didRegisterForRemoteNotificationsWithDeviceToken:) func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let username = UIDevice.current.name
+        
         let installation = PFInstallation.current()
         installation?.setDeviceTokenFrom(deviceToken)
+        installation?.addUniqueObject(username, forKey: "username")
         installation?.saveInBackground()
         PFPush.subscribeToChannel(inBackground: "niurvc")
+        
+        if let currentUser = PFInstallation.current(){
+            currentUser["Username"] = "John Smith"
+            //set other fields the same way....
+            currentUser.saveInBackground()
+        }
     }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
