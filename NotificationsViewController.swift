@@ -10,7 +10,16 @@ import UIKit
 
 class NotificationsViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelegate {
 
- 
+    @IBOutlet weak var displayit: UILabel!
+    
+    
+    @IBOutlet weak var btnadmin: UIButton!
+    
+    @IBAction func btnadmin(_ sender: UIButton) {
+    }
+    
+   
+    
     @IBAction func btnMain(_ sender: UIBarButtonItem) {
       
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -39,6 +48,7 @@ class NotificationsViewController: UIViewController,UIWebViewDelegate,UIScrollVi
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
+        
         if Reachability.isConnectedToNetwork(){
             ImportantLinksWebView.isHidden = true
             countweb=0;
@@ -46,7 +56,22 @@ class NotificationsViewController: UIViewController,UIWebViewDelegate,UIScrollVi
         }else{
             UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
         }
+      _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.OutPutButton), userInfo: nil, repeats: false)
     }
+    
+    func OutPutButton(){
+        let username = UIDevice.current.name
+        print("username \(username)")
+        displayit.text = username
+        // username = "Charles's iPhone"
+        if (username == "Charles's iPhone")
+        {
+            btnadmin.isHidden = false
+        }else{
+            btnadmin.isHidden = true
+        }
+    }
+    
     func loadwb()
     {
        

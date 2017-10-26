@@ -46,6 +46,9 @@ class FirstViewController: UIViewController,UIWebViewDelegate,UIScrollViewDelega
         testObject.saveInBackground { (success: Bool!,nil) -> Void in
             print("Object has been saved.")
         }
+        
+
+        
         btnrefresh.setTitle("reload",for: .normal)
         btnrefresh.alignImageAndTitleVertically(padding: 18)
         web.delegate = self

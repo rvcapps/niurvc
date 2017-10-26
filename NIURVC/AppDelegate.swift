@@ -40,13 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 else
                 {
                     print("Notification access accepted.")
-                    UIApplication.shared.registerForRemoteNotifications()
+                    UIApplication.shared.registerForRemoteNotifications();
                 }
             }
         }
         else
         {
-              
+            
             let notificationTypes: UIUserNotificationType = [UIUserNotificationType.alert, UIUserNotificationType.badge, UIUserNotificationType.sound]
             let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(types: notificationTypes, categories: nil)
             // Register app for receive notifications
@@ -56,13 +56,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // We want to register the installation in the back4app channel.
         if #available(iOS 10.0, *) {
             let content = UNMutableNotificationContent()
-                content.badge = 0 // your badge count
+            content.badge = 0 // your badge count
         } else {
             // Fallback on earlier versions
             application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge], categories: nil))
             application.applicationIconBadgeNumber = 0
         }
-        
         
         return true
     }
@@ -75,10 +74,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-//        let notification = UILocalNotification()
-//        notification.alertBody = "This is a fake notification"
-//        notification.fireDate  = NSDate(timeIntervalSinceNow: 2) as Date
-//        UIApplication.shared.scheduleLocalNotification(notification)
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -102,65 +97,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let otherVC = sb.instantiateViewController(withIdentifier: "HomeNav") as! MainViewController
-//         otherVC.pagetodisplay = 0
-//        window?.rootViewController = otherVC;
-        
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let otherVC = sb.instantiateViewController(withIdentifier: "notif") as! NotificationsViewController
         window?.rootViewController = otherVC;
         
     }
- 
     
     @objc(application:didRegisterForRemoteNotificationsWithDeviceToken:) func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let username = UIDevice.current.name
-        
-        let installation = PFInstallation.current()
+          let username = UIDevice.current.name
+          let installation = PFInstallation.current()
         installation?.setDeviceTokenFrom(deviceToken)
-        installation?.addUniqueObject(username, forKey: "username")
+        installation?.setObject(username, forKey: "username")
         installation?.saveInBackground()
         PFPush.subscribeToChannel(inBackground: "niurvc")
-        
-        if let currentUser = PFInstallation.current(){
-            currentUser["Username"] = "John Smith"
-            //set other fields the same way....
-            currentUser.saveInBackground()
-        }
-    }
-    
-    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let otherVC = sb.instantiateViewController(withIdentifier: "home") as! FirstViewController
-        window?.rootViewController = otherVC;
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         PFPush.handle(userInfo)
         
-       
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let otherVC = sb.instantiateViewController(withIdentifier: "HomeNav") as! MainViewController
-//        otherVC.pagetodisplay = 0
-//        window?.rootViewController = otherVC;
-        
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let otherVC = sb.instantiateViewController(withIdentifier: "notif") as! NotificationsViewController
-       // otherVC.pagetodisplay = 0
         window?.rootViewController = otherVC;
-      
-          application.applicationIconBadgeNumber = 0
+        
+        
+        application.applicationIconBadgeNumber = 0
         switch application.applicationState {
         case .active:
             //app is currently active, can update badges count here
             //app is transitioning from background to foreground (user taps notification), do what you need when user taps here
-          
-         
+            
+            
             break
         case .inactive:
-           
+            
             break
         case .background:
             //app is in background, if content-available key of your notification is set to 1, poll to your backend to retrieve data and update your interface here

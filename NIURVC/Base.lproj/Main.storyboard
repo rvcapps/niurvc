@@ -730,20 +730,39 @@
                                 </items>
                             </navigationBar>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7l-I8-kP5">
-                                <rect key="frame" x="0.0" y="32" width="667" height="343"/>
+                                <rect key="frame" x="0.0" y="32" width="667" height="297"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWt-ZC-oq1">
+                                <rect key="frame" x="310" y="337" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="Admin"/>
+                                <connections>
+                                    <action selector="btnadmin:" destination="w2g-dL-Z5N" eventType="touchUpInside" id="bd6-Jo-gYM"/>
+                                    <segue destination="AJ1-7S-fMf" kind="show" id="UCy-tZ-LGg"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5t-hC-xEu">
+                                <rect key="frame" x="418" y="337" width="229" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="bTX-6q-AJP"/>
                     <connections>
                         <outlet property="ImportantLinksWebView" destination="f7l-I8-kP5" id="iGO-RP-2pz"/>
+                        <outlet property="btnadmin" destination="PWt-ZC-oq1" id="6He-39-WUj"/>
+                        <outlet property="displayit" destination="g5t-hC-xEu" id="Kgi-ai-D4K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBa-13-zPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1388" y="103"/>
+            <point key="canvasLocation" x="-1422.6386806596702" y="52"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -961,6 +980,65 @@
             </objects>
             <point key="canvasLocation" x="-447" y="2732"/>
         </scene>
+        <!--Admin View Controller-->
+        <scene sceneID="Qe7-VP-JIr">
+            <objects>
+                <viewController storyboardIdentifier="admin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AJ1-7S-fMf" customClass="adminViewController" customModule="NIURVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Hv-8D-68l"/>
+                        <viewControllerLayoutGuide type="bottom" id="sCA-q2-Tg5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Vn-mC-RAx">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JK6-lI-Ja4">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="NIU &amp; RVC &quot;Engineering Our Future&quot;" id="5uZ-oV-clz">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="onE-yQ-QqY">
+                                            <connections>
+                                                <segue destination="w2g-dL-Z5N" kind="show" id="gC9-Ml-Zq7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7zM-fu-F2B">
+                                <rect key="frame" x="0.0" y="32" width="667" height="343"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECt-cF-0no">
+                                <rect key="frame" x="89" y="45" width="488" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyd-YI-nwP">
+                                <rect key="frame" x="89" y="83" width="488" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="btnsend:" destination="AJ1-7S-fMf" eventType="touchUpInside" id="GjK-aE-rC4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnsend" destination="Jyd-YI-nwP" id="0m4-jh-ZAI"/>
+                        <outlet property="txtoutput" destination="ECt-cF-0no" id="YEq-fr-w1l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Mn-d4-LVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2327.5862068965521" y="488.80000000000001"/>
+        </scene>
     </scenes>
     <resources>
         <image name="50job-search-in-newspapers.png" width="50" height="50"/>
@@ -988,6 +1066,7 @@
         <image name="weekly-calendar.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="gC9-Ml-Zq7"/>
         <segue reference="1Ib-7x-cEJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.2196078431372549" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
