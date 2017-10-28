@@ -145,8 +145,7 @@ func removefooter()
          UIViewController.removeSpinner(spinner: sv)
     }
     func webViewDidStartLoad(_ webView: UIWebView) {
-//           sv = UIViewController.displaySpinner(onView: self.view)
-// webview.isHidden = true
+     
     }
     @objc func cleanweb(){
      let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"

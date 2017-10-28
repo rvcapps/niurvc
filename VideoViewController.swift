@@ -17,14 +17,14 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
         print("webload: \(webview .stringByEvaluatingJavaScript(from: "window.location.href")!)")
         webview.isHidden = true
          sv = UIViewController.displaySpinner(onView: self.view)
-           _ = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
+           _ = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
     }
     @IBAction func btnPhotos(_ sender: UIBarButtonItem) {
         if Reachability.isConnectedToNetwork(){
             webview.isHidden = true
             countweb=0;
             loadwb()
-             _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.cleanweb2), userInfo: nil, repeats: false)
+             _ = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(self.cleanweb2), userInfo: nil, repeats: false)
         }else{
             UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
         }
@@ -54,8 +54,8 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
     }
     func loadwb()
     {
-        sv = UIViewController.displaySpinner(onView: self.view)
         if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/media.cfm") {
+            sv = UIViewController.displaySpinner(onView: self.view)
             webview.scalesPageToFit = true
             webview.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
@@ -92,11 +92,17 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
     
    
     func webViewDidStartLoad(_ webView: UIWebView) {
-       
+        let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
+        webView.stringByEvaluatingJavaScript(from: ls)
+        let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+        webview.stringByEvaluatingJavaScript(from: tops)
     }
     @objc func cleanweb2(){
-        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
         webview.stringByEvaluatingJavaScript(from: ls)
+       // let script = "$('body').animate({scrollTop:0}, 'slow')"
+        //"$('body').margin-top({scrollTop:0}, 'slow')"
+        //webview.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         webview.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
@@ -107,29 +113,27 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
         UIViewController.removeSpinner(spinner: sv)
     }
     @objc func cleanweb(){
-        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
         webview.stringByEvaluatingJavaScript(from: ls)
-        let script = "$('body').animate({scrollTop:0}, 'slow')"
-        //"$('body').margin-top({scrollTop:0}, 'slow')"
-        webview.stringByEvaluatingJavaScript(from: script)
+        //        let script = "$('body').animate({scrollTop:0}, 'slow')"
+        //        webview.stringByEvaluatingJavaScript(from: script)
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         webview.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
-         _ = Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
+        _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading{
-            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"
+            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);$('#cs_control_162871').hide();})"
             webView.stringByEvaluatingJavaScript(from: ls)
             let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
-            webview.stringByEvaluatingJavaScript(from: tops)
-           print("webViewDidFinishLoad")
+            webView.stringByEvaluatingJavaScript(from: tops)
             return
         }else
         {
             webView.scrollView.scrollsToTop = true
             print("else webViewDidFinishLoad")
-            _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
+            _ = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
       
     }

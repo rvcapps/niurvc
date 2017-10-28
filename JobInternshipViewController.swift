@@ -109,8 +109,7 @@ class JobInternshipViewController: UIViewController,UIWebViewDelegate,UIScrollVi
         //.navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom, .well, .job-rss
     }
     func webViewDidStartLoad(_ webView: UIWebView) {
-//         sv = UIViewController.displaySpinner(onView: self.view)
- //       JobInternshipWebView.isHidden = true
+
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
         if webView.isLoading{

@@ -64,7 +64,7 @@ var sv:UIView!
     }
     */
     func webViewDidStartLoad(_ webView: UIWebView) {
-//        web.isHidden = true
+
     }
     @objc func cleanweb(){
 //        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('.new-message.not').hide();$('.options-menu').hide();$('.powered-by').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 0);})"

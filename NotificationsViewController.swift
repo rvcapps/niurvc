@@ -99,7 +99,7 @@ class NotificationsViewController: UIViewController,UIWebViewDelegate,UIScrollVi
      }
      */
     func webViewDidStartLoad(_ webView: UIWebView) {
-        //        ImportantLinksWebView.isHidden = true
+       
     }
     @objc func cleanweb(){
         

@@ -92,8 +92,11 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
      }
      */
     func webViewDidStartLoad(_ webView: UIWebView) {
-//           sv = UIViewController.displaySpinner(onView: self.view)
-//        PartnersWebView.isHidden = true
+         
+    }
+    @objc func hideweb(){
+        PartnersWebView.isHidden = false
+        UIViewController.removeSpinner(spinner: sv)
     }
     @objc func cleanweb(){
         let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
@@ -103,8 +106,7 @@ class PartnersViewController: UIViewController,UIWebViewDelegate,UIScrollViewDel
         let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
         PartnersWebView.stringByEvaluatingJavaScript(from: tops)
         print("cleanweb")
-        PartnersWebView.isHidden = false
-        UIViewController.removeSpinner(spinner: sv)
+      _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
