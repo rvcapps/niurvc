@@ -180,8 +180,9 @@ func removefooter()
   
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-//        webview.isHidden = false
-//        UIViewController.removeSpinner(spinner: sv)
+        webview.isHidden = false
+        UIViewController.removeSpinner(spinner: sv)
+        print("error")
     }
     
     func addPullToRefreshToWebView(){
