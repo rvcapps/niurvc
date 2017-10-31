@@ -10,10 +10,26 @@ import UIKit
 
 class CommunicateViewController: UIViewController {
 
+    
+    
+    
+    @IBOutlet weak var btnlive: UIButton!
+    
+    @IBOutlet weak var btnfaq: UIButton!
+    
+    @IBOutlet weak var btnadvisor: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        btnlive.setTitle("Live Chat",for: .normal)
+        btnlive.alignImageAndTitleVertically(padding: 10)
+        
+        btnfaq.setTitle("FAQ",for: .normal)
+        btnfaq.alignImageAndTitleVertically(padding: 10)
+        
+        btnadvisor.setTitle("Advisors",for: .normal)
+        btnadvisor.alignImageAndTitleVertically(padding:10)
+       
     }
 
     override func didReceiveMemoryWarning() {

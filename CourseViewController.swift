@@ -9,8 +9,10 @@
 import UIKit
 
 
-class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate,UIWebViewDelegate{
+class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate,UIWebViewDelegate,UIScrollViewDelegate{
+     var refreshController = UIRefreshControl()
     var countweb:integer_t!
+    var sv:UIView!
     @IBOutlet weak var txtSelectMenu: UITextField!
     
     @IBOutlet weak var pvSelect: UIPickerView!
@@ -18,23 +20,31 @@ class CourseViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var web: UIWebView!
    
-    var list = ["Select below","Getting Started", "Mechanical Engineering","Manufacturing Technology"]
+    var list = ["Getting Started", "Mechanical Engineering","Manufacturing Technology (Online)"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-txtSelectMenu.delegate = self
         web.delegate = self
-         countweb=0;
-        loadwb()
-       
+        addPullToRefreshToWebView()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        if Reachability.isConnectedToNetwork(){
+            web.isHidden = true
+            countweb=0;
+            loadwb()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Please Try Again Later")
+        }
     }
     func loadwb()
     {
-        if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+          if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+            sv = UIViewController.displaySpinner(onView: self.view)
+            web.scalesPageToFit = true
+            web.contentMode = .scaleAspectFit
             let request = URLRequest(url: url)
             web.loadRequest(request)
-             web.reload()
         }
     }
     override func didReceiveMemoryWarning() {
@@ -66,34 +76,42 @@ txtSelectMenu.delegate = self
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
          countweb=0;
         self.txtSelectMenu.text = self.list[row]
-        if row == 1
+        if row == 0
         {
-            //web.loadRequest(URLRequest(url: URL(string: "http://google.com")!))
-            web.delegate = self
-            if let url = URL(string: "http://author.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+            web.isHidden = true
+            countweb=0;
+            sv = UIViewController.displaySpinner(onView: self.view)
+            if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/getting-started.cfm") {
+                web.scalesPageToFit = true
+                web.contentMode = .scaleAspectFit
                 let request = URLRequest(url: url)
                 web.loadRequest(request)
             }
            
         }
-        if row == 2
+        if row == 1
         {
-            //web.loadRequest(URLRequest(url: URL(string: "http://google.com")!))
-            web.delegate = self
-            if let url = URL(string: "https://www.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/index.cfm#cs_control_168893") {
+            web.isHidden = true
+            countweb=0;
+            sv = UIViewController.displaySpinner(onView: self.view)
+            if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/mechanicalengineering.cfm") {
+                web.scalesPageToFit = true
+                web.contentMode = .scaleAspectFit
                 let request = URLRequest(url: url)
                 web.loadRequest(request)
             }
             
         }
-        if row == 3
+        if row == 2
         {
-            //web.loadRequest(URLRequest(url: URL(string: "http://google.com")!))
-            web.delegate = self
-            if let url = URL(string: "https://www.rockvalleycollege.edu/Courses/Programs/Engineering/NIU/index.cfm#cs_control_168893") {
+            web.isHidden = true
+            countweb=0;
+            sv = UIViewController.displaySpinner(onView: self.view)
+            if let url = URL(string: "http://rockvalleycollege.edu/Courses/Programs/Engineering/NIU/m/manufacturingtechnology.cfm") {
+                web.scalesPageToFit = true
+                web.contentMode = .scaleAspectFit
                 let request = URLRequest(url: url)
                 web.loadRequest(request)
-               
             }
             
         }
@@ -112,22 +130,80 @@ txtSelectMenu.delegate = self
         }
         
     }
-    
+    func webViewDidStartLoad(_ webView: UIWebView) {
+//           sv = UIViewController.displaySpinner(onView: self.view)
+// web.isHidden = true
+    }
+    @objc func cleanweb(){
+        let ls = "$(document).ready(function() { $('#headline-wrapper').remove();$('#branding').remove();$('#navbar-static-top').hide();$('#navbar-fixed-top').hide();$('#navbar-fixed-bottom').hide();$('#cs_control_158876').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+        web.stringByEvaluatingJavaScript(from: ls)
+//        let script = "$('body').animate({scrollTop:0}, 'slow')"
+//        web.stringByEvaluatingJavaScript(from: script)
+        let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+        web.stringByEvaluatingJavaScript(from: tops)
+        print("cleanweb")
+        web.isHidden = false
+        UIViewController.removeSpinner(spinner: sv)
+    }
     func webViewDidFinishLoad(_ webView: UIWebView) {
-            //after code when webview finishes
-            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
-        
-         webView.stringByEvaluatingJavaScript(from: ls)
-       //  print("run")
-        if countweb==0{
-            countweb=1;
-            let scrollPoint = CGPoint(x: 0, y:txtSelectMenu.frame.origin.y - 44)
-            // webView.scrollView.setContentOffset(scrollPoint, animated: true)//Set false if you doesn't want animation
-            webView.scrollView.setContentOffset(scrollPoint, animated: true)
-            webView.scalesPageToFit = true
-            webView.scrollView.scrollsToTop=true
+        if webView.isLoading{
+            print("webViewDidFinishLoad")
+            let ls = "$(document).ready(function() { $('#header').hide(); $('#footer').hide();$('#cs_entrance_small').hide();$('#cs_entrance').hide();$('#cs_entrance_menu').hide();$('* > :nth-child(3n+3)').css('margin-top', 20);})"
+            webView.stringByEvaluatingJavaScript(from: ls)
+            let tops = "document.body.style.margin='0';document.body.style.padding = '0'"
+            webView.stringByEvaluatingJavaScript(from: tops)
+            return
+        }else
+        {
+            webView.scrollView.scrollsToTop = true
+            print("else webViewDidFinishLoad")
+            _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.cleanweb), userInfo: nil, repeats: false)
         }
+    }
+   
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+       // web.isHidden = false
+       // UIViewController.removeSpinner(spinner: sv)
+    }
+    
+    func addPullToRefreshToWebView(){
       
-        
+            refreshController = UIRefreshControl()
+            refreshController.bounds = CGRect(x:0, y:0, width:refreshController.bounds.size.width, height:refreshController.bounds.size.height) // Change position of refresh view
+            refreshController.addTarget(self, action: #selector(refreshWebView(refresh:)), for: UIControlEvents.valueChanged)
+            refreshController.attributedTitle = NSAttributedString(string: "Pull down to refresh...")
+            web.scrollView.addSubview(refreshController)
+       
+    }
+    
+    @objc func refreshWebView(refresh:UIRefreshControl){
+        if Reachability.isConnectedToNetwork(){
+            web.isHidden = true
+            sv = UIViewController.displaySpinner(onView: self.view)
+            web.reload()
+            refresh.endRefreshing()
+        }else{
+            UIAlertView.MsgBox("Internet Connection Required, Swipe down on browser to try again")
+            refresh.endRefreshing()
+        }
+    }
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        switch navigationType {
+        case .linkClicked:
+            // Open links in Safari
+            guard let url = request.url else { return true }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                // openURL(_:) is deprecated in iOS 10+.
+                UIApplication.shared.openURL(url)
+            }
+            return false
+        default:
+            // Handle other navigation types...
+            return true
+        }
     }
 }
