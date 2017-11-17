@@ -15,9 +15,9 @@ class VideoViewController: UIViewController,UIWebViewDelegate ,UIScrollViewDeleg
     
     @objc func webload(){
         print("webload: \(webview .stringByEvaluatingJavaScript(from: "window.location.href")!)")
-        webview.isHidden = true
-         sv = UIViewController.displaySpinner(onView: self.view)
-           _ = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(self.hideweb), userInfo: nil, repeats: false)
+       // webview.isHidden = true
+       //  sv = UIViewController.displaySpinner(onView: self.view)
+       //    _ = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: ////#selector(self.hideweb), userInfo: nil, repeats: false)
     }
     @IBAction func btnPhotos(_ sender: UIBarButtonItem) {
         if Reachability.isConnectedToNetwork(){

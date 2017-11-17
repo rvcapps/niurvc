@@ -969,7 +969,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Importank Links" image="50web-link.png" selectedImage="50web-link.png" id="4xb-YY-cmE"/>
+                    <tabBarItem key="tabBarItem" title="Important Links" image="50web-link.png" selectedImage="50web-link.png" id="4xb-YY-cmE"/>
                     <connections>
                         <outlet property="ImportantLinksWebView" destination="Dje-qH-y2K" id="Ms8-fh-Mtz"/>
                         <outlet property="btnLinks" destination="bkd-kr-rB7" id="icR-9Z-5PB"/>
