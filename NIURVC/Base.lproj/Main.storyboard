@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -214,7 +214,7 @@
                         <viewControllerLayoutGuide type="top" id="SHr-Q8-85i"/>
                         <viewControllerLayoutGuide type="bottom" id="uMD-w0-Gnf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qSH-GL-VqO">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="qSH-GL-VqO">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -256,7 +256,7 @@
                         <viewControllerLayoutGuide type="top" id="Bsk-za-PKh"/>
                         <viewControllerLayoutGuide type="bottom" id="x99-OC-pSz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="de9-i8-G59">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="de9-i8-G59">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -784,7 +784,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-527" y="166"/>
+            <point key="canvasLocation" x="-489" y="-310"/>
         </scene>
         <!--Scholarships-->
         <scene sceneID="aQ6-ac-jPP">
@@ -1066,7 +1066,7 @@
         <image name="weekly-calendar.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gC9-Ml-Zq7"/>
+        <segue reference="8ma-Yc-i8j"/>
         <segue reference="1Ib-7x-cEJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.2196078431372549" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
